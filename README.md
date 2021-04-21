@@ -1,4 +1,4 @@
-# Сайт отеля RinnRise | Revenue Backend
+# Сайт отеля RinnRise | NextJS
 ![](https://upro.group/images/logo.png)
 
 ## Локальный запуск
