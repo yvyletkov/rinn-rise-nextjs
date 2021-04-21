@@ -1,5 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
+import Image from 'next/image'
 import s from "./style.module.scss";
 import styled from "styled-components";
 import {NextArrow, PrevArrow} from "../SliderArrows";
@@ -21,35 +22,6 @@ const SliderStyles = styled(Slider)`
     margin: 0 auto;
     display: flex;
     justify-content: center;
-  }
-
-  @media screen and (min-width: 481px) {
-    .slick-slider {
-      height: unset;
-      padding-bottom: ${p => p.onlyTitle ? '0' : '40px'}
-    }
-  }
-  @media screen and (max-width: 1200px) {
-    .slick-slider {
-      height: unset
-    }
-  }
-`;
-
-const SliderStylesManySlider = styled(Slider)`
-  .slick-next:before,
-  .slick-prev:before {
-    color: #000;
-  }
-
-  .slick-list {
-    overflow: visible;
-  }
-
-  .slick-track {
-    margin: 0 auto;
-    display: flex;
-    justify-content: start;
   }
 
   @media screen and (min-width: 481px) {
@@ -118,7 +90,7 @@ const MainSlider = ({
         const {img, title, description, popupData, imgHeight} = item;
         return (
             <div className="SliderElement" key={index}>
-                <EventMainSliderItem
+                <MainSliderItem
                     onlyTitle={onlyTitle}
                     withTip={withTip}
                     key={index}
@@ -142,29 +114,28 @@ const MainSlider = ({
     return (
         <div className={s.wrapper}>
             <div className={containerStyles}>
+
                 {(useMediaQuery('(max-width: 480px)') && slides.length === 1) &&
-                <div style={{
-                    position: 'absolute',
-                    transform: 'rotate(-90deg)',
-                    right: '-30%', color: 'rgb(226, 226, 226)',
-                    fontFamily: 'Helvetica Neue Black',
-                    fontSize: '9vw',
-                    lineHeight: '0.8',
-                    top: '47%'
-                }}>
-                    Новые программы<br/>в разработке
-                </div>}
+                    <div style={{
+                        position: 'absolute',
+                        transform: 'rotate(-90deg)',
+                        right: '-30%', color: 'rgb(226, 226, 226)',
+                        fontFamily: 'Helvetica Neue Black',
+                        fontSize: '9vw',
+                        lineHeight: '0.8',
+                        top: '47%'
+                    }}>
+                        Новые программы<br/>в разработке
+                    </div>}
+
                 {/*<HeadlineCenter*/}
                 {/*    title={window.matchMedia('(max-width: 490px').matches ? (titleMobile || title) : title}/>*/}
 
-                {topText && <p className={s.text}>{topText}</p>}
 
-                {manySlides ? <SliderStylesManySlider><Slider {...settings}>{items}</Slider></SliderStylesManySlider>
-                    :
                     <SliderStyles onlyTitle={onlyTitle}>
                         <Slider {...settings}>{items}</Slider>
-                    </SliderStyles>}
-                {bottomText && <p className={s.text}>{bottomText}</p>}
+                    </SliderStyles>
+
             </div>
         </div>
     );
@@ -173,7 +144,7 @@ const MainSlider = ({
 export default MainSlider;
 
 
-const EventMainSliderItem = (props) => {
+const MainSliderItem = (props) => {
     let [showTip, setShowTip] = React.useState(false);
 
     const {img, title, description, active, index, withButton, activatePopup, withTip, onlyTitle, imgHeight = null} = props;
@@ -186,7 +157,7 @@ const EventMainSliderItem = (props) => {
         <div className={classNames}>
 
 
-            <img className={s.img} style={{height: imgHeight}} src={img} alt=""/>
+            <Image width={'100%'} height={'100%'} layout={'responsive'} className={s.img} style={{height: imgHeight}} src={img} alt=""/>
 
             <div className={s.content}>
                 <h6 className={onlyTitle ? s.titleSmall : s.title} dangerouslySetInnerHTML={{__html: title}}/>
