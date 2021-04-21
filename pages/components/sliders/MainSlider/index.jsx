@@ -28,7 +28,7 @@ const SliderStyles = styled(Slider)`
   @media screen and (min-width: 481px) {
     .slick-slider {
       height: unset;
-      padding-bottom: ${p => p.onlyTitle ? '0' : '40px'}
+      padding-bottom: 40px;
     }
   }
   @media screen and (max-width: 1200px) {
@@ -45,14 +45,7 @@ const MainSlider = ({
                         titleMobile,
                         initialSlideIndex = 0,
                         manySlides = false,
-                        withButton = false,
-                        activatePopup,
-                        withTip = false,
-                        onlyTitle = false,
-                        topText = null,
-                        bottomText = null,
-                        allClosedAtStart = false,
-                        squaredCards = false
+
                     }) => {
 
     const settings = {
@@ -60,7 +53,7 @@ const MainSlider = ({
         infinite: true,
         slidesToShow: slides.length === 1 ? 1 : 3,
         centerMode: true,
-        arrows: manySlides,
+        arrows: false,
         variableWidth: true,
         nextArrow: <NextArrow positionStyles={{
             bottom: "-20px",
@@ -101,7 +94,7 @@ const MainSlider = ({
         );
     });
 
-    const containerStyles = cx(s.container, {[s.withPadding]: manySlides, [s.small]: slides.length === 1})
+    const containerStyles = cx(s.container, {[s.small]: slides.length === 1})
 
     return (
         <div className={s.wrapper}>
@@ -124,7 +117,7 @@ const MainSlider = ({
                     title={useMediaQuery('(max-width: 490px)').matches ? (titleMobile || title) : title}/>
 
 
-                <SliderStyles onlyTitle={onlyTitle}>
+                <SliderStyles>
                     <Slider {...settings}>{items}</Slider>
                 </SliderStyles>
 
@@ -147,7 +140,7 @@ const MainSliderItem = (props) => {
         <div className={classNames}>
 
 
-            <Image width={'100%'} height={'100%'} layout={'responsive'} className={s.img}
+            <Image layout='fill' className={s.img}
                    src={img} alt=""/>
 
             <div className={s.content}>
@@ -158,7 +151,6 @@ const MainSliderItem = (props) => {
                        style={{marginBottom: '10px'}}/>
 
                 </div>
-
 
                 <div className={s.moreBtn} onClick={() => setShowDescr(!showDescr)}>
                     {showDescr ? 'Cкрыть' : 'Подробнее'}
