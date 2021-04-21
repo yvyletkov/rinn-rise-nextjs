@@ -11,16 +11,16 @@ const slides = [
         title: "Слайд 1",
         description: 'Описание слайда',
     },
-    // {
-    //     img: '/images/1.jpg',
-    //     title: "Слайд 1",
-    //     description: 'Описание слайда',
-    // },
-    // {
-    //     img: '/images/1.jpg',
-    //     title: "Слайд 1",
-    //     description: 'Описание слайда',
-    // },
+    {
+        img: '/images/1.jpg',
+        title: "Слайд 1",
+        description: 'Описание слайда',
+    },
+    {
+        img: '/images/1.jpg',
+        title: "Слайд 1",
+        description: 'Описание слайда',
+
 ];
 
 const slidesPromo = [
