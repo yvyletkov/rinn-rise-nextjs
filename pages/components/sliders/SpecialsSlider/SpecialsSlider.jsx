@@ -1,7 +1,7 @@
 import React from 'react';
 import s from './SpecialsSlider.module.scss';
 import styled from "styled-components";
-import {NextArrow, PrevArrow} from "../../../SliderArrows";
+import {NextArrow, PrevArrow} from "../../SliderArrows";
 import Slider from "react-slick";
 import SpecialsSliderItem from "./SpecialsSliderItem/SpecialsSliderItem";
 

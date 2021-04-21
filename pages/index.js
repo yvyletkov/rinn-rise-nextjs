@@ -1,9 +1,7 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import MainSlider from "./components/MainSlider";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import SpecialsSlider from "./components/shared/sliders/SpecialsSlider/SpecialsSlider";
+import MainSlider from "./components/sliders/MainSlider";
+import SpecialsSlider from "./components/sliders/SpecialsSlider/SpecialsSlider";
 
 const slides = [
     {
@@ -20,6 +18,7 @@ const slides = [
         img: '/images/1.jpg',
         title: "Слайд 1",
         description: 'Описание слайда',
+    }
 
 ];
 
