@@ -24,27 +24,27 @@ const slides = [
 
 const slidesPromo = [
     {
-        img: './images/1.jpg',
+        img: '/images/1.jpg',
         subtitle: "Летний отдых",
         title: "С выгодой до 20%",
         link: '/offers/letniy-otdyh',
         cashback: true,
     },
     {
-        img: './images/1.jpg',
+        img: '/images/1.jpg',
         subtitle: "до 20 000 рублей",
         title: "Кэшбэк на отдых",
         link: '/offers/cashback',
     },
     {
-        img: './images/1.jpg',
+        img: '/images/1.jpg',
         subtitle: "Длительное проживание 2021",
         title: "С выгодой до 25%",
         link: '/offers/dlitelnoe-prozhivaniye',
         cashback: true,
     },
     {
-        img: './images/1.jpg',
+        img: '/images/1.jpg',
         subtitle: "Английские каникулы",
         title: "в Крыму",
         link: '/offers/language-camp',
