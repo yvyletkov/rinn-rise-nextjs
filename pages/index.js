@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import MainSlider from "./components/sliders/MainSlider";
+import MainSlider from "./components/sliders/InfrastructureSlider";
 import SpecialsSlider from "./components/sliders/SpecialsSlider/SpecialsSlider";
 
 const slides = [
