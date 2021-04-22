@@ -2,6 +2,7 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import MainSlider from "./components/sliders/InfrastructureSlider";
 import SpecialsSlider from "./components/sliders/SpecialsSlider/SpecialsSlider";
+import Header from "./components/Header/Header";
 
 const slides = [
     {
@@ -59,6 +60,7 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
             <main>
+                <Header/>
                 <MainSlider slides={slides} title={'Заголовок'}/>
                 <SpecialsSlider slides={slidesPromo}/>
             </main>
