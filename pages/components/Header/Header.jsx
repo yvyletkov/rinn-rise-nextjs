@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import s from "./Header.module.scss";
 import Link from 'next/link'
 import Menu from "./Menu/Menu";
-import {useMediaQuery} from "../customHooks/useMediaQuery";
+import useMediaQuery from "../customHooks/useMediaQuery";
 // import PopupContactForm from "../additional/ContactForm/PopupContactForm";
 
 

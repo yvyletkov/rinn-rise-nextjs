@@ -3,17 +3,7 @@ import s from "./style.module.scss";
 // import leftArrowImg from "/images/slider-arrows/arrow-thin-small-left.png";
 import React from "react";
 
-export function NextArrow({style, positionStyles, onClick}) {
-    return (
-        <div
-            className={s.nextArrow}
-            style={{...style, backgroundImage: 'url(/images/slider-arrows/arrow-thin-small-right.png)', ...positionStyles}}
-            onClick={onClick}
-        />
-    );
-}
-
-export function PrevArrow({style, positionStyles, onClick}) {
+function PrevArrow({style, positionStyles, onClick}) {
     return (
         <div
             className={s.prevArrow}
@@ -22,3 +12,5 @@ export function PrevArrow({style, positionStyles, onClick}) {
         />
     );
 }
+
+export default PrevArrow

@@ -1,6 +1,7 @@
 import React from 'react';
 import s from './SpecialsSlider.module.scss';
-import {NextArrow, PrevArrow} from "../../SliderArrows";
+import PrevArrow from "../../SliderArrows/PrevArrow";
+import NextArrow from '../../SliderArrows/NextArrow';
 import Slider from "react-slick";
 import SpecialsSliderItem from "./SpecialsSliderItem/SpecialsSliderItem";
 
@@ -30,7 +31,7 @@ const SpecialsSlider = ({slides}) => {
         ]
     };
 
-    const items = slides.map((item, index) => {
+    const items = slides !== undefined && slides.map((item, index) => {
         const {img, title, subtitle, link} = item;
         return (
             <div className="SliderElement" key={index}>
