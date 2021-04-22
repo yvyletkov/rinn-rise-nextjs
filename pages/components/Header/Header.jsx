@@ -7,17 +7,15 @@ import {useMediaQuery} from "../customHooks/useMediaQuery";
 
 
 const CustomLink = ({title, style, icon, link = '#', extraClass = null, onClickHandler, href = '#'}) => {
-    if (href) return <Link href={href} onClick={onClickHandler ? onClickHandler : null} style={style}
-                        className={s.link + ' ' + extraClass}>
-        <a>
+    if (href) return <Link href={href} onClick={onClickHandler ? onClickHandler : null} style={style}>
+        <a className={s.link + ' ' + extraClass}>
             {icon && <img src={icon} alt={title}/>}
             {title && <div>{title}</div>}
         </a>
     </Link>
 
-    return <Link onClick={onClickHandler ? onClickHandler : null} style={style} href={link}
-                    className={s.link + ' ' + extraClass}>
-        <a>
+    return <Link onClick={onClickHandler ? onClickHandler : null} style={style} href={link}>
+        <a className={s.link + ' ' + extraClass}>
             {icon && <img src={icon} alt={title}/>}
             {title && <div>{title}</div>}
         </a>
@@ -66,11 +64,11 @@ const Header = () => {
                             <span></span>
                         </div>
                         <div className={s.leftBlock}>
-                            <CustomLink title={"Проживание"} link={"/residence"} onClickHandler={(e) => {
+                            <CustomLink title={"Проживание"} href={"/residence"} onClickHandler={(e) => {
                                 handleLinkClick(e);
                                 document.querySelector('#residence').scrollIntoView({behavior: 'smooth', block: 'start'})
                             }}/>
-                            <CustomLink title={"Спортивные сборы"} link={"/sports"} onClickHandler={(e) => {
+                            <CustomLink title={"Спортивные сборы"} href={"/sports"} onClickHandler={(e) => {
                                 handleLinkClick(e);
                                 document.querySelector('#sports').scrollIntoView({behavior: 'smooth', block: 'start'})
                             }}/>
