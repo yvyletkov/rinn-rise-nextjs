@@ -64,11 +64,15 @@ const Header = () => {
                             <span></span>
                         </div>
                         <div className={s.leftBlock}>
-                            <CustomLink title={"Проживание"} href={"/residence"} onClickHandler={(e) => {
+                            <CustomLink title={"Акции"} href={"/residence"} onClickHandler={(e) => {
                                 handleLinkClick(e);
                                 document.querySelector('#residence').scrollIntoView({behavior: 'smooth', block: 'start'})
                             }}/>
-                            <CustomLink title={"Спортивные сборы"} href={"/sports"} onClickHandler={(e) => {
+                            <CustomLink title={"Номера и цены"} href={"/sports"} onClickHandler={(e) => {
+                                handleLinkClick(e);
+                                document.querySelector('#sports').scrollIntoView({behavior: 'smooth', block: 'start'})
+                            }}/>
+                            <CustomLink title={"Инфраструктура"} href={"/sports"} onClickHandler={(e) => {
                                 handleLinkClick(e);
                                 document.querySelector('#sports').scrollIntoView({behavior: 'smooth', block: 'start'})
                             }}/>
@@ -76,7 +80,7 @@ const Header = () => {
                         <div className={s.logo}>
                             <Link href={'/'}>
                                 <a>
-                                    <img src={'/images/prometey-logo.svg'} alt="Прометей"/>
+                                    <img src={'/images/rinnrise-logo.png'} alt="Прометей"/>
                                 </a>
                             </Link>
                         </div>
@@ -84,10 +88,12 @@ const Header = () => {
                             {/*<CustomLink icon={search}*/}
                             {/*      extraClass={s.searchIcon} href={"/search"} onClickHandler={handleLinkClick} style={{cursor: 'not-allowed'}}/>*/}
                             <div className={s.contacts}>
-                                <a href={"tel:88005000347"}
+                                <a href={"tel:88005557856"}
                                          className={s.link + ' ' + s.number}>
-                                    <div>8 800 500-03-47</div>
-                                    <span style={{whiteSpace: 'nowrap',fontSize: '12px', position: 'absolute', bottom: '-12px', left: '0'}}>(звонок бесплатный)</span>
+                                    <div className={s.telephone}>+7 (800) 555-78-56</div>
+                                    <span className={s.location}>
+                                        Джемете, г. Анапа
+                                    </span>
                                 </a>
                             </div>
 
