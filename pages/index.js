@@ -3,6 +3,7 @@ import styles from '../styles/Home.module.css'
 import MainSlider from "./components/sliders/InfrastructureSlider";
 import SpecialsSlider from "./components/sliders/SpecialsSlider/SpecialsSlider";
 import Header from "./components/Header/Header";
+import HomePageBanner from './components/HomePageBanner/HomePageBanner';
 
 const slides = [
     {
@@ -61,6 +62,7 @@ export default function Home() {
             </Head>
             <main>
                 <Header/>
+                <HomePageBanner />
                 <MainSlider slides={slides} title={'Заголовок'}/>
                 <SpecialsSlider slides={slidesPromo}/>
             </main>
