@@ -1,40 +1,8 @@
 import React from 'react';
 import s from './SpecialsSlider.module.scss';
-import styled from "styled-components";
 import {NextArrow, PrevArrow} from "../../SliderArrows";
 import Slider from "react-slick";
 import SpecialsSliderItem from "./SpecialsSliderItem/SpecialsSliderItem";
-
-const SliderStyles = styled(Slider)`
-  .slick-next:before,
-  .slick-prev:before {
-    color: #000;
-  }
-  .slick-list {
-    transition: all 0.3s;
-    overflow: visible;
-  }
-  .slick-slider {
-    margin-top: 90px;
-  }
-  .slick-dots li {
-    margin: 0
-  }
-
-  .slick-slide img {
-    width: 100%;
-    margin: 0 40px 0 0;
-  }
-
-  .slick-track {
-    margin: 0 auto;
-  }
-  @media screen and (max-width: 1200px){
-    .slick-slider {
-      margin-top: 0;
-    }
-  }
-`;
 
 const SpecialsSlider = ({slides}) => {
 
@@ -80,9 +48,9 @@ const SpecialsSlider = ({slides}) => {
     return (
         <div className={s.sliderContainer}>
             <div className={s.sliderTitle}>Активные спецпредложения</div>
-            <SliderStyles>
+            <div className={s.sliderWrapper}>
                 <Slider {...settings}>{items}</Slider>
-            </SliderStyles>
+            </div>
         </div>
     )
 }
