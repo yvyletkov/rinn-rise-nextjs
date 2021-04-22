@@ -151,7 +151,7 @@
   cursor: pointer;
 }
 
-.title, .titleSmall {
+.title {
   width: fit-content;
   position: relative;
   text-transform: uppercase;
@@ -168,7 +168,7 @@
 
 .title:after, .titleSmall:after {
   display: block;
-  background-color: #ff6c39;
+  background-color: #00af98;
   content: "";
   width: 15px;
   height: 4px;
