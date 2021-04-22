@@ -1,41 +1,11 @@
-import React from "react";
-import Slider from "react-slick";
+import React from 'react'
+import Slider from 'react-slick'
 import Image from 'next/image'
-import s from "./style.module.scss";
-import styled from "styled-components";
-import {NextArrow, PrevArrow} from "../../SliderArrows";
-import cx from "classnames"
-import {useMediaQuery} from "../../customHooks/useMediaQuery";
-import HeadlineCenter from "../../HeadlineCenter";
-
-const SliderStyles = styled(Slider)`
-  .slick-next:before,
-  .slick-prev:before {
-    color: #000;
-  }
-
-  .slick-list {
-    overflow: visible;
-  }
-
-  .slick-track {
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-  }
-
-  @media screen and (min-width: 481px) {
-    .slick-slider {
-      height: unset;
-      padding-bottom: 40px;
-    }
-  }
-  @media screen and (max-width: 1200px) {
-    .slick-slider {
-      height: unset
-    }
-  }
-`;
+import s from './style.module.scss'
+import {NextArrow, PrevArrow} from '../../SliderArrows'
+import cx from 'classnames'
+import {useMediaQuery} from '../../customHooks/useMediaQuery'
+import HeadlineCenter from '../../HeadlineCenter'
 
 
 const InfrastructureSlider = ({
@@ -77,10 +47,10 @@ const InfrastructureSlider = ({
                 }
             },
         ]
-    };
+    }
 
     const items = slides.map((item, index) => {
-        const {img, title, description, popupData, imgHeight} = item;
+        const {img, title, description, popupData, imgHeight} = item
         return (
             <div className="SliderElement" key={index}>
                 <InfrastructureSliderItem
@@ -90,8 +60,8 @@ const InfrastructureSlider = ({
                     active={useMediaQuery('(max-width: 490px)') ? false : index === 1}
                 />
             </div>
-        );
-    });
+        )
+    })
 
     const containerStyles = cx(s.container, {[s.small]: slides.length === 1})
 
@@ -116,22 +86,20 @@ const InfrastructureSlider = ({
                     title={useMediaQuery('(max-width: 490px)').matches ? (titleMobile || title) : title}/>
 
 
-                <SliderStyles>
                     <Slider {...settings}>{items}</Slider>
-                </SliderStyles>
 
             </div>
         </div>
-    );
-};
+    )
+}
 
-export default InfrastructureSlider;
+export default InfrastructureSlider
 
 
 const InfrastructureSliderItem = (props) => {
-    const {img, title, description, active} = props;
+    const {img, title, description, active} = props
 
-    let [showDescr, setShowDescr] = React.useState(active);
+    let [showDescr, setShowDescr] = React.useState(active)
 
     let classNames = cx([s.card], {[s.active]: showDescr})
 
@@ -159,5 +127,5 @@ const InfrastructureSliderItem = (props) => {
             </div>
 
 
-        </div>);
-};
+        </div>)
+}

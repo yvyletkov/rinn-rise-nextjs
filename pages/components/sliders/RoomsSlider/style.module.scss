@@ -1,0 +1,14 @@
+.wrapper {
+  max-width: 1580px;
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 113px;
+  overflow: hidden;
+  margin-bottom: -23px;
+}
+
+@media screen and (max-width: 480px){
+  .wrapper {
+    padding-bottom: 37px;
+  }
+}
