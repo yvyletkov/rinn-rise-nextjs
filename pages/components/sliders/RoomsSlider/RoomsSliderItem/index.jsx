@@ -1,44 +1,44 @@
 import React from 'react'
 import s from './style.module.scss'
 import Link from 'next/link'
+import Image from 'next/image'
 
 
-const RoomsSlider = ({
-                         img,
-                         link,
-                         title,
-                         subtitle,
-                         time,
-                         date,
-                         campus,
-                         campusName,
-                         active,
-
-                     }) => {
+const RoomsSliderItem = ({
+                             img,
+                             ...data
+                         }) => {
 
     const handleLinkClick = (e) => {
         if (!link) e.preventDefault()
     }
 
     return (
-        <div className={active ? s.card + ' ' + s.active : s.card}>
-            <Link onClick={handleLinkClick} href={link ? link : '#'}>
-                {link && <p className={s.link}>Подробнее →</p>}
-                <img className={s.img} src={img} alt={title}/>
-                <div className={s.content}>
-                    <p className={s.title}>{title}</p>
-                    <p dangerouslySetInnerHTML={{__html: subtitle}} className={s.subtitle}
-                       style={!time ? {marginBottom: '20px'} : {}}/>
-                    {time && <p className={s.time}>{time}
-                        <span>{date}</span></p>}
-                    <p dangerouslySetInnerHTML={{__html: campus}} className={s.campus}>
-                    </p>
-                    <div dangerouslySetInnerHTML={{__html: campusName}}/>
+        <Link onClick={handleLinkClick} href="#">
+            <a>
+                <div className={s.card}>
+                    <div className={s.img}>
+                        <Image layout="fill" src={img} alt={''}/>
+                    </div>
+                    <div className={s.content}>
+                        <h6 className={s.title}>
+                            Номер
+                            <span>Стандарт</span>
+                        </h6>
+                        <p className={s.text}>
+                            {data.text}
+                        </p>
+                        <Link href={''}>
+                            <a className={s.link}>
+                                Подробнее <span>→</span>
+                            </a>
+                        </Link>
+                    </div>
                 </div>
-            </Link>
-        </div>
+            </a>
+        </Link>
     );
 
 };
 
-export default RoomsSlider;
+export default RoomsSliderItem;
