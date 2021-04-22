@@ -4,7 +4,6 @@ import Image from 'next/image'
 import s from "./style.module.scss";
 import styled from "styled-components";
 import {NextArrow, PrevArrow} from "../../SliderArrows";
-import CircleTip from "../../CircleTip";
 import cx from "classnames"
 import {useMediaQuery} from "../../customHooks/useMediaQuery";
 import HeadlineCenter from "../../HeadlineCenter";
@@ -39,7 +38,7 @@ const SliderStyles = styled(Slider)`
 `;
 
 
-const MainSlider = ({
+const InfrastructureSlider = ({
                         slides,
                         title,
                         titleMobile,
@@ -84,7 +83,7 @@ const MainSlider = ({
         const {img, title, description, popupData, imgHeight} = item;
         return (
             <div className="SliderElement" key={index}>
-                <MainSliderItem
+                <InfrastructureSliderItem
                     img={img}
                     title={title}
                     description={description}
@@ -126,22 +125,23 @@ const MainSlider = ({
     );
 };
 
-export default MainSlider;
+export default InfrastructureSlider;
 
 
-const MainSliderItem = (props) => {
+const InfrastructureSliderItem = (props) => {
     const {img, title, description, active} = props;
 
     let [showDescr, setShowDescr] = React.useState(active);
 
-    let classNames = cx([s.card], {[s.active]: showDescr}, {[s.squared]: props.squaredCards})
+    let classNames = cx([s.card], {[s.active]: showDescr})
 
     return (
         <div className={classNames}>
 
-
-            <Image layout='fill' className={s.img}
-                   src={img} alt=""/>
+            <div className={s.imgWrapper}>
+                <Image layout='fill' className={s.img}
+                       src={img} alt=""/>
+            </div>
 
             <div className={s.content}>
                 <h6 className={s.title} dangerouslySetInnerHTML={{__html: title}}/>
