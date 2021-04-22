@@ -1,95 +1,92 @@
 import React from 'react'
 import Slider from 'react-slick'
 import s from './style.module.scss'
-import Index from './RoomsSliderItem'
-import styled from 'styled-components'
+import RoomsSliderItem from './RoomsSliderItem'
 import HeadlineCenter from '../../HeadlineCenter'
+import {useMediaQuery} from '../../customHooks/useMediaQuery'
 import {NextArrow, PrevArrow} from '../../SliderArrows'
 
-const SliderStyles = styled.div`
-  .slick-next:before,
-  .slick-prev:before {
-    color: #000;
-  }
+const initialSlides = [
+    {
+        img: '/images/1.jpg',
+        data: {
+            text: 'Уютный однокомнатный номер с двумя раздельными кроватями или одной большой кроватью.'
+        }
+    },
+    {
+        img: '/images/1.jpg',
+        data: {
+            text: 'Уютный однокомнатный номер с большой кроватью.'
+        }
+    },
+    {
+        img: '/images/1.jpg',
+        data: {
+            text: 'Уютный однокомнатный номер с большой кроватью.'
+        }
+    },
+    {
+        img: '/images/1.jpg',
+        data: {
+            text: 'Уютный однокомнатный номер с большой кроватью.'
+        }
+    },
+    {
+        img: '/images/1.jpg',
+        data: {
+            text: 'Уютный однокомнатный номер с большой кроватью.'
+        }
+    },
+]
 
-  .slick-list {
-    transition: all 0.3s;
-    overflow: visible;
-  }
-  
-  .slick-dots {
-    bottom: -32px;
-  }
-  .slick-dots li {
-    margin: 0
-  }
-
-.slick-slide img {
-  width: 100%;
-  margin: 0 40px 0 0;
-}
-
-.slick-track {
-  margin: 0 auto;
-}
-`
+const RoomsSlider = ({
+                        title = 'Какой-то заголовок',
+                        slides = initialSlides,
+                    }) => {
 
 
-const Index = ({title = 'Какой-то заголовок', slides, type = 'home-page', desaturated = false, infinite = false}) => {
-
-
-    const initialCurrentSlideIndex = window.matchMedia('(min-width: 769px)').matches ?
+    const initialCurrentSlideIndex = useMediaQuery('(min-width: 769px)') ?
         (slides.length >= 5 ? 2 : slides.length === 4 ? 2 : slides.length === 2 ? 1 : slides.length === 3 ? 1 : 0)
         : 0
 
     let [currentSlideIndex, setCurrentSlideIndex] = React.useState(initialCurrentSlideIndex)
 
     const items = slides.map((item, index) => {
-        const {img, link, title, subtitle, time, date, campus, campusName, subsubtitle='', fontsizeSubsubtitle='', capacity, area} = item;
+        const {
+            img,
+            data
+        } = item;
         return (
-            <div className='sliderElement' key={index}>
-                <Index
-                    desaturated={desaturated}
-                    active={currentSlideIndex === index}
-                    link={link}
-                    type={type}
+            <div className="sliderElement" key={index}>
+                <RoomsSliderItem
                     img={img}
-                    title={title}
-                    subtitle={subtitle}
-                    subsubtitle={subsubtitle}
-                    fontsizeSubsubtitle={fontsizeSubsubtitle}
-                    time={time}
-                    date={date}
-                    campus={campus}
-                    campusName={campusName}
-                    capacity={capacity}
-                    area={area}
+                    {...data}
                 />
             </div>
         )
     })
 
-    const afterChangeHandler = (index) => setCurrentSlideIndex(index)
+    const afterChangeHandler = index => setCurrentSlideIndex(index)
 
     const settings = {
         initialSlide: initialCurrentSlideIndex,
         afterChange: afterChangeHandler,
         dots: false,
         className: 'center',
-        centerMode: true,
-        infinite: type !== 'home-page' || infinite,
+        centerMode: false,
+        infinite: false,
         centerPadding: '60px',
         variableWidth: true,
         speed: 500,
         nextArrow: <NextArrow onClick={() => setCurrentSlideIndex(currentSlideIndex + 1)} positionStyles={{
             bottom: '-90px',
-            right: '50%',
-            transform: 'translateX(120%)'
+            left: '50%',
+            transform: 'translateX(900%)'
         }}/>,
         prevArrow: <PrevArrow onClick={() => setCurrentSlideIndex(currentSlideIndex - 1)} positionStyles={{
             bottom: '-90px',
             left: '50%',
-            transform: 'translateX(-120%)'
+            transform: 'translateX(750%)'
         }}/>,
         responsive: [
             {
@@ -100,7 +97,7 @@ const Index = ({title = 'Какой-то заголовок', slides, type = 'ho
                     centerMode: false,
                     slidesToShow: 1,
                     slidesToScroll: 1,
-                    infinite: type !== 'home-page' || infinite,
+                    infinite: false,
                     dots: true,
                     arrows: false
                 }
@@ -116,12 +113,13 @@ const Index = ({title = 'Какой-то заголовок', slides, type = 'ho
 
     return (
         <div className={s.wrapper}>
-            <HeadlineCenter title={title}/>
-            <SliderStyles>
+            <div className={s.container}>
+                <HeadlineCenter title={title}/>
                 <Slider ref={sliderRef} {...settings}>{items}</Slider>
-            </SliderStyles>
+            </div>
+
         </div>
     )
 }
 
-export default Index
+export default RoomsSlider
