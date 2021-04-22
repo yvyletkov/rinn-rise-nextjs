@@ -1,4 +1,5 @@
-import '../styles/globals.scss'
+import '../styles/globals.scss';
+import '../styles/fonts.css';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
