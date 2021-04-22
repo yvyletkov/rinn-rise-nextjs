@@ -3,8 +3,9 @@ import Slider from 'react-slick'
 import s from './style.module.scss'
 import RoomsSliderItem from './RoomsSliderItem'
 import HeadlineCenter from '../../HeadlineCenter'
-import {useMediaQuery} from '../../customHooks/useMediaQuery'
-import {NextArrow, PrevArrow} from '../../SliderArrows'
+import useMediaQuery from '../../customHooks/useMediaQuery'
+import NextArrow from '../../SliderArrows/NextArrow';
+import PrevArrow from '../../SliderArrows/PrevArrow';
 
 const initialSlides = [
     {
