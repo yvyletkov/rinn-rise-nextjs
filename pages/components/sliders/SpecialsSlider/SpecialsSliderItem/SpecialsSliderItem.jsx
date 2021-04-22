@@ -25,15 +25,18 @@ const SpecialsSliderItem = (props) => {
                 className={cardClassNames}
                 onMouseEnter={() => !window.matchMedia("screen and (max-width: 1200px)").matches ? setLifted(true) : null}
                 onMouseLeave={() => !window.matchMedia("screen and (max-width: 1200px)").matches ? setLifted(false) : null}>
-                <Image width={'100%'} height={'150%'} layout={'responsive'}
-                       className={decolorized ? s.img + ' ' + s.decolorized : s.img} src={img} alt="Афиша"/>
+                    <Image layout={'responsive'}
+                           height={'150%'}
+                           width={'100%'}
+                           className={decolorized ? s.img + ' ' + s.decolorized : s.img}
+                           src={img}
+                           alt="Афиша"/>
                 <div className={s.content}>
                     <p dangerouslySetInnerHTML={{__html: subtitle}} className={s.subtitle}/>
                     <p dangerouslySetInnerHTML={{__html: title}} className={s.title}/>
                     {link && <div>Подробнее →</div>}
                 </div>
             </div>
-            {/*</NavLink>*/}
         </div>);
 };
 
