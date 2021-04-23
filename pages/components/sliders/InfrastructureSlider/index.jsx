@@ -114,14 +114,9 @@ const InfrastructureSlider = ({
     return (
         <div className={s.wrapper}>
             <div className={containerStyles}>
-
-
                 <HeadlineCenter
                     title={useMediaQuery('(max-width: 490px)') ? (titleMobile || title) : title}/>
-
-
                 <Slider {...settings}>{items}</Slider>
-
             </div>
         </div>
     )
