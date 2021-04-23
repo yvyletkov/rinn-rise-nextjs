@@ -22,6 +22,12 @@
 
       .stars {
         width: 90px;
+        position: relative;
+        height: 20px;
+
+        img {
+          object-fit: contain;
+        }
       }
 
       .text {
@@ -53,7 +59,10 @@
       transform: translate(-50%);
       height: 100%;
       width: 100%;
-      object-fit: cover;
+
+      img {
+        object-fit: cover;
+      }
     }
 
     .circlesBlock {

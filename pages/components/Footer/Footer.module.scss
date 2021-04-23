@@ -13,6 +13,46 @@
       height: 460px;
       box-shadow: -14.444px 19.167px 27px 0px rgba(23, 23, 23, 0.14);
     }
+
+    .contactBlock {
+      width: 500px;
+      height: 300px;
+      background-color: #fff;
+      position: absolute;
+      right: 60px;
+      bottom: -60px;
+      z-index: 100;
+      box-shadow: -14.444px 19.167px 27px 0px rgba(23, 23, 23, 0.05);
+      border-radius: 5px;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .title {
+        font-family: "Proxima Nova Black", sans-serif;
+        font-size: 35px;
+      }
+
+      .text p {
+        margin: 15px 0;
+        font-family: "Proxima Nova Regular", sans-serif;
+        display: flex;
+        align-items: center;
+
+        img {
+          margin-right: 10px;
+        }
+      }
+
+      .iconsBlock {
+        display: flex;
+
+        .icon {
+          margin: 0 20px 0 0;
+        }
+      }
+    }
   }
 
   .footerGray {
@@ -35,6 +75,11 @@
       .managedBy {
         display: block;
       }
+    }
+  }
+  @media screen and (max-width: 500px) {
+    .container {
+      padding: 0;
     }
   }
 }
