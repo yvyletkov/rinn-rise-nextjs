@@ -1,9 +1,9 @@
 import React from "react";
-import s from "./SpecialsSliderItem.module.scss";
+import s from "./style.module.scss";
 import cx from "classnames";
 import Image from 'next/image';
 
-const SpecialsSliderItem = (props) => {
+const OffersSliderItem = (props) => {
     const {img, active, title, subtitle, link, decolorized, oneLine, smallText} = props;
 
     let [lifted, setLifted] = React.useState(active);
@@ -40,4 +40,4 @@ const SpecialsSliderItem = (props) => {
         </div>);
 };
 
-export default SpecialsSliderItem;
+export default OffersSliderItem;
