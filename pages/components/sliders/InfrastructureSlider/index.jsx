@@ -8,8 +8,14 @@ import cx from 'classnames'
 import useMediaQuery from '../../customHooks/useMediaQuery'
 import HeadlineCenter from '../../HeadlineCenter'
 
-const InfrastructureSliderItem = (props) => {
-    const {img, title, description, active, setActive, index} = props
+const InfrastructureSliderItem = ({
+                                      img,
+                                      title,
+                                      description,
+                                      active,
+                                      setActive,
+                                      index
+                                  }) => {
 
     const classNames = cx([s.card], {[s.active]: active})
 
@@ -17,14 +23,11 @@ const InfrastructureSliderItem = (props) => {
         setActive(active ? null : index)
     }
 
-    useEffect(() => console.log('item rerender'))
-
-
     return (
         <div className={classNames}>
 
-            <div className={s.imgWrapper}>
-                <Image layout="fill" className={s.img}
+            <div className={s.img}>
+                <Image layout="fill"
                        src={img} alt=""/>
             </div>
 
@@ -33,8 +36,7 @@ const InfrastructureSliderItem = (props) => {
 
                 <div className={s.description}>
                     <p dangerouslySetInnerHTML={{__html: description}}
-                       style={{marginBottom: '10px'}}/>
-
+                       style={useMediaQuery('(max-width: 490px)')?{}:{marginBottom: '10px'}}/>
                 </div>
 
                 <div className={s.moreBtn} onClick={handleClick}>
@@ -88,8 +90,6 @@ const InfrastructureSlider = ({
 
     const [activeSlideIndex, setActiveSlideIndex] = useState(1)
     const [items, setItems] = useState([])
-
-    console.log(activeSlideIndex)
 
     useEffect(() => {
         setItems(slides.map((item, index) => {
