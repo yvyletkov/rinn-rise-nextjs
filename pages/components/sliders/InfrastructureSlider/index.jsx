@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import Slider from 'react-slick'
 import Image from 'next/image'
 import s from './style.module.scss'
@@ -9,11 +9,16 @@ import useMediaQuery from '../../customHooks/useMediaQuery'
 import HeadlineCenter from '../../HeadlineCenter'
 
 const InfrastructureSliderItem = (props) => {
-    const {img, title, description, active} = props
+    const {img, title, description, active, setActive, index} = props
 
-    let [showDescr, setShowDescr] = React.useState(active)
+    const classNames = cx([s.card], {[s.active]: active})
 
-    let classNames = cx([s.card], {[s.active]: showDescr})
+    const handleClick = () => {
+        setActive(active ? null : index)
+    }
+
+    useEffect(() => console.log('item rerender'))
+
 
     return (
         <div className={classNames}>
@@ -32,8 +37,8 @@ const InfrastructureSliderItem = (props) => {
 
                 </div>
 
-                <div className={s.moreBtn} onClick={() => setShowDescr(!showDescr)}>
-                    {showDescr ? 'Cкрыть' : 'Подробнее'}
+                <div className={s.moreBtn} onClick={handleClick}>
+                    {active ? 'Cкрыть' : 'Подробнее'}
                 </div>
 
             </div>
@@ -43,17 +48,16 @@ const InfrastructureSliderItem = (props) => {
 }
 
 const InfrastructureSlider = ({
-                                  slides,
+                                  slides = [],
                                   title,
-                                  // titleMobile,
+                                  titleMobile,
                                   initialSlideIndex = 0,
-                                  // manySlides = false,
                               }) => {
 
     const settings = {
         initialSlide: initialSlideIndex,
         infinite: true,
-        slidesToShow: slides !== undefined && (slides.length === 1 ? 1 : 3),
+        slidesToShow: slides.length === 1 ? 1 : 3,
         centerMode: true,
         arrows: false,
         variableWidth: true,
@@ -82,41 +86,38 @@ const InfrastructureSlider = ({
         ]
     }
 
-    const items = slides !== undefined && slides.map((item, index) => {
-            const {img, title, description, popupData, imgHeight} = item
+    const [activeSlideIndex, setActiveSlideIndex] = useState(1)
+    const [items, setItems] = useState([])
+
+    console.log(activeSlideIndex)
+
+    useEffect(() => {
+        setItems(slides.map((item, index) => {
+            const {img, title, description} = item
             return (
                 <div className="SliderElement" key={index}>
                     <InfrastructureSliderItem
+                        index={index}
                         img={img}
                         title={title}
                         description={description}
-                        active={useMediaQuery('(max-width: 490px)') ? false : index === 1}
+                        setActive={setActiveSlideIndex}
+                        active={index === activeSlideIndex}
                     />
                 </div>
             )
-        });
+        }))
+    }, [activeSlideIndex])
 
-    const containerStyles = cx(s.container, {[s.small]: slides !== undefined && slides.length === 1})
+    const containerStyles = cx(s.container, {[s.small]: slides.length === 1})
 
     return (
         <div className={s.wrapper}>
             <div className={containerStyles}>
 
-                {(useMediaQuery('(max-width: 480px)') &&  slides !== undefined && slides.length === 1) &&
-                <div style={{
-                    position: 'absolute',
-                    transform: 'rotate(-90deg)',
-                    right: '-30%', color: 'rgb(226, 226, 226)',
-                    fontFamily: 'Helvetica Neue Black',
-                    fontSize: '9vw',
-                    lineHeight: '0.8',
-                    top: '47%'
-                }}>
-                    Новые программы<br/>в разработке
-                </div>}
 
                 <HeadlineCenter
-                    title={useMediaQuery('(max-width: 490px)').matches ? (titleMobile || title) : title}/>
+                    title={useMediaQuery('(max-width: 490px)') ? (titleMobile || title) : title}/>
 
 
                 <Slider {...settings}>{items}</Slider>
