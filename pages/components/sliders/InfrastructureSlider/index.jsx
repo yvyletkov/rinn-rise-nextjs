@@ -3,7 +3,7 @@ import Slider from 'react-slick'
 import Image from 'next/image'
 import s from './style.module.scss'
 import PrevArrow from '../../SliderArrows/PrevArrow'
-import NextArrow from '../../SliderArrows/NextArrow';
+import NextArrow from '../../SliderArrows/NextArrow'
 import cx from 'classnames'
 import useMediaQuery from '../../customHooks/useMediaQuery'
 import HeadlineCenter from '../../HeadlineCenter'
@@ -90,6 +90,8 @@ const InfrastructureSlider = ({
 
     const [activeSlideIndex, setActiveSlideIndex] = useState(1)
     const [items, setItems] = useState([])
+    const mobile = useMediaQuery('(max-width: 700px)')
+
 
     useEffect(() => {
         setItems(slides.map((item, index) => {
@@ -102,7 +104,7 @@ const InfrastructureSlider = ({
                         title={title}
                         description={description}
                         setActive={setActiveSlideIndex}
-                        active={index === activeSlideIndex}
+                        active={!mobile ? index === activeSlideIndex : false}
                     />
                 </div>
             )

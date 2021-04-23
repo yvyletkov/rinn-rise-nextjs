@@ -22,6 +22,7 @@
   .title {
     font-family: "Proxima Nova Black";
     font-size: 40px;
+    line-height: 1;
     margin-bottom: 10px;
   }
   .text {
@@ -57,5 +58,39 @@
   height: 250px;
   img {
     object-fit: contain;
+  }
+}
+
+@media (max-width: 992px) {
+  .imageWrapper {
+    padding: 90px 20px 90px 0;
+  }
+}
+
+@media (max-width: 700px) {
+  .container {
+    flex-wrap: wrap;
+  }
+
+  .content, .imageWrapper {
+    width: 100%;
+  }
+
+  .content {
+    padding: 80px 20px 20px;
+
+    .title {
+      font-size: 32px;
+    }
+  }
+
+  .imageWrapper {
+    padding: 0;
+    .img {
+      height: 200px;
+      border: none;
+      border-radius: 0;
+
+    }
   }
 }
