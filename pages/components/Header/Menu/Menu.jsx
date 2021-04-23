@@ -83,7 +83,7 @@ const Menu = ({menuOpened, toggleMenu}) => {
 
                 <div className={s.menuItem} onClick={toggleMenu}>
                     {/* checkactive is for cheking main root page */}
-                    <Link isActive={checkActive} href={""} onClick={(e) => {
+                    <Link isActive={checkActive} href={"/"} onClick={(e) => {
                         handleLinkClick(e)
                         document.querySelector('#sports').scrollIntoView({behavior: 'smooth', block: 'start'})
                     }}>
@@ -95,7 +95,7 @@ const Menu = ({menuOpened, toggleMenu}) => {
 
                 <div className={s.menuItem} onClick={toggleMenu}>
                     {/* checkactive is for cheking main root page */}
-                    <Link isActive={checkActive} href={""} onClick={(e) => {
+                    <Link isActive={checkActive} href={"/"} onClick={(e) => {
                         handleLinkClick(e)
                         document.querySelector('#gyms').scrollIntoView({behavior: 'smooth', block: 'start'})
                     }}>
@@ -111,7 +111,7 @@ const Menu = ({menuOpened, toggleMenu}) => {
             <div className={s.col}>
 
                 <div className={s.menuItem} onClick={toggleMenu}>
-                    <Link isActive={checkActive} href={""} onClick={(e) => {
+                    <Link isActive={checkActive} href={"/"} onClick={(e) => {
                         handleLinkClick(e)
                         document.querySelector('#aboutCenter').scrollIntoView({behavior: 'smooth', block: 'start'})
                     }}>
@@ -127,7 +127,7 @@ const Menu = ({menuOpened, toggleMenu}) => {
 
 
                 <div className={s.menuItem} onClick={toggleMenu}>
-                    <Link href={""} onClick={(e) => {
+                    <Link href={"/"} onClick={(e) => {
                         handleLinkClick(e)
                         document.querySelector('#footer').scrollIntoView({behavior: 'smooth', block: 'start'})
                     }}>
