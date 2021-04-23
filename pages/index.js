@@ -5,6 +5,7 @@ import SpecialsSlider from "./components/sliders/SpecialsSlider/SpecialsSlider";
 import Header from "./components/Header/Header";
 import HomePageBanner from './components/HomePageBanner/HomePageBanner';
 import RoomsSlider from './components/sliders/RoomsSlider';
+import TextBlock from './components/TextBlock';
 
 const slides = [
     {
@@ -58,20 +59,23 @@ const slidesPromo = [
 export default function Home() {
     return (<>
             <Head>
-                <title>Главная страница</title>
+                <title>Rinn Rise – Главная страница – Анапа, Джемете</title>
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
             <main>
                 <Header/>
                 <HomePageBanner />
                 <section className='section first'>
-                    <RoomsSlider title={'Проживание'}/>
+                    <RoomsSlider title={'Номера и цены'}/>
+                </section>
+                <section>
+                    <TextBlock/>
                 </section>
                 <section className='section'>
                     <SpecialsSlider slides={slidesPromo}/>
                 </section>
                 <section className='section'>
-                    <InfrastructureSlider slides={slides} title={'Заголовок'}/>
+                    <InfrastructureSlider slides={slides} title={'Инфраструктура'}/>
                 </section>
             </main>
         </>

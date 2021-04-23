@@ -1,0 +1,16 @@
+.wrapper {
+  width: 100%;
+  background-color: #f1f1f1;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 50%;
+}

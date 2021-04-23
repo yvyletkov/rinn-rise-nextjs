@@ -1,6 +1,6 @@
-import React from "react";
-import s from "./style.module.scss";
-import cx from 'classnames';
+import React from 'react'
+import s from './style.module.scss'
+import cx from 'classnames'
 
 const CircleTip = ({accordeonStatus, onClick, style, forDesktop = false}) => {
 
@@ -11,4 +11,4 @@ const CircleTip = ({accordeonStatus, onClick, style, forDesktop = false}) => {
     </span>
 }
 
-export default CircleTip;
+export default CircleTip
