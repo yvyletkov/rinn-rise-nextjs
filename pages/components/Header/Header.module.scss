@@ -100,12 +100,14 @@
   margin-right: 0;
   text-align: right;
   font-size: 20px;
+  align-items: center;
 }
 
 .link img {
   display: inline-block;
   height: 17px;
   margin-right: 5px;
+  margin-top: 3px;
 }
 
 .link div {
@@ -194,13 +196,13 @@
   }
 
   .logo img {
-    width: 100px;
+    width: 73px;
     transition: all 400ms;
     position: unset;
   }
 
   .content.minified .logo img {
-    width: 170px;
+    width: 73px;
   }
 
   .container {
@@ -234,7 +236,7 @@
   }
 
   @media (max-width: 768px) {
-    background-color: #f5c500;
+    background-color: #00af98;
     width: 43px;
     height: 43px;
   }

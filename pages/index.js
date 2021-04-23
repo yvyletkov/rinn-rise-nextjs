@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import InfrastructureSlider from "./components/sliders/InfrastructureSlider";
-import SpecialsSlider from "./components/sliders/SpecialsSlider/SpecialsSlider";
+import SpecialsSlider from "./components/sliders/OffersSlider";
 import Header from "./components/Header/Header";
 import HomePageBanner from './components/HomePageBanner/HomePageBanner';
 import RoomsSlider from './components/sliders/RoomsSlider';
@@ -59,7 +59,9 @@ const slidesPromo = [
 export default function Home() {
     return (<>
             <Head>
+            
                 <title>Rinn Rise – Главная страница – Анапа, Джемете</title>
+
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
             <main>
