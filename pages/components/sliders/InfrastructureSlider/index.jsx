@@ -88,11 +88,14 @@ const InfrastructureSlider = ({
         ]
     }
 
-    const [activeSlideIndex, setActiveSlideIndex] = useState(1)
-    const [items, setItems] = useState([])
     const mobile = useMediaQuery('(max-width: 700px)')
+    const [activeSlideIndex, setActiveSlideIndex] = useState()
+    const [items, setItems] = useState([])
 
-
+    useEffect(() => {
+        setActiveSlideIndex(mobile ? null : 1)
+    }, [mobile]);
+    
     useEffect(() => {
         setItems(slides.map((item, index) => {
             const {img, title, description} = item
@@ -104,7 +107,7 @@ const InfrastructureSlider = ({
                         title={title}
                         description={description}
                         setActive={setActiveSlideIndex}
-                        active={!mobile ? index === activeSlideIndex : false}
+                        active={index === activeSlideIndex}
                     />
                 </div>
             )
