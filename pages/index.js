@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import MainSlider from "./components/sliders/InfrastructureSlider";
-import Index from "./components/sliders/OffersSlider";
+import InfrastructureSlider from "./components/sliders/InfrastructureSlider";
+import SpecialsSlider from "./components/sliders/SpecialsSlider/SpecialsSlider";
 import Header from "./components/Header/Header";
 import HomePageBanner from './components/HomePageBanner/HomePageBanner';
 import RoomsSlider from './components/sliders/RoomsSlider';
@@ -64,9 +64,15 @@ export default function Home() {
             <main>
                 <Header/>
                 <HomePageBanner />
-                <MainSlider slides={slides} title={'Заголовок'}/>
-                <RoomsSlider title={'Проживание'}/>
-                <Index slides={slidesPromo}/>
+                <section className='section first'>
+                    <RoomsSlider title={'Проживание'}/>
+                </section>
+                <section className='section'>
+                    <SpecialsSlider slides={slidesPromo}/>
+                </section>
+                <section className='section'>
+                    <InfrastructureSlider slides={slides} title={'Заголовок'}/>
+                </section>
             </main>
         </>
     )
