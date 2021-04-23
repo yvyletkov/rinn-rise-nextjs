@@ -5,7 +5,7 @@ import NextArrow from '../../SliderArrows/NextArrow';
 import Slider from "react-slick";
 import SpecialsSliderItem from "./SpecialsSliderItem/SpecialsSliderItem";
 
-const SpecialsSlider = ({slides}) => {
+const SpecialsSlider = ({slides = []}) => {
 
     const settings = {
         infinite: true,
@@ -31,7 +31,7 @@ const SpecialsSlider = ({slides}) => {
         ]
     };
 
-    const items = slides !== undefined && slides.map((item, index) => {
+    const items = slides.map((item, index) => {
         const {img, title, subtitle, link} = item;
         return (
             <div className="SliderElement" key={index}>
