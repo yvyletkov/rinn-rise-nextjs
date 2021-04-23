@@ -14,8 +14,6 @@ const RoomsSliderItem = ({
     }
 
     return (
-        <Link onClick={handleLinkClick} href="#">
-            <a>
                 <div className={s.card}>
                     <div className={s.img}>
                         <Image layout="fill" src={img} alt={''}/>
@@ -23,8 +21,9 @@ const RoomsSliderItem = ({
                     <div className={s.content}>
                         <h6 className={s.title}>
                             Номер
-                            <span>Стандарт</span>
+                            <span>{data.title}</span>
                         </h6>
+                        {data.additional && <p className={s.additionalInfo}>{data.additional}</p>}
                         <p className={s.text}>
                             {data.text}
                         </p>
@@ -35,8 +34,6 @@ const RoomsSliderItem = ({
                         </a>
                     </Link>
                 </div>
-            </a>
-        </Link>
     );
 
 };
