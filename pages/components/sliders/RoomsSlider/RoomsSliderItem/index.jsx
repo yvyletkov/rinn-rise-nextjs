@@ -28,12 +28,12 @@ const RoomsSliderItem = ({
                         <p className={s.text}>
                             {data.text}
                         </p>
-                        <Link href={''}>
-                            <a className={s.link}>
-                                Подробнее <span>→</span>
-                            </a>
-                        </Link>
                     </div>
+                    <Link href={''}>
+                        <a className={s.link}>
+                            Подробнее <span>→</span>
+                        </a>
+                    </Link>
                 </div>
             </a>
         </Link>

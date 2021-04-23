@@ -52,7 +52,7 @@ $imgWidth: 390px;
     text-transform: none;
     margin-top: 2px;
     font-size: 30px;
-    font-weight: bolder;
+    font-family: 'Proxima Nova Black', sans-serif;
   }
 
 }
@@ -66,41 +66,65 @@ $imgWidth: 390px;
   position: absolute;
   color: #b9b9b9;
   bottom: 60px;
-  left: 40px;
+  left: $imgWidth + 40px;
   span {
     font-size: 20px;
   }
 }
 
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 720px) {
   .card {
     width: 65vw;
     height: calc(65vw * 1.4);
     position: relative;
     margin: 0 0 0 20px;
+    display: block;
     box-shadow: -14.444px 19.167px 27px 0px rgba(23, 23, 23, 0.14);
   }
-}
 
-@media screen and (max-width: 425px) {
+  .img {
+    height: 50%;
+    width: 100%;
+  }
+
   .content {
-    transform: scale(0.8);
+    padding: 20px;
+    width: 100%;
+  }
+
+  .title {
+    font-size: 11px;
+    margin-bottom: 12px;
+    span {
+      font-size: 20px;
+    }
+  }
+
+  .link {
+    bottom: 20px;
+    left: 20px;
   }
 }
 
+//@media screen and (max-width: 425px) {
+//  .content {
+//    transform: scale(0.8);
+//  }
+//}
+//
 @media screen and (max-width: 375px) {
-  .content {
-    transform: scale(0.7);
+  .text {
+    font-size: 12px;
   }
 }
-
-@media screen and (max-width: 320px) {
-  .content {
-    transform: scale(0.6);
-  }
-}
-
+//
+//@media screen and (max-width: 320px) {
+//  .content {
+//    transform: scale(0.6);
+//  }
+//}
+//
 
 
 
