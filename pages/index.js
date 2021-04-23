@@ -58,7 +58,7 @@ const slidesPromo = [
 export default function Home() {
     return (<>
             <Head>
-                <title>Главная страница</title>
+                <title>Rinn Rise - Главная страница</title>
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
             <main>
