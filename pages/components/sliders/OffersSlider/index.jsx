@@ -1,11 +1,12 @@
 import React from 'react';
-import s from './SpecialsSlider.module.scss';
+import s from './style.module.scss';
 import PrevArrow from "../../SliderArrows/PrevArrow";
 import NextArrow from '../../SliderArrows/NextArrow';
 import Slider from "react-slick";
-import SpecialsSliderItem from "./SpecialsSliderItem/SpecialsSliderItem";
+import OffersSliderItem from "./OffersSliderItem";
+import HeadlineCenter from '../../HeadlineCenter';
 
-const SpecialsSlider = ({slides = []}) => {
+const OffersSlider = ({slides = []}) => {
 
     const settings = {
         infinite: true,
@@ -14,11 +15,13 @@ const SpecialsSlider = ({slides = []}) => {
         speed: 500,
         nextArrow: <NextArrow positionStyles={{
             bottom: "15px",
-            right: "calc(50% - 60px)"
+            left: '50%',
+            transform: 'translateX(900%)'
         }}/>,
         prevArrow: <PrevArrow positionStyles={{
             bottom: "15px",
-            left: "calc(50% - 60px)"
+            left: '50%',
+            transform: 'translateX(750%)'
         }}/>,
         responsive: [
             {
@@ -35,7 +38,7 @@ const SpecialsSlider = ({slides = []}) => {
         const {img, title, subtitle, link} = item;
         return (
             <div className="SliderElement" key={index}>
-                <SpecialsSliderItem
+                <OffersSliderItem
                     img={img}
                     title={title}
                     subtitle={subtitle}
@@ -48,7 +51,7 @@ const SpecialsSlider = ({slides = []}) => {
 
     return (
         <div className={s.sliderContainer}>
-            <div className={s.sliderTitle}>Активные спецпредложения</div>
+            <HeadlineCenter title={'Специальные предложения'} style={{paddingBottom:'40px'}}/>
             <div className={s.sliderWrapper}>
                 <Slider {...settings}>{items}</Slider>
             </div>
@@ -56,4 +59,4 @@ const SpecialsSlider = ({slides = []}) => {
     )
 }
 
-export default SpecialsSlider
+export default OffersSlider;

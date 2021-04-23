@@ -88,8 +88,8 @@ const Header = () => {
                             {/*<CustomLink icon={search}*/}
                             {/*      extraClass={s.searchIcon} href={"/search"} onClickHandler={handleLinkClick} style={{cursor: 'not-allowed'}}/>*/}
                             <div className={s.contacts}>
-                                <a href={"tel:88005557856"}
-                                         className={s.link + ' ' + s.number}>
+                                <a href={"tel:88005557856"} className={s.link + ' ' + s.number}>
+                                    <img src={'/images/phone.svg'} alt={'Телефон'}/>
                                     <div className={s.telephone}>+7 (800) 555-78-56</div>
                                     <span className={s.location}>
                                         Джемете, г. Анапа
