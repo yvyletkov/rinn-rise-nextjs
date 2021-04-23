@@ -14,8 +14,8 @@ const HomePageBanner = () => {
                     </div>
                     <img className={s.banner} src={'/images/home-page/1.jpg'} alt={'Rinn Rise'}/>
                     <img className={s.circlesBlock} src={'/images/home-page/circles.png'} alt={'Круги'} />
+                    <div className={s.moduleBlock} />
                 </div>
-                <div className={s.moduleBlock} />
                 <div className={s.animatedMouse}>
                     <AnimatedMouseIcon />
                 </div>

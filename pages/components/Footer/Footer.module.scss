@@ -1,0 +1,44 @@
+.wrapper {
+  width: 100%;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+
+    .mapWrapper {
+      max-width: 1150px;
+      margin: 0 auto 100px;
+      height: 460px;
+      box-shadow: -14.444px 19.167px 27px 0px rgba(23, 23, 23, 0.14);
+    }
+  }
+
+  .footerGray {
+    box-sizing: border-box;
+    padding: 0 10px;
+    width: 100%;
+    display: flex;
+    background-color: #e0e0e0;
+    text-align: center;
+    font-size: 16px;
+    font-weight: lighter;
+    height: 65px;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (max-width: 1100px) {
+      .thinLine {
+        display: none;
+      }
+      .managedBy {
+        display: block;
+      }
+    }
+  }
+}
+
+
+
+

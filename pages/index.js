@@ -6,6 +6,7 @@ import Header from "./components/Header/Header";
 import HomePageBanner from './components/HomePageBanner/HomePageBanner';
 import RoomsSlider from './components/sliders/RoomsSlider';
 import TextBlock from './components/TextBlock';
+import Footer from './components/Footer/Footer';
 
 const slides = [
     {
@@ -79,6 +80,7 @@ export default function Home() {
                 <section className='section'>
                     <InfrastructureSlider slides={slides} title={'Инфраструктура'}/>
                 </section>
+                <Footer/>
             </main>
         </>
     )
