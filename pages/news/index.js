@@ -1,12 +1,4 @@
 import Head from 'next/head'
-import InfrastructureSlider from '../components/sliders/InfrastructureSlider';
-import SpecialsSlider from '../components/sliders/OffersSlider';
-import Header from '../components/Header/Header';
-import HomePageBanner from '../components/HomePageBanner/HomePageBanner';
-import RoomsSlider from '../components/sliders/RoomsSlider';
-import TextBlock from '../components/TextBlock';
-import Footer from '../components/Footer/Footer';
-import LazyLoad from 'react-lazyload';
 
 const slides = [
     {
