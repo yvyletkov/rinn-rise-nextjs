@@ -53,10 +53,17 @@
   height: 200px;
 }
 
-.logo img {
+.logo a .logoWrapper {
   width: 150px;
+  height: 90px;
   position: relative;
   top:15px;
+
+  @media screen and (max-width: 1200px) {
+    top:unset;
+    width: 100px;
+    height: 60px;
+  }
 }
 
 .leftBlock {
