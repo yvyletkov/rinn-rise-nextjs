@@ -3,7 +3,7 @@ import s from './Header.module.scss'
 import Link from 'next/link'
 import Menu from './Menu/Menu'
 import useMediaQuery from '../customHooks/useMediaQuery'
-// import PopupContactForm from '../additional/ContactForm/PopupContactForm'
+import Image from 'next/image'
 
 
 const CustomLink = ({title, style, icon, link = '#', extraClass = null, onClickHandler, href = '#'}) => {
@@ -80,7 +80,9 @@ const Header = () => {
                         <div className={s.logo}>
                             <Link href={'/'}>
                                 <a>
-                                    <img src={'/images/rinnrise-logo.png'} alt="Rinnrise"/>
+                                    <div className={s.logoWrapper}>
+                                        <Image layout={'fill'} src={'/images/rinnrise-logo.png'} alt="Rinnrise"/>
+                                    </div>
                                 </a>
                             </Link>
                         </div>
