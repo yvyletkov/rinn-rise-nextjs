@@ -28,23 +28,35 @@ export default function Home() {
                     <TextBlock/>
                 </section>
 
-                <LazyLoad height={'400px'} offset={800}>
-                    <section className="section">
-                        <OffersSlider slides={offersSlides} title="Специальные предложения"/>
-                    </section>
-                </LazyLoad>
+                {/*<LazyLoad height={'400px'} offset={800}>*/}
+                {/*    <section className="section">*/}
+                {/*        <OffersSlider slides={offersSlides} title="Специальные предложения"/>*/}
+                {/*    </section>*/}
+                {/*</LazyLoad>*/}
 
-                <LazyLoad height={'400px'} offset={800}>
-                    <section className="section">
-                        <InfrastructureSlider slides={infrastructureSlides} title={'Инфраструктура'}/>
-                    </section>
-                </LazyLoad>
+                {/*<LazyLoad height={'400px'} offset={800}>*/}
+                {/*    <section className="section">*/}
+                {/*        <InfrastructureSlider slides={infrastructureSlides} title={'Инфраструктура'}/>*/}
+                {/*    </section>*/}
+                {/*</LazyLoad>*/}
 
-                <LazyLoad height={'400px'} offset={800}>
-                    <section className="section">
-                        <GallerySlider slides={gallerySlides} title={'Фотогалерея'}/>
-                    </section>
-                </LazyLoad>
+                {/*<LazyLoad height={'400px'} offset={800}>*/}
+                {/*    <section className="section">*/}
+                {/*        <GallerySlider slides={gallerySlides} title={'Фотогалерея'}/>*/}
+                {/*    </section>*/}
+                {/*</LazyLoad>*/}
+
+                <section className="section">
+                    <OffersSlider slides={offersSlides} title="Специальные предложения"/>
+                </section>
+
+                <section className="section">
+                    <InfrastructureSlider slides={infrastructureSlides} title={'Инфраструктура'}/>
+                </section>
+
+                <section className="section">
+                    <GallerySlider slides={gallerySlides} title={'Фотогалерея'}/>
+                </section>
 
             </main>
         </>
