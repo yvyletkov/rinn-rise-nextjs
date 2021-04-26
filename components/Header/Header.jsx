@@ -81,7 +81,7 @@ const Header = () => {
                             <Link href={'/'}>
                                 <a>
                                     <div className={s.logoWrapper}>
-                                        <Image loading={'eager'} layout={'fill'} src={'/images/rinnrise-logo.png'} alt="Rinnrise"/>
+                                        <Image loading={'eager'} layout={'fill'} src={'/images/rinnrise-logo.svg'} alt="Rinnrise"/>
                                     </div>
                                 </a>
                             </Link>

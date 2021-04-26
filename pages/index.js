@@ -6,6 +6,8 @@ import RoomsSlider from '../components/sliders/RoomsSlider'
 import TextBlock from '../components/TextBlock'
 import {roomsSlides, offersSlides, infrastructureSlides, gallerySlides} from '../data/homePageData'
 import GallerySlider from '../components/sliders/GallerySlider'
+import LazyLoad from 'react-lazyload';
+import SimpleReactLightbox from 'simple-react-lightbox';
 
 
 export default function Home() {
@@ -26,17 +28,23 @@ export default function Home() {
                     <TextBlock/>
                 </section>
 
-                <section className="section">
-                    <OffersSlider slides={offersSlides} title="Специальные предложения"/>
-                </section>
+                <LazyLoad height={'400px'} offset={800}>
+                    <section className="section">
+                        <OffersSlider slides={offersSlides} title="Специальные предложения"/>
+                    </section>
+                </LazyLoad>
 
-                <section className="section">
-                    <InfrastructureSlider slides={infrastructureSlides} title={'Инфраструктура'}/>
-                </section>
+                <LazyLoad height={'400px'} offset={800}>
+                    <section className="section">
+                        <InfrastructureSlider slides={infrastructureSlides} title={'Инфраструктура'}/>
+                    </section>
+                </LazyLoad>
 
-                <section className="section">
-                    <GallerySlider slides={gallerySlides} title={'Фотогалерея'}/>
-                </section>
+                <LazyLoad height={'400px'} offset={800}>
+                    <section className="section">
+                        <GallerySlider slides={gallerySlides} title={'Фотогалерея'}/>
+                    </section>
+                </LazyLoad>
 
             </main>
         </>

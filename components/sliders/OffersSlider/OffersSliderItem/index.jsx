@@ -32,6 +32,7 @@ const OffersSliderItem = ({
                 onMouseEnter={() => !window.matchMedia('screen and (max-width: 1200px)').matches ? setLifted(true) : null}
                 onMouseLeave={() => !window.matchMedia('screen and (max-width: 1200px)').matches ? setLifted(false) : null}>
                 <Image layout={'responsive'}
+                       loading='eager'
                        height={'150%'}
                        // quality='40'
                        width={'100%'}
