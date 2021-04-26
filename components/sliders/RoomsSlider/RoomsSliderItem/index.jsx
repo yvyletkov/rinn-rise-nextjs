@@ -41,7 +41,7 @@ const RoomsSliderItem = ({
 
 RoomsSliderItem.propTypes = {
     img: PropTypes.string.isRequired,
-    data: PropTypes.object.isRequired,
+    data: PropTypes.object,
 }
 
 export default RoomsSliderItem;

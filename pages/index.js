@@ -1,13 +1,12 @@
 import Head from 'next/head'
 import InfrastructureSlider from '../components/sliders/InfrastructureSlider'
-import SpecialsSlider from '../components/sliders/OffersSlider'
+import OffersSlider from '../components/sliders/OffersSlider'
 import HomePageBanner from '../components/HomePageBanner/HomePageBanner'
 import RoomsSlider from '../components/sliders/RoomsSlider'
 import TextBlock from '../components/TextBlock'
 import {roomsSlides, offersSlides, infrastructureSlides, gallerySlides} from '../data/homePageData'
-import GallerySlider from '../components/sliders/GallerySlider';
-import LazyLoad from 'react-lazyload';
-import SimpleReactLightbox from 'simple-react-lightbox';
+import GallerySlider from '../components/sliders/GallerySlider'
+
 
 export default function Home() {
     return (<>
@@ -23,29 +22,21 @@ export default function Home() {
                     <RoomsSlider title={'Номера и цены'} slides={roomsSlides}/>
                 </section>
 
-                <LazyLoad height={'400px'} offset={100}>
-                    <section className="section">
-                        <TextBlock/>
-                    </section>
-                </LazyLoad>
+                <section className="section">
+                    <TextBlock/>
+                </section>
 
-                <LazyLoad height={'400px'} offset={200}>
-                    <section className="section">
-                        <SpecialsSlider slides={offersSlides} title="Специальные предложения"/>
-                    </section>
-                </LazyLoad>
+                <section className="section">
+                    <OffersSlider slides={offersSlides} title="Специальные предложения"/>
+                </section>
 
-                <LazyLoad height={'400px'} offset={100} >
-                    <section className="section">
-                        <InfrastructureSlider slides={infrastructureSlides} title={'Инфраструктура'}/>
-                    </section>
-                </LazyLoad>
+                <section className="section">
+                    <InfrastructureSlider slides={infrastructureSlides} title={'Инфраструктура'}/>
+                </section>
 
-                <LazyLoad height={'400px'} offset={600}>
-                    <section className="section">
-                        <GallerySlider slides={gallerySlides} title={'Фотогалерея'}/>
-                    </section>
-                </LazyLoad>
+                <section className="section">
+                    <GallerySlider slides={gallerySlides} title={'Фотогалерея'}/>
+                </section>
 
             </main>
         </>
