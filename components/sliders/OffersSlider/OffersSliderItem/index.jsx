@@ -33,6 +33,7 @@ const OffersSliderItem = ({
                 onMouseLeave={() => !window.matchMedia('screen and (max-width: 1200px)').matches ? setLifted(false) : null}>
                 <Image layout={'responsive'}
                        height={'150%'}
+                       quality='40'
                        width={'100%'}
                        className={s.img}
                        src={img}
