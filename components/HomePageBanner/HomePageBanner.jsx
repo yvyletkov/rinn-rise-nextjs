@@ -19,7 +19,7 @@ const HomePageBanner = () => {
                     {/*<div className={s.moduleBlock} />*/}
                 </div>
                 <div className={s.banner}>
-                    <Image layout={'fill'} src={'/images/home-page/1.jpg'} alt={'Rinn Rise'}/>
+                    <Image loading={'eager'} layout={'fill'} src={'/images/home-page/1.jpg'} alt={'Rinn Rise'}/>
                 </div>
                 <div className={s.animatedMouse}>
                     <AnimatedMouseIcon />
