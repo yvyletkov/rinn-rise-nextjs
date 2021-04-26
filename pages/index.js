@@ -23,25 +23,25 @@ export default function Home() {
                     <RoomsSlider title={'Номера и цены'} slides={roomsSlides}/>
                 </section>
 
-                <LazyLoad height={'400px'}>
+                <LazyLoad height={'400px'} offset={100}>
                     <section className="section">
                         <TextBlock/>
                     </section>
                 </LazyLoad>
 
-                <LazyLoad height={'400px'}>
+                <LazyLoad height={'400px'} offset={200}>
                     <section className="section">
                         <SpecialsSlider slides={offersSlides} title="Специальные предложения"/>
                     </section>
                 </LazyLoad>
 
-                <LazyLoad height={'400px'}>
+                <LazyLoad height={'400px'} offset={100} >
                     <section className="section">
                         <InfrastructureSlider slides={infrastructureSlides} title={'Инфраструктура'}/>
                     </section>
                 </LazyLoad>
 
-                <LazyLoad height={'400px'}>
+                <LazyLoad height={'400px'} offset={600}>
                     <section className="section">
                         <GallerySlider slides={gallerySlides} title={'Фотогалерея'}/>
                     </section>

@@ -1,4 +1,3 @@
-
 import '../styles/globals.scss';
 import '../styles/fonts.css';
 import 'slick-carousel/slick/slick.css';
