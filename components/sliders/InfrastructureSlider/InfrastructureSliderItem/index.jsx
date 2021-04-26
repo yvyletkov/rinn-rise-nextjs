@@ -26,6 +26,7 @@ const InfrastructureSliderItem = ({
 
             <div className={s.img}>
                 <Image layout="fill"
+                       loading='eager'
                        quality='40'
                        src={img}
                        alt=""/>
