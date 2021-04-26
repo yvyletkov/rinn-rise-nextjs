@@ -16,7 +16,7 @@ const HomePageBanner = () => {
                         <h3 className={s.subtitle}>Джемете, Анапа</h3>
                     </div>
                     <img className={s.circlesBlock} src={'/images/home-page/circles.png'} alt={'Круги'} />
-                    <div className={s.moduleBlock} />
+                    {/*<div className={s.moduleBlock} />*/}
                 </div>
                 <div className={s.banner}>
                     <Image layout={'fill'} src={'/images/home-page/1.jpg'} alt={'Rinn Rise'}/>

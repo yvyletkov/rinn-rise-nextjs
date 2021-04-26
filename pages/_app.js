@@ -1,3 +1,4 @@
+
 import '../styles/globals.scss';
 import '../styles/fonts.css';
 import 'slick-carousel/slick/slick.css';
@@ -8,6 +9,8 @@ import Header from '../components/Header/Header';
 import LazyLoad from 'react-lazyload';
 import Footer from '../components/Footer/Footer';
 import {useEffect, useState} from 'react';
+import SimpleReactLightbox from 'simple-react-lightbox'
+
 
 function MyApp({Component, pageProps}) {
     const [loading, setLoading] = useState(false);
@@ -34,13 +37,13 @@ function MyApp({Component, pageProps}) {
             {loading ? (
                 <h1>Loading...</h1>
             ) : (
-                <>
-                    <Header/>
-                    <Component {...pageProps} />
-                    <LazyLoad height={'200px'}>
-                        <Footer/>
-                    </LazyLoad>
-                </>
+                <SimpleReactLightbox>
+                  <Header/>
+                  <Component {...pageProps} />
+                  <LazyLoad height={'200px'}>
+                    <Footer/>
+                  </LazyLoad>
+                </SimpleReactLightbox>
             )}
         </>
     );
