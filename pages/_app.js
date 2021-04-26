@@ -13,14 +13,14 @@ function MyApp({Component, pageProps}) {
 
     const [loading, setLoading] = useState(true)
 
-    useEffect(() => {
-        const timeout = setTimeout(() => setLoading(false), 1000)
-        return () => clearTimeout(timeout)
-    }, [Component]);
+    // useEffect(() => {
+    //     const timeout = setTimeout(() => setLoading(false), 1000)
+    //     return () => clearTimeout(timeout)
+    // }, [Component]);
 
     return (
         <>
-            {loading && <Loader/>}
+            {/*{loading && <Loader/>}*/}
 
                 <SimpleReactLightbox>
                     <Header/>
@@ -29,7 +29,7 @@ function MyApp({Component, pageProps}) {
                         <Footer/>
                     </LazyLoad>
                 </SimpleReactLightbox>
-            )}
+            {/*)}*/}
         </>
     );
 }
