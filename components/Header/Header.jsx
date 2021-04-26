@@ -102,7 +102,7 @@ const Header = () => {
                                     ? <img style={{
                                         width: "47%",
                                         filter: 'invert(1)'
-                                    }} src={'/images/phone.svg'} alt=""/>
+                                    }} src={'/images/footer/phone.svg'} alt=""/>
                                     : 'Заказать звонок'
                             }</div>
 
