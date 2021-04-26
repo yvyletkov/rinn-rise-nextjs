@@ -80,7 +80,6 @@ const RoomsSlider = ({
 
     const sliderRef = React.useRef()
 
-
     return (
         <div className={s.wrapper}>
             <div className={s.container}>

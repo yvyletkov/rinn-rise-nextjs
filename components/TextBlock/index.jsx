@@ -31,7 +31,7 @@ const TextBlock = (props) => {
             </div>
             <div className={s.imageWrapper}>
                 <div className={s.img}>
-                    <Image src="/images/home-page/text-block.jpg" layout="fill"/>
+                    <Image quality='50' src="/images/home-page/text-block.jpg" layout="fill"/>
                 </div>
             </div>
         </div>
