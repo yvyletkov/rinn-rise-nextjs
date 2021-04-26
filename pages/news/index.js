@@ -1,12 +1,11 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
-import InfrastructureSlider from './components/sliders/InfrastructureSlider';
-import SpecialsSlider from './components/sliders/OffersSlider';
-import Header from './components/Header/Header';
-import HomePageBanner from './components/HomePageBanner/HomePageBanner';
-import RoomsSlider from './components/sliders/RoomsSlider';
-import TextBlock from './components/TextBlock';
-import Footer from './components/Footer/Footer';
+import InfrastructureSlider from '../components/sliders/InfrastructureSlider';
+import SpecialsSlider from '../components/sliders/OffersSlider';
+import Header from '../components/Header/Header';
+import HomePageBanner from '../components/HomePageBanner/HomePageBanner';
+import RoomsSlider from '../components/sliders/RoomsSlider';
+import TextBlock from '../components/TextBlock';
+import Footer from '../components/Footer/Footer';
 import LazyLoad from 'react-lazyload';
 
 const slides = [
@@ -62,24 +61,12 @@ export default function Home() {
     return (<>
             <Head>
 
-                <title>Rinn Rise – Главная страница – Анапа, Джемете</title>
+                <title>123</title>
 
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
             <main>
-                <HomePageBanner/>
-                <section className="section first">
-                    <RoomsSlider title={'Номера и цены'}/>
-                </section>
-                <section>
-                    <TextBlock/>
-                </section>
-                <section className="section">
-                    <SpecialsSlider slides={slidesPromo}/>
-                </section>
-                <section className="section">
-                    <InfrastructureSlider slides={slides} title={'Инфраструктура'}/>
-                </section>
+                <h1 style={{marginTop: '200px'}}>HELLO WORLD!</h1>
             </main>
         </>
     )
