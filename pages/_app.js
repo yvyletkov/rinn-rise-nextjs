@@ -7,6 +7,7 @@ import LazyLoad from 'react-lazyload'
 import Footer from '../components/Footer/Footer'
 import SimpleReactLightbox from 'simple-react-lightbox'
 import {useEffect, useState} from 'react'
+import Loader from '../components/Loader';
 
 function MyApp({Component, pageProps}) {
 
@@ -19,7 +20,7 @@ function MyApp({Component, pageProps}) {
 
     return (
         <>
-            {loading && <h1 style={{textAlign: 'center'}}>Loading...</h1>}
+            {loading && <Loader/>}
 
                 <SimpleReactLightbox>
                     <Header/>
