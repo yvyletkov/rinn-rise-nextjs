@@ -15,11 +15,11 @@ const HomePageBanner = () => {
                         <h1 className={s.title}>Rinn Rise</h1>
                         <h3 className={s.subtitle}>Джемете, Анапа</h3>
                     </div>
-                    <div className={s.banner}>
-                        <Image layout={'fill'} src={'/images/home-page/1.jpg'} alt={'Rinn Rise'}/>
-                    </div>
                     <img className={s.circlesBlock} src={'/images/home-page/circles.png'} alt={'Круги'} />
                     <div className={s.moduleBlock} />
+                </div>
+                <div className={s.banner}>
+                    <Image layout={'fill'} src={'/images/home-page/1.jpg'} alt={'Rinn Rise'}/>
                 </div>
                 <div className={s.animatedMouse}>
                     <AnimatedMouseIcon />
