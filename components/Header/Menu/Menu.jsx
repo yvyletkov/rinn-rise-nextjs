@@ -142,7 +142,7 @@ const Menu = ({menuOpened, toggleMenu}) => {
             <div className={`${s.col}`}>
                 <div className={s.callUs}>Свяжитесь с нами</div>
                 <div className={s.location}>
-                    <img className={s.adressImg} src={'/images/footer/adress.png'} alt="Наш адрес"/>
+                    <img className={s.adressImg} src={'/images/footer/address.png'} alt="Наш адрес"/>
                 </div>
                 <div className={s.phone}>
                     <img src={'/images/footer/phone.svg'} alt="Телефон"/>

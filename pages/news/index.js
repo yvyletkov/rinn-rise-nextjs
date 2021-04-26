@@ -1,11 +1,14 @@
 import Head from 'next/head'
-import InfrastructureSlider from '../components/sliders/InfrastructureSlider'
-import SpecialsSlider from '../components/sliders/OffersSlider'
-import HomePageBanner from '../components/HomePageBanner/HomePageBanner'
-import RoomsSlider from '../components/sliders/RoomsSlider'
-import TextBlock from '../components/TextBlock'
+import InfrastructureSlider from '../components/sliders/InfrastructureSlider';
+import SpecialsSlider from '../components/sliders/OffersSlider';
+import Header from '../components/Header/Header';
+import HomePageBanner from '../components/HomePageBanner/HomePageBanner';
+import RoomsSlider from '../components/sliders/RoomsSlider';
+import TextBlock from '../components/TextBlock';
+import Footer from '../components/Footer/Footer';
+import LazyLoad from 'react-lazyload';
 
-const infrastructureSlides = [
+const slides = [
     {
         img: '/images/infrastructure/wild-beach.jpg',
         title: 'Дикий пляж',
@@ -54,74 +57,16 @@ const slidesPromo = [
     },
 ]
 
-const roomsSlides = [
-    {
-        img: '/images/room-photos/standart.jpg',
-        data: {
-            title: 'Стандарт',
-            text: 'Уютный однокомнатный номер с двумя раздельными кроватями или одной большой кроватью.'
-        }
-    },
-    {
-        img: '/images/room-photos/Superior-no-extra.jpg',
-        data: {
-            title: 'Superior',
-            additional: 'Без доп. места',
-            text: 'Уютный однокомнатный номер с большой кроватью.'
-        }
-    },
-    {
-        img: '/images/room-photos/Superior-with-extra.jpg',
-        data: {
-            title: 'Superior',
-            additional: 'C доп. местом',
-            text: 'Просторный однокомнатный номер с большой кроватью.'
-        }
-    },
-    {
-        img: '/images/room-photos/lux-1.jpg',
-        data: {
-            title: 'Люкс однокомнантый',
-            text: 'Просторный однокомнатный номер с большой кроватью.'
-        }
-    },
-    {
-        img: '/images/room-photos/lux-2.jpg',
-        data: {
-            title: 'Люкс двухкомнатный',
-            text: 'Просторный двухкомнатный номер с большой спальней и гостиной.'
-        }
-    },
-    {
-        img: '/images/room-photos/lux-3.jpg',
-        data: {
-            title: 'Люкс трехкомнатный',
-            text: 'Просторный трёхкомнатный номер с гостиной и двумя спальнями.'
-        }
-    },
-]
-
-
 export default function Home() {
     return (<>
             <Head>
-                <title>Rinn Rise – Главная страница – Анапа, Джемете</title>
+
+                <title>123</title>
+
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
             <main>
-                <HomePageBanner/>
-                <section className="section first">
-                    <RoomsSlider title={'Номера и цены'} slides={roomsSlides}/>
-                </section>
-                <section>
-                    <TextBlock/>
-                </section>
-                <section className="section">
-                    <SpecialsSlider slides={slidesPromo} title='Специальные предложения'/>
-                </section>
-                <section className="section">
-                    <InfrastructureSlider slides={infrastructureSlides} title={'Инфраструктура'}/>
-                </section>
+                <h1 style={{marginTop: '200px'}}>HELLO WORLD!</h1>
             </main>
         </>
     )
