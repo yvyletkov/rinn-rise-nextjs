@@ -1,9 +1,9 @@
-import React, {useState} from "react";
-import s from "./Header.module.scss";
+import React, {useState} from 'react'
+import s from './Header.module.scss'
 import Link from 'next/link'
-import Menu from "./Menu/Menu";
-import useMediaQuery from "../customHooks/useMediaQuery";
-// import PopupContactForm from "../additional/ContactForm/PopupContactForm";
+import Menu from './Menu/Menu'
+import useMediaQuery from '../customHooks/useMediaQuery'
+// import PopupContactForm from '../additional/ContactForm/PopupContactForm'
 
 
 const CustomLink = ({title, style, icon, link = '#', extraClass = null, onClickHandler, href = '#'}) => {
@@ -20,25 +20,25 @@ const CustomLink = ({title, style, icon, link = '#', extraClass = null, onClickH
             {title && <div>{title}</div>}
         </a>
     </Link>
-};
+}
 
 const Header = () => {
 
-    let [scrolledFromTop, setScrolledFromTop] = useState(0);
-    let [menuOpened, setMenuOpened] = useState(false);
-    let [popupOpened, setPopupOpened] = useState(false);
-    const [innerHeight, setInnerHeight] = useState();
+    let [scrolledFromTop, setScrolledFromTop] = useState(0)
+    let [menuOpened, setMenuOpened] = useState(false)
+    let [popupOpened, setPopupOpened] = useState(false)
+    const [innerHeight, setInnerHeight] = useState()
 
     const listenToScroll = () => {
-        const scroll = document.body.scrollTop || document.documentElement.scrollTop;
+        const scroll = document.body.scrollTop || document.documentElement.scrollTop
         setScrolledFromTop(scroll)
     };
 
     React.useEffect(() => {
-        window.addEventListener('scroll', listenToScroll);
-        setInnerHeight(window.innerHeight);
+        window.addEventListener('scroll', listenToScroll)
+        setInnerHeight(window.innerHeight)
         return () => window.removeEventListener('scroll', listenToScroll)
-    }, []);
+    }, [])
 
     const toggleMenu = () => {
         setMenuOpened(status => !status)
@@ -85,8 +85,6 @@ const Header = () => {
                             </Link>
                         </div>
                         <div className={s.rightBlock}>
-                            {/*<CustomLink icon={search}*/}
-                            {/*      extraClass={s.searchIcon} href={"/search"} onClickHandler={handleLinkClick} style={{cursor: 'not-allowed'}}/>*/}
                             <div className={s.contacts}>
                                 <a href={"tel:88005557856"} className={s.link + ' ' + s.number}>
                                     <img src={'/images/footer/phone.svg'} alt={'Телефон'}/>
@@ -123,7 +121,7 @@ const Header = () => {
 
         </>
     )
-};
+}
 
-export default Header;
+export default Header
 

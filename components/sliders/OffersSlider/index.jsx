@@ -52,7 +52,7 @@ const OffersSlider = ({slides, title}) => {
 
     return (
         <div className={s.sliderContainer}>
-            <HeadlineCenter title={title} style={{paddingBottom:'40px'}}/>
+            <HeadlineCenter title={title}/>
             <div className={s.sliderWrapper}>
                 <Slider {...settings}>{items}</Slider>
             </div>

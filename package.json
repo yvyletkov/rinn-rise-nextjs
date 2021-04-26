@@ -15,6 +15,7 @@
     "react-lazyload": "^3.2.0",
     "react-slick": "^0.28.1",
     "react-yandex-maps": "^4.6.0",
+    "simple-react-lightbox": "^3.6.6",
     "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
