@@ -1,65 +1,135 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import InfrastructureSlider from '../components/sliders/InfrastructureSlider';
+import SpecialsSlider from '../components/sliders/OffersSlider';
+import Header from '../components/Header/Header';
+import HomePageBanner from '../components/HomePageBanner/HomePageBanner';
+import RoomsSlider from '../components/sliders/RoomsSlider';
+import TextBlock from '../components/TextBlock';
+import Footer from '../components/Footer/Footer';
+
+const infrastructureSlides = [
+    {
+        img: '/images/infrastructure/wild-beach.jpg',
+        title: 'Дикий пляж',
+        description: `Дикий пляж в Джемете – уникальная возможность получить морскую гладь в чистом виде. Без мусора, пронзительного людского шума и других отвлекающих от прекрасного отдыха факторов.`,
+    },
+    {
+        img: '/images/infrastructure/dolphinarium.jpg',
+        title: 'Дельфинарий «Немо»',
+        description: `Дельфинарий «Немо» в Джемете — одна из популярных туристических достопримечательностей, открытая в 2013 году. «Немо» — известная сеть океанариумов на территории стран СНГ, известная красочными представлениями и множеством развлечений с представителями подводного мира — дайвингом, дельфинотерапией и многими другими.`,
+    },
+    {
+        img: '/images/infrastructure/aquapark.jpg',
+        title: 'Аквапарк «Тики-Так»',
+        description: `В аквапарке представлены новейшие аттракционы. Для любителей экстрима представлен аттракцион, оборудованный специальной капсулой для вертикального старта, – на такой горке скорость спуска развивается до 12 м/сек!<br/>Также оборудованы горки «свободного падения», горка-водоворот, горка-лабиринт и мн. др. Для детишек предусмотрен детский игровой городок, со всевозможными спусками, игровыми площадками, водными игрушками и опрокидывающейся емкостью с водой, расположенной на высоте 8 м.`,
+    }
+
+];
+
+const slidesPromo = [
+    {
+        img: '/images/1.jpg',
+        subtitle: 'Летний отдых',
+        title: 'С выгодой до 20%',
+        link: '/offers/letniy-otdyh',
+        cashback: true,
+    },
+    {
+        img: '/images/1.jpg',
+        subtitle: 'до 20 000 рублей',
+        title: 'Кэшбэк на отдых',
+        link: '/offers/cashback',
+    },
+    {
+        img: '/images/1.jpg',
+        subtitle: 'Длительное проживание 2021',
+        title: 'С выгодой до 25%',
+        link: '/offers/dlitelnoe-prozhivaniye',
+        cashback: true,
+    },
+    {
+        img: '/images/1.jpg',
+        subtitle: 'Английские каникулы',
+        title: 'в Крыму',
+        link: '/offers/language-camp',
+        cashback: true,
+    },
+]
+
+const roomsSlides = [
+    {
+        img: '/images/room-photos/standart.jpg',
+        data: {
+            title: 'Стандарт',
+            text: 'Уютный однокомнатный номер с двумя раздельными кроватями или одной большой кроватью.'
+        }
+    },
+    {
+        img: '/images/room-photos/Superior-no-extra.jpg',
+        data: {
+            title: 'Superior',
+            additional: 'Без доп. места',
+            text: 'Уютный однокомнатный номер с большой кроватью.'
+        }
+    },
+    {
+        img: '/images/room-photos/Superior-with-extra.jpg',
+        data: {
+            title: 'Superior',
+            additional: 'C доп. местом',
+            text: 'Просторный однокомнатный номер с большой кроватью.'
+        }
+    },
+    {
+        img: '/images/room-photos/lux-1.jpg',
+        data: {
+            title: 'Люкс однокомнантый',
+            text: 'Просторный однокомнатный номер с большой кроватью.'
+        }
+    },
+    {
+        img: '/images/room-photos/lux-2.jpg',
+        data: {
+            title: 'Люкс двухкомнатный',
+            text: 'Просторный двухкомнатный номер с большой спальней и гостиной.'
+        }
+    },
+    {
+        img: '/images/room-photos/lux-3.jpg',
+        data: {
+            title: 'Люкс трехкомнатный',
+            text: 'Просторный трёхкомнатный номер с гостиной и двумя спальнями.'
+        }
+    },
+]
+
 
 export default function Home() {
-  return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    return (<>
+            <Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+                <title>Rinn Rise – Главная страница – Анапа, Джемете</title>
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
-  )
+                <link rel="icon" href="/favicon.ico"/>
+            </Head>
+            <main>
+                <Header/>
+                <HomePageBanner/>
+                <section className="section first">
+                    <RoomsSlider title={'Номера и цены'} slides={roomsSlides}/>
+                </section>
+                <section>
+                    <TextBlock/>
+                </section>
+                <section className="section">
+                    <SpecialsSlider slides={slidesPromo} title='Специальные предложения'/>
+                </section>
+                <section className="section">
+                    <InfrastructureSlider slides={infrastructureSlides} title={'Инфраструктура'}/>
+                </section>
+                <Footer/>
+            </main>
+        </>
+    )
 }

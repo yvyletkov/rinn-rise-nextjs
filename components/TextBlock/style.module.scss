@@ -1,0 +1,96 @@
+.wrapper {
+  width: 100%;
+  background-color: #f1f1f1;
+}
+
+.container {
+  position: relative;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+}
+
+.content {
+  width: 50%;
+  padding: 110px 40px 65px;
+  .subtitle {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-family: "Proxima Nova Light";
+  }
+  .title {
+    font-family: "Proxima Nova Black";
+    font-size: 40px;
+    line-height: 1;
+    margin-bottom: 10px;
+  }
+  .text {
+    margin-bottom: 10px;
+    text-align: justify;
+  }
+}
+
+.imageWrapper {
+  position: relative;
+  align-items: center;
+  width: 50%;
+  padding: 90px 20px 90px 50px;
+
+  .img {
+    width: 100%;
+    position: relative;
+    height: 100%;
+    border: 10px solid #fff;
+    border-radius: 5px;
+    box-shadow: 21.5px 37.239px 43.5px rgba(20,20,20,0.12);
+    img {
+      object-fit: cover;
+    }
+  }
+}
+
+.starImg {
+  position: absolute;
+  top: -75px;
+  left: -150px;
+  width: 260px;
+  height: 250px;
+  img {
+    object-fit: contain;
+  }
+}
+
+@media (max-width: 992px) {
+  .imageWrapper {
+    padding: 90px 20px 90px 0;
+  }
+}
+
+@media (max-width: 700px) {
+  .container {
+    flex-wrap: wrap;
+  }
+
+  .content, .imageWrapper {
+    width: 100%;
+  }
+
+  .content {
+    padding: 80px 20px 20px;
+
+    .title {
+      font-size: 32px;
+    }
+  }
+
+  .imageWrapper {
+    padding: 0;
+    .img {
+      height: 200px;
+      border: none;
+      border-radius: 0;
+
+    }
+  }
+}

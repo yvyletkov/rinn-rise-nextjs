@@ -1,0 +1,140 @@
+$cardWidth: 685px;
+$imgWidth: 390px;
+
+.card {
+  width: $cardWidth;
+  height: 350px;
+  position: relative;
+  margin: 0 15px;
+  border-radius: 5px;
+  box-shadow: -14.444px 19.167px 30px 2px rgb(23 23 23 / 14%);
+  transition: all 300ms;
+  display: flex;
+  overflow: hidden;
+
+}
+
+.img {
+  position: relative;
+  width: $imgWidth;
+  height: 100%;
+
+  img {
+    object-fit: cover;
+  }
+}
+
+.content {
+  box-sizing: border-box;
+  width: $cardWidth - $imgWidth;
+  padding: 80px 40px;
+  position: relative;
+}
+
+.additionalInfo {
+  font-family: "Proxima Nova Regular";
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  color: #cbcbcb;
+}
+
+.title {
+
+  font-size: 12px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    width: 25px;
+    height: 10px;
+    background-color: #00af98;
+  }
+
+  span {
+    display: block;
+    text-transform: none;
+    margin-top: 2px;
+    font-size: 28px;
+    line-height: 1;
+    font-family: 'Proxima Nova Black', sans-serif;
+  }
+
+}
+
+.text {
+  font-size: 15px;
+  text-align: justify;
+}
+
+.link {
+  position: absolute;
+  color: #b9b9b9;
+  bottom: 60px;
+  left: $imgWidth + 40px;
+
+  span {
+    font-size: 20px;
+  }
+}
+
+
+@media screen and (max-width: 720px) {
+  .card {
+    width: 65vw;
+    height: calc(65vw * 1.4);
+    position: relative;
+    margin: 0 0 0 20px;
+    display: block;
+    box-shadow: -14.444px 19.167px 27px 0px rgba(23, 23, 23, 0.14);
+  }
+
+  .additionalInfo {
+    margin-bottom: 5px;
+  }
+
+  .img {
+    height: 50%;
+    width: 100%;
+  }
+
+  .content {
+    padding: 20px;
+    width: 100%;
+  }
+
+  .title {
+    font-size: 11px;
+    margin-bottom: 10px;
+
+    span {
+      font-size: 20px;
+    }
+  }
+
+  .link {
+    bottom: 20px;
+    left: 20px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .text {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 345px) {
+  .img {
+    height: 43%;
+  }
+  .card {
+    height: calc(65vw * 1.5);
+  }
+}
+
+
+
