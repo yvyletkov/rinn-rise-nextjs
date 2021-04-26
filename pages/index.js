@@ -7,6 +7,7 @@ import HomePageBanner from './components/HomePageBanner/HomePageBanner';
 import RoomsSlider from './components/sliders/RoomsSlider';
 import TextBlock from './components/TextBlock';
 import Footer from './components/Footer/Footer';
+import LazyLoad from 'react-lazyload';
 
 const slides = [
     {
@@ -80,7 +81,9 @@ export default function Home() {
                 <section className="section">
                     <InfrastructureSlider slides={slides} title={'Инфраструктура'}/>
                 </section>
-                <Footer/>
+                <LazyLoad height={'200px'}>
+                    <Footer/>
+                </LazyLoad>
             </main>
         </>
     )

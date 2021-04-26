@@ -80,7 +80,7 @@ const Header = () => {
                         <div className={s.logo}>
                             <Link href={'/'}>
                                 <a>
-                                    <img src={'/images/rinnrise-logo.png'} alt="Прометей"/>
+                                    <img src={'/images/rinnrise-logo.png'} alt="Rinnrise"/>
                                 </a>
                             </Link>
                         </div>
@@ -89,7 +89,7 @@ const Header = () => {
                             {/*      extraClass={s.searchIcon} href={"/search"} onClickHandler={handleLinkClick} style={{cursor: 'not-allowed'}}/>*/}
                             <div className={s.contacts}>
                                 <a href={"tel:88005557856"} className={s.link + ' ' + s.number}>
-                                    <img src={'/images/phone.svg'} alt={'Телефон'}/>
+                                    <img src={'/images/footer/phone.svg'} alt={'Телефон'}/>
                                     <div className={s.telephone}>+7 (800) 555-78-56</div>
                                     <span className={s.location}>
                                         Джемете, г. Анапа

@@ -4,6 +4,19 @@
   max-height: 1000px;
   width: 100%;
 
+  .banner {
+    position: absolute;
+    top:0;
+    left:50%;
+    transform: translate(-50%);
+    height: 100%;
+    width: 100%;
+
+    img {
+      object-fit: cover;
+    }
+  }
+
   .container {
     box-sizing: border-box;
     max-width: 1200px;
@@ -13,6 +26,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 
     .textBlock {
       z-index: 100;
@@ -52,24 +66,12 @@
       }
     }
 
-    .banner {
-      position: absolute;
-      top:0;
-      left:50%;
-      transform: translate(-50%);
-      height: 100%;
-      width: 100%;
-
-      img {
-        object-fit: cover;
-      }
-    }
-
     .circlesBlock {
       position: absolute;
       left: 50%;
       top:24%;
       transform: translate(-50%);
+      z-index: 1;
 
       @media screen and (max-width: 700px){
         display: none;
@@ -88,6 +90,7 @@
     max-height: 100px;
     height: 100%;
     border-radius: 5px;
+    z-index: 1;
   }
 
   .animatedMouse {
