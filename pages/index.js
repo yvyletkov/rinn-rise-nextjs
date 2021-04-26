@@ -1,14 +1,14 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import InfrastructureSlider from './components/sliders/InfrastructureSlider';
-import SpecialsSlider from './components/sliders/OffersSlider';
-import Header from './components/Header/Header';
-import HomePageBanner from './components/HomePageBanner/HomePageBanner';
-import RoomsSlider from './components/sliders/RoomsSlider';
-import TextBlock from './components/TextBlock';
-import Footer from './components/Footer/Footer';
+import InfrastructureSlider from '../components/sliders/InfrastructureSlider';
+import SpecialsSlider from '../components/sliders/OffersSlider';
+import Header from '../components/Header/Header';
+import HomePageBanner from '../components/HomePageBanner/HomePageBanner';
+import RoomsSlider from '../components/sliders/RoomsSlider';
+import TextBlock from '../components/TextBlock';
+import Footer from '../components/Footer/Footer';
 
-const slides = [
+const infrastructureSlides = [
     {
         img: '/images/infrastructure/wild-beach.jpg',
         title: 'Дикий пляж',
@@ -57,6 +57,54 @@ const slidesPromo = [
     },
 ]
 
+const roomsSlides = [
+    {
+        img: '/images/room-photos/standart.jpg',
+        data: {
+            title: 'Стандарт',
+            text: 'Уютный однокомнатный номер с двумя раздельными кроватями или одной большой кроватью.'
+        }
+    },
+    {
+        img: '/images/room-photos/Superior-no-extra.jpg',
+        data: {
+            title: 'Superior',
+            additional: 'Без доп. места',
+            text: 'Уютный однокомнатный номер с большой кроватью.'
+        }
+    },
+    {
+        img: '/images/room-photos/Superior-with-extra.jpg',
+        data: {
+            title: 'Superior',
+            additional: 'C доп. местом',
+            text: 'Просторный однокомнатный номер с большой кроватью.'
+        }
+    },
+    {
+        img: '/images/room-photos/lux-1.jpg',
+        data: {
+            title: 'Люкс однокомнантый',
+            text: 'Просторный однокомнатный номер с большой кроватью.'
+        }
+    },
+    {
+        img: '/images/room-photos/lux-2.jpg',
+        data: {
+            title: 'Люкс двухкомнатный',
+            text: 'Просторный двухкомнатный номер с большой спальней и гостиной.'
+        }
+    },
+    {
+        img: '/images/room-photos/lux-3.jpg',
+        data: {
+            title: 'Люкс трехкомнатный',
+            text: 'Просторный трёхкомнатный номер с гостиной и двумя спальнями.'
+        }
+    },
+]
+
+
 export default function Home() {
     return (<>
             <Head>
@@ -69,16 +117,16 @@ export default function Home() {
                 <Header/>
                 <HomePageBanner/>
                 <section className="section first">
-                    <RoomsSlider title={'Номера и цены'}/>
+                    <RoomsSlider title={'Номера и цены'} slides={roomsSlides}/>
                 </section>
                 <section>
                     <TextBlock/>
                 </section>
                 <section className="section">
-                    <SpecialsSlider slides={slidesPromo}/>
+                    <SpecialsSlider slides={slidesPromo} title='Специальные предложения'/>
                 </section>
                 <section className="section">
-                    <InfrastructureSlider slides={slides} title={'Инфраструктура'}/>
+                    <InfrastructureSlider slides={infrastructureSlides} title={'Инфраструктура'}/>
                 </section>
                 <Footer/>
             </main>

@@ -5,8 +5,9 @@ import NextArrow from '../../SliderArrows/NextArrow';
 import Slider from "react-slick";
 import OffersSliderItem from "./OffersSliderItem";
 import HeadlineCenter from '../../HeadlineCenter';
+import PropTypes from 'prop-types';
 
-const OffersSlider = ({slides = []}) => {
+const OffersSlider = ({slides, title}) => {
 
     const settings = {
         infinite: true,
@@ -51,12 +52,23 @@ const OffersSlider = ({slides = []}) => {
 
     return (
         <div className={s.sliderContainer}>
-            <HeadlineCenter title={'Специальные предложения'} style={{paddingBottom:'40px'}}/>
+            <HeadlineCenter title={title} style={{paddingBottom:'40px'}}/>
             <div className={s.sliderWrapper}>
                 <Slider {...settings}>{items}</Slider>
             </div>
         </div>
     )
+}
+
+
+OffersSlider.propTypes = {
+    slides: PropTypes.arrayOf(PropTypes.object).isRequired,
+    title: PropTypes.string.isRequired,
+}
+
+OffersSlider.defaultProps = {
+    slides: [],
+    title: 'Заголовок'
 }
 
 export default OffersSlider;

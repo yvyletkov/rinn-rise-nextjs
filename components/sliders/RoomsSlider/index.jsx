@@ -1,62 +1,16 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import Slider from 'react-slick'
 import s from './style.module.scss'
 import RoomsSliderItem from './RoomsSliderItem'
 import HeadlineCenter from '../../HeadlineCenter'
 import useMediaQuery from '../../customHooks/useMediaQuery'
-import NextArrow from '../../SliderArrows/NextArrow';
-import PrevArrow from '../../SliderArrows/PrevArrow';
-
-const initialSlides = [
-    {
-        img: '/images/room-photos/standart.jpg',
-        data: {
-            title: 'Стандарт',
-            text: 'Уютный однокомнатный номер с двумя раздельными кроватями или одной большой кроватью.'
-        }
-    },
-    {
-        img: '/images/room-photos/Superior-no-extra.jpg',
-        data: {
-            title: 'Superior',
-            additional: 'Без доп. места',
-            text: 'Уютный однокомнатный номер с большой кроватью.'
-        }
-    },
-    {
-        img: '/images/room-photos/Superior-with-extra.jpg',
-        data: {
-            title: 'Superior',
-            additional: 'C доп. местом',
-            text: 'Просторный однокомнатный номер с большой кроватью.'
-        }
-    },
-    {
-        img: '/images/room-photos/lux-1.jpg',
-        data: {
-            title: 'Люкс однокомнантый',
-            text: 'Просторный однокомнатный номер с большой кроватью.'
-        }
-    },
-    {
-        img: '/images/room-photos/lux-2.jpg',
-        data: {
-            title: 'Люкс двухкомнатный',
-            text: 'Просторный двухкомнатный номер с большой спальней и гостиной.'
-        }
-    },
-    {
-        img: '/images/room-photos/lux-3.jpg',
-        data: {
-            title: 'Люкс трехкомнатный',
-            text: 'Просторный трёхкомнатный номер с гостиной и двумя спальнями.'
-        }
-    },
-]
+import NextArrow from '../../SliderArrows/NextArrow'
+import PrevArrow from '../../SliderArrows/PrevArrow'
+import PropTypes from 'prop-types'
 
 const RoomsSlider = ({
-                        title = 'Какой-то заголовок',
-                        slides = initialSlides,
+                        slides,
+                        title
                     }) => {
 
 
@@ -120,11 +74,16 @@ const RoomsSlider = ({
         ]
     }
 
-    React.useEffect(() => {
+    useEffect(() => {
         sliderRef.current.slickGoTo(currentSlideIndex)
     }, [currentSlideIndex])
 
     const sliderRef = React.useRef()
+
+    useEffect(() => {
+        console.log(slides)
+    });
+
 
     return (
         <div className={s.wrapper}>
@@ -135,6 +94,17 @@ const RoomsSlider = ({
 
         </div>
     )
+}
+
+
+RoomsSlider.propTypes = {
+    slides: PropTypes.arrayOf(PropTypes.object).isRequired,
+    title: PropTypes.string.isRequired,
+}
+
+RoomsSlider.defaultProps = {
+    slides: [],
+    title: 'Заголовок'
 }
 
 export default RoomsSlider
