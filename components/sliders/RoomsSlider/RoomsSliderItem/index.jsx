@@ -2,16 +2,12 @@ import React from 'react'
 import s from './style.module.scss'
 import Link from 'next/link'
 import Image from 'next/image'
-
+import PropTypes from 'prop-types';
 
 const RoomsSliderItem = ({
                              img,
                              ...data
                          }) => {
-
-    const handleLinkClick = (e) => {
-        if (!link) e.preventDefault()
-    }
 
     return (
                 <div className={s.card}>
@@ -34,8 +30,14 @@ const RoomsSliderItem = ({
                         </a>
                     </Link>
                 </div>
-    );
+    )
 
-};
+}
+
+
+RoomsSliderItem.propTypes = {
+    img: PropTypes.string.isRequired,
+    data: PropTypes.object.isRequired,
+}
 
 export default RoomsSliderItem;

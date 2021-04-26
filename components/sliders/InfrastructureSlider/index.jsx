@@ -1,63 +1,21 @@
 import React, {useEffect, useState} from 'react'
 import Slider from 'react-slick'
-import Image from 'next/image'
 import s from './style.module.scss'
 import PrevArrow from '../../SliderArrows/PrevArrow'
 import NextArrow from '../../SliderArrows/NextArrow'
 import cx from 'classnames'
 import useMediaQuery from '../../customHooks/useMediaQuery'
 import HeadlineCenter from '../../HeadlineCenter'
-
-const InfrastructureSliderItem = ({
-                                      img,
-                                      title,
-                                      description,
-                                      active,
-                                      setActive,
-                                      index
-                                  }) => {
-
-    const classNames = cx([s.card], {[s.active]: active})
-
-    const handleClick = () => {
-        setActive(active ? null : index)
-    }
-
-    return (
-        <div className={classNames}>
-
-            <div className={s.img}>
-                <Image layout="fill"
-                       src={img} alt=""/>
-            </div>
-
-            <div className={s.content}>
-                <h6 className={s.title} dangerouslySetInnerHTML={{__html: title}}/>
-
-                <div className={s.description}>
-                    <p dangerouslySetInnerHTML={{__html: description}}
-                       style={useMediaQuery('(max-width: 490px)')?{}:{marginBottom: '10px'}}/>
-                </div>
-
-                <div className={s.moreBtn} onClick={handleClick}>
-                    {active ? 'Cкрыть' : 'Подробнее'}
-                </div>
-
-            </div>
-
-
-        </div>)
-}
+import InfrastructureSliderItem from './InfrastructureSliderItem'
+import PropTypes from 'prop-types'
 
 const InfrastructureSlider = ({
-                                  slides = [],
+                                  slides,
                                   title,
                                   titleMobile,
-                                  initialSlideIndex = 0,
                               }) => {
 
     const settings = {
-        initialSlide: initialSlideIndex,
         infinite: true,
         slidesToShow: slides.length === 1 ? 1 : 3,
         centerMode: true,
@@ -125,6 +83,17 @@ const InfrastructureSlider = ({
             </div>
         </div>
     )
+}
+
+InfrastructureSlider.propTypes = {
+    slides: PropTypes.arrayOf(PropTypes.object).isRequired,
+    title: PropTypes.string.isRequired,
+    titleMobile: PropTypes.string,
+    initialSlideIndex: PropTypes.number
+}
+
+InfrastructureSlider.defaultProps = {
+    slides: [],
 }
 
 export default InfrastructureSlider
