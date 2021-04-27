@@ -5,7 +5,9 @@ import OffersSlider from '../components/sliders/OffersSlider'
 import HomePageBanner from '../components/HomePageBanner'
 import RoomsSlider from '../components/sliders/RoomsSlider'
 import TextBlock from '../components/TextBlock'
-import {roomsSlides, offersSlides, infrastructureSlides, gallerySlides} from '../data/homePageData'
+import {offersSlides, infrastructureSlides} from '../data/home-page';
+import {gallerySlides} from '../data/gallery-data';
+import {roomsSlides} from '../data/rooms-data';
 import LazyLoad from 'react-lazyload'
 const GallerySlider = dynamic(() => import('../components/sliders/GallerySlider'))
 
