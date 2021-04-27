@@ -10,26 +10,28 @@ const ResortVacationPageBanner = () => {
     return (
         <div className={s.wrapper}>
             <div className={s.container}>
-                <div className={s.textBlock}>
-                    <p className={s.text}>Курортный отдых</p>
-                    <h1 className={s.title}>Идеальный отдых</h1>
-                    <h3 className={s.subtitle}>Для всей семьи</h3>
-                </div>
-                <div className={s.descriptionWrapper}>
-                    <div className={s.toggleDescriptionBtn}>
-                        Подробнее →
+                <div className={s.content}>
+                    <div className={s.heading}>
+                        <p className={s.text}>Курортный отдых</p>
+                        <h1 className={s.title}>Идеальный <span>отдых</span></h1>
+                        <h3 className={s.subtitle}>Для всей семьи</h3>
                     </div>
-                    <div className={s.descriptionBlock + showDescription ? s.active : ''}>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi est in ipsam
-                            necessitatibus numquam quod similique veniam? Ab architecto, dolore illum, ipsa, magni odit
-                            quas repudiandae rerum soluta sunt velit.
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi est in ipsam
-                            necessitatibus numquam quod similique veniam? Ab architecto, dolore illum, ipsa, magni odit
-                            quas repudiandae rerum soluta sunt velit.
-                        </p>
-                    </div>
+                    <div className={s.descriptionWrapper}>
+                        <div className={s.toggleDescriptionBtn} onClick={() => setShowDescription(status => !status)}>
+                            Подробнее →
+                        </div>
+                        <div className={s.descriptionBlock + (showDescription ? (' ' + s.active) : '')}>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi est in ipsam
+                                necessitatibus numquam quod similique veniam? Ab architecto, dolore illum, ipsa, magni odit
+                                quas repudiandae rerum soluta sunt velit.
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi est in ipsam
+                                necessitatibus numquam quod similique veniam? Ab architecto, dolore illum, ipsa, magni odit
+                                quas repudiandae rerum soluta sunt velit.
+                            </p>
+                        </div>
 
+                    </div>
                 </div>
                 {/*<div className={s.moduleBlock} />*/}
             </div>
