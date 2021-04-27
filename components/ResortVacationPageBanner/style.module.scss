@@ -31,6 +31,13 @@
     align-items: center;
     position: relative;
 
+    .content {
+      transform: translateY(-100px);
+      @media (max-width: 560px) {
+        transform: none;
+      }
+    }
+
     .heading {
       z-index: 100;
       display: flex;

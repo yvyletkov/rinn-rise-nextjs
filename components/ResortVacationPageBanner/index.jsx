@@ -37,9 +37,9 @@ const ResortVacationPageBanner = () => {
             </div>
             <div className={s.banner}>
                 {!mobile ?
-                    <Image loading={'eager'} layout={'fill'} src={'/images/home-page/1.jpg'} alt={'Rinn Rise'}/>
+                    <Image loading={'eager'} layout={'fill'} src={'/images/resort-vacation/glavnaya.jpg'} alt={'Rinn Rise'}/>
                     :
-                    <Image loading={'eager'} layout={'fill'} src={'/images/home-page/banner-mobile.jpg'}
+                    <Image loading={'eager'} layout={'fill'} src={'/images/resort-vacation/glavnaya.jpg'}
                            alt={'Rinn Rise'}/>
                 }
             </div>
