@@ -11,6 +11,7 @@
     transform: translate(-50%);
     height: 100%;
     width: 100%;
+    margin-top: 25px;
 
     img {
       object-fit: cover;
@@ -63,6 +64,13 @@
 
       @media screen and (max-width: 550px){
         align-items: flex-start;
+
+        .text, .subtitle {
+          font-size: 24px;
+        }
+        .title {
+          font-size: 56px;
+        }
       }
     }
 
