@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {FC} from 'react';
 import s from './style.module.scss';
 import PrevArrow from "../../SliderArrows/PrevArrow";
 import NextArrow from '../../SliderArrows/NextArrow';
