@@ -36,7 +36,7 @@ export default function Home() {
                     <InfrastructureSlider slides={infrastructureSlides} title={'Инфраструктура'}/>
                 </section>
 
-                <LazyLoad height={'300px'} offset={1000}>
+                <LazyLoad height={'300px'} offset={1700}>
                     <section className="section">
                         <GallerySlider slides={gallerySlides} title={'Фотогалерея'}/>
                     </section>

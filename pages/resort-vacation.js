@@ -65,7 +65,7 @@ export default function ResortVacation() {
                     <OffersSlider slides={offersSlides} title="Специальные предложения"/>
                 </section>
 
-                <LazyLoad height={'300px'} offset={1000}>
+                <LazyLoad height={'300px'} offset={1700}>
                     <section className="section">
                         <GallerySlider slides={gallerySlides} title={'Фотогалерея'}/>
                     </section>
