@@ -10,27 +10,14 @@
     width: 100%;
     margin: 0 auto;
     overflow: visible;
-    padding-bottom: 95px;
-
-    &:before {
-      content: '';
-      //background: no-repeat url(../../../img/home-page/football.png);
-      width: 160px;
-      height: 160px;
-      background-size: contain;
-      position: absolute;
-      right: 90px;
-      top: -80px;
-      z-index: 1;
-      @media (max-width: 768px) {display: none}
-    }
+    padding-bottom: 75px;
 
     .sliderWrapper {
       max-width: 1200px;
-      margin: -40px auto 0;
+      margin: 0 auto;
 
-      :global(slick-dots) {
-        bottom: 12px;
+      :global(.slick-dots) {
+        bottom: -35px;
       }
 
       .sliderItemWrapper {
@@ -42,7 +29,7 @@
         justify-content: center;
         width: 280px;
         margin: 40px auto;
-        padding: 10px;
+        padding: 0 0 0 20px;
 
         @media (max-width: 1000px) {
           margin-left: 20px;
@@ -56,26 +43,28 @@
         }
 
         h5 {
-          font-family: "Geometria Bold", sans-serif;
+          font-family: "Proxima Nova Black", sans-serif;
           font-size: 20px;
           margin-bottom: 15px;
           text-align: center;
         }
 
         p {
-          font-family: "Geometria Light", sans-serif;
+          font-family: "Proxima Nova Regular", sans-serif;
           line-height: 1.2;
           text-align: center;
         }
 
 
         @media (max-width: 600px) {
-          zoom: 0.8;
-          margin: 40px auto 50px
+          margin: 40px auto 0;
         }
       }
     }
 
+    @media (max-width: 600px) {
+      padding: 0 0 20px;
+    }
 
   }
 

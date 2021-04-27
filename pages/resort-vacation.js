@@ -7,19 +7,48 @@ import AdvantagesSlider from '../components/sliders/AdvantagesSlider';
 import {advantagesSlidesData} from '../data/resort-vacation';
 import RoomsSlider from '../components/sliders/RoomsSlider';
 import OffersSlider from '../components/sliders/OffersSlider';
+
 const GallerySlider = dynamic(() => import('../components/sliders/GallerySlider'))
 
 export default function ResortVacation() {
-    return (<>
+    const backgroundItemsStyles = {
+        wrapper: {
+            position: 'absolute',
+            left: '50%',
+            transform: 'translateX(-800px)',
+            bottom: '30px',
+            width: '200px',
+            height: '200px',
+        },
+        glasses: {
+            width: '400px',
+            position: 'absolute',
+            left: 0,
+            top: 0
+        },
+        berry: {
+            width: '130px',
+            position: 'absolute',
+            left: '150px',
+            bottom: '-90px'
+        }
+    }
+    return (
+        <>
             <Head>
                 <title>Курортный отдых – Rinn Rise – Анапа, Джемете</title>
             </Head>
             <main>
 
                 <ResortVacationPageBanner/>
-
-                <section className='section first'>
+                <section className="section first" style={{position:'relative'}}>
                     <AdvantagesSlider slides={advantagesSlidesData}/>
+                    <div style={backgroundItemsStyles.wrapper}>
+                        <img style={backgroundItemsStyles.glasses} src={'/images/resort-vacation/glasses.png'}
+                             alt={'очки'}/>
+                        <img style={backgroundItemsStyles.berry} src={'/images/resort-vacation/yagody.png'}
+                             alt={'ягоды'}/>
+                    </div>
                 </section>
 
                 <section className="section">
@@ -31,7 +60,7 @@ export default function ResortVacation() {
                 </section>
 
                 <LazyLoad height={'300px'} offset={1000}>
-                    <section className='section'>
+                    <section className="section">
                         <GallerySlider slides={gallerySlides} title={'Фотогалерея'}/>
                     </section>
                 </LazyLoad>
