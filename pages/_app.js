@@ -5,9 +5,9 @@ import 'slick-carousel/slick/slick-theme.css'
 import Header from '../components/Header/Header'
 import LazyLoad from 'react-lazyload'
 import Footer from '../components/Footer/Footer'
-import SimpleReactLightbox from 'simple-react-lightbox'
+// import SimpleReactLightbox from 'simple-react-lightbox'
 import {useEffect, useState} from 'react'
-import Loader from '../components/Loader';
+import Loader from '../components/Loader'
 
 function MyApp({Component, pageProps}) {
 
@@ -21,14 +21,13 @@ function MyApp({Component, pageProps}) {
     return (
         <>
             {loading && <Loader/>}
-                <SimpleReactLightbox>
+                {/*<SimpleReactLightbox>*/}
                     <Header/>
                     <Component {...pageProps} />
                     <LazyLoad height={'200px'}>
                         <Footer/>
                     </LazyLoad>
-                </SimpleReactLightbox>
-            )}
+                {/*</SimpleReactLightbox>*/}
         </>
     );
 }

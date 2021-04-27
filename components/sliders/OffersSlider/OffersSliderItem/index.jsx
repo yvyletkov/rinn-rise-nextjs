@@ -31,14 +31,14 @@ const OffersSliderItem = ({
                 className={cardClassNames}
                 onMouseEnter={() => !window.matchMedia('screen and (max-width: 1200px)').matches ? setLifted(true) : null}
                 onMouseLeave={() => !window.matchMedia('screen and (max-width: 1200px)').matches ? setLifted(false) : null}>
-                <Image layout={'responsive'}
-                       loading='eager'
-                       height={'150%'}
-                       // quality='40'
-                       width={'100%'}
-                       className={s.img}
-                       src={img}
-                       alt="Афиша"/>
+                <Image
+                    layout={'responsive'}
+                    height={'150%'}
+                    quality="40"
+                    width={'100%'}
+                    className={s.img}
+                    src={img}
+                    alt="Афиша"/>
                 <div className={s.content}>
                     <p dangerouslySetInnerHTML={{__html: subtitle}} className={s.subtitle}/>
                     <p dangerouslySetInnerHTML={{__html: title}} className={s.title}/>
