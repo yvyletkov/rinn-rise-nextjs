@@ -1,9 +1,11 @@
-import React from 'react';
-import s from './HomePageBanner.module.scss';
-import AnimatedMouseIcon from '../shared/AnimatedMouseIcon/AnimatedMouseIcon';
-import Image from 'next/image';
+import React from 'react'
+import s from './HomePageBanner.module.scss'
+import AnimatedMouseIcon from '../shared/AnimatedMouseIcon/AnimatedMouseIcon'
+import Image from 'next/image'
+import useMediaQuery from '../customHooks/useMediaQuery'
 
 const HomePageBanner = () => {
+    const mobile = useMediaQuery('(max-width: 550px)')
     return (
             <div className={s.wrapper}>
                 <div className={s.container}>
@@ -19,7 +21,11 @@ const HomePageBanner = () => {
                     {/*<div className={s.moduleBlock} />*/}
                 </div>
                 <div className={s.banner}>
-                    <Image loading={'eager'} layout={'fill'} src={'/images/home-page/1.jpg'} alt={'Rinn Rise'}/>
+                    {!mobile ?
+                        <Image loading={'eager'} layout={'fill'} src={'/images/home-page/1.jpg'} alt={'Rinn Rise'}/>
+                        :
+                        <Image loading={'eager'} layout={'fill'} src={'/images/home-page/banner-mobile.jpg'} alt={'Rinn Rise'}/>
+                    }
                 </div>
                 <div className={s.animatedMouse}>
                     <AnimatedMouseIcon />
