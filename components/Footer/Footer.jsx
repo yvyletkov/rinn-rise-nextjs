@@ -27,7 +27,7 @@ const Footer = () => {
                                        options={{
                                            iconLayout: 'default#image',
                                            iconImageHref: '/images/logo.png',
-                                           iconImageSize: isMobile ? [140, 100] : [207, 161],
+                                           iconImageSize: isMobile ? [140, 100] : [160, 120],
                                            iconImageOffset: isMobile ? [-65, -100] : [0, 0],
                                        }}
                             />
@@ -64,10 +64,10 @@ const Footer = () => {
                     </div>
                     <div className={s.iconsBlock}>
                         <div className={s.icon}>
-                            <Image layout={'fill'} src={'/images/footer/inst.png'} alt={'Инстаграм'}/>
+                            <Image layout={'fill'} src={'/images/footer/inst.svg'} alt={'Инстаграм'}/>
                         </div>
                         <div className={s.icon}>
-                            <Image layout={'fill'} src={'/images/footer/vk.png'} alt={'Вконтакте'}/>
+                            <Image layout={'fill'} src={'/images/footer/vk.svg'} alt={'Вконтакте'}/>
                         </div>
                     </div>
                 </div>
