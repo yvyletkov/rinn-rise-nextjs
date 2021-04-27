@@ -9,7 +9,12 @@ const GallerySliderItem = ({img, title}) => {
         <div onMouseEnter={() => setShowDescription(true)}
              onMouseLeave={() => setShowDescription(false)}
              className={s.photo}>
-            <Image loading='eager' quality='45' layout='fill' className={s.img} src={img} alt={title}/>
+            <Image
+                quality="45"
+                layout="fill"
+                className={s.img}
+                src={img}
+                alt={title}/>
         </div>
     );
 };

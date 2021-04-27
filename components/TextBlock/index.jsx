@@ -7,7 +7,10 @@ const TextBlock = (props) => {
     return <div className={s.wrapper}>
         <div className={s.container}>
             <div className={s.starImg}>
-                <Image src='/images/home-page/star.png' layout='fill'/>
+                <Image
+                    quality="50"
+                    src="/images/home-page/star.png"
+                    layout="fill"/>
             </div>
             <div className={s.content}>
                 <p className={s.subtitle}>Добро пожаловать</p>
@@ -31,7 +34,10 @@ const TextBlock = (props) => {
             </div>
             <div className={s.imageWrapper}>
                 <div className={s.img}>
-                    <Image quality='50' src="/images/home-page/text-block.jpg" layout="fill"/>
+                    <Image
+                        quality="50"
+                        src="/images/home-page/text-block.jpg"
+                        layout="fill"/>
                 </div>
             </div>
         </div>

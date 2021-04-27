@@ -54,9 +54,9 @@ export default function Home() {
                     <InfrastructureSlider slides={infrastructureSlides} title={'Инфраструктура'}/>
                 </section>
 
-                <section className="section">
-                    <GallerySlider slides={gallerySlides} title={'Фотогалерея'}/>
-                </section>
+                {/*<section className="section">*/}
+                {/*    <GallerySlider slides={gallerySlides} title={'Фотогалерея'}/>*/}
+                {/*</section>*/}
 
             </main>
         </>

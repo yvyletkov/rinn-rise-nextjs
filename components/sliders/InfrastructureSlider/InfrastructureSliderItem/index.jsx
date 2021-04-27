@@ -25,11 +25,11 @@ const InfrastructureSliderItem = ({
         <div className={classNames}>
 
             <div className={s.img}>
-                <Image layout="fill"
-                       loading='eager'
-                       quality='40'
-                       src={img}
-                       alt=""/>
+                <Image
+                    layout="fill"
+                    quality="40"
+                    src={img}
+                    alt=""/>
             </div>
 
             <div className={s.content}>
@@ -37,7 +37,7 @@ const InfrastructureSliderItem = ({
 
                 <div className={s.description}>
                     <p dangerouslySetInnerHTML={{__html: description}}
-                       style={useMediaQuery('(max-width: 490px)')?{}:{marginBottom: '10px'}}/>
+                       style={useMediaQuery('(max-width: 490px)') ? {} : {marginBottom: '10px'}}/>
                 </div>
 
                 <div className={s.moreBtn} onClick={handleClick}>

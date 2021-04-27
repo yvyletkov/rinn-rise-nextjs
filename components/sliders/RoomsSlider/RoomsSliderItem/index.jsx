@@ -16,7 +16,7 @@ const RoomsSliderItem = ({
                             layout="fill"
                             quality='40'
                             src={img}
-                            alt={''}/>
+                            alt={data.title}/>
                     </div>
                     <div className={s.content}>
                         <h6 className={s.title}>
@@ -35,7 +35,6 @@ const RoomsSliderItem = ({
                     </Link>
                 </div>
     )
-
 }
 
 
