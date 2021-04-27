@@ -13,7 +13,6 @@ export default function Home() {
     return (<>
             <Head>
                 <title>Rinn Rise – Главная страница – Анапа, Джемете</title>
-                <link rel="icon" href="/favicon.ico"/>
             </Head>
             <main>
 
