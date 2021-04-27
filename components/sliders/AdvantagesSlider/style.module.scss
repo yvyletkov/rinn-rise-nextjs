@@ -10,14 +10,14 @@
     width: 100%;
     margin: 0 auto;
     overflow: visible;
-    padding-bottom: 95px;
+    padding-bottom: 75px;
 
     .sliderWrapper {
       max-width: 1200px;
-      margin: -40px auto 0;
+      margin: 0 auto;
 
-      :global(slick-dots) {
-        bottom: 12px;
+      :global(.slick-dots) {
+        bottom: -35px;
       }
 
       .sliderItemWrapper {
@@ -57,12 +57,14 @@
 
 
         @media (max-width: 600px) {
-          zoom: 0.8;
-          margin: 40px auto 50px
+          margin: 40px auto 0;
         }
       }
     }
 
+    @media (max-width: 600px) {
+      padding: 0 0 20px;
+    }
 
   }
 
