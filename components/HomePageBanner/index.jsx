@@ -1,5 +1,5 @@
 import React from 'react'
-import s from './HomePageBanner.module.scss'
+import s from './style.module.scss'
 import AnimatedMouseIcon from '../shared/AnimatedMouseIcon/AnimatedMouseIcon'
 import Image from 'next/image'
 import useMediaQuery from '../customHooks/useMediaQuery'
