@@ -82,6 +82,9 @@
 }
 
 @media screen and (max-width: 480px){
+  .card:before {
+    content: none;
+  }
   .cardWrapper {
     width: 65vw;
   }

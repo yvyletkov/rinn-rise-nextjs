@@ -27,8 +27,8 @@ const Footer = () => {
                                        options={{
                                            iconLayout: 'default#image',
                                            iconImageHref: '/images/logo.png',
-                                           iconImageSize: [207, 161],
-                                           iconImageOffset: isMobile ? [-80, -100] : [0, 0],
+                                           iconImageSize: isMobile ? [140, 100] : [207, 161],
+                                           iconImageOffset: isMobile ? [-65, -100] : [0, 0],
                                        }}
                             />
                         </Map>
