@@ -8,15 +8,15 @@ const GallerySlider = dynamic(() => import('../components/sliders/GallerySlider'
 export default function Home() {
     return (<>
             <Head>
-                <title>Rinn Rise – Главная страница – Анапа, Джемете</title>
-                <link rel="icon" href="/favicon.ico"/>
+                <title>Курортный отдых – Rinn Rise – Анапа, Джемете</title>
+                <link rel='icon' href='/favicon.ico'/>
             </Head>
             <main>
 
                 <ResortVacationPageBanner/>
 
                 <LazyLoad height={'300px'} offset={1000}>
-                    <section className="section">
+                    <section className='section first'>
                         <GallerySlider slides={gallerySlides} title={'Фотогалерея'}/>
                     </section>
                 </LazyLoad>

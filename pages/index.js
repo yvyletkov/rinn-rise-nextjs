@@ -12,7 +12,7 @@ const GallerySlider = dynamic(() => import('../components/sliders/GallerySlider'
 export default function Home() {
     return (<>
             <Head>
-                <title>Курортный отдых – Rinn Rise – Анапа, Джемете</title>
+                <title>Rinn Rise – Главная страница – Анапа, Джемете</title>
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
             <main>
