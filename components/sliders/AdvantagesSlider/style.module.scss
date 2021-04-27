@@ -35,7 +35,7 @@
 
       .sliderItemWrapper {
         box-sizing: border-box;
-        display: flex;
+        display: flex !important;
         flex-direction: column;
         position: relative;
         align-items: center;

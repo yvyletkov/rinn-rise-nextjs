@@ -34,20 +34,20 @@ const AdvantagesSlider = ({slides}) => {
         ]
     };
 
+    const items = slides.map((item, idx) => {
+            return <div className={s.sliderItemWrapper}>
+                    <img src={item.img} alt={''}/>
+                    <h5>{item.title}</h5>
+                    <p dangerouslySetInnerHTML={{__html: item.text}}/>
+                </div>
+        })
+
     return <div id="places" className={s.wrapper}>
         <div className={s.container}>
             <HeadlineCenter title={'Преимущества'}/>
             <div className={s.sliderWrapper}>
                 <Slider {...settings} slidesToShow={4}>
-                    {slides.map((item) => {
-                        return <div>
-                            <div className={s.sliderItemWrapper}>
-                                <img src={item.img} alt={''}/>
-                                <h5>{item.title}</h5>
-                                <p dangerouslySetInnerHTML={{__html: item.text}}/>
-                            </div>
-                        </div>
-                    })}
+                    {items}
                 </Slider>
             </div>
 
