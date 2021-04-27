@@ -2,8 +2,12 @@ import s from './style.module.scss'
 import React from 'react'
 import PropTypes from 'prop-types'
 
+interface ArrowProps {
+    positionStyles: object,
+    onClick?: any
+}
 
-function NextArrow({positionStyles, onClick}) {
+function NextArrow({positionStyles, onClick}: ArrowProps) {
     return (
         <div
             className={s.nextArrow}

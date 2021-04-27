@@ -3,8 +3,12 @@ import React from 'react'
 import NextArrow from './NextArrow'
 import PropTypes from 'prop-types'
 
+interface ArrowProps {
+    positionStyles: object,
+    onClick?: any
+}
 
-function PrevArrow({positionStyles, onClick}) {
+function PrevArrow({positionStyles, onClick}: ArrowProps) {
     return (
         <div
             className={s.prevArrow}
