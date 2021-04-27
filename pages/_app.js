@@ -23,7 +23,7 @@ function MyApp({Component, pageProps}) {
             {loading && <Loader/>}
                     <Header/>
                     <Component {...pageProps} />
-                    <LazyLoad height={'300px'} offset={150}>
+                    <LazyLoad height={'300px'} offset={300}>
                         <Footer/>
                     </LazyLoad>
         </>

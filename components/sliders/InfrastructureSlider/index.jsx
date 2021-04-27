@@ -51,7 +51,7 @@ const InfrastructureSlider = ({
     const [items, setItems] = useState([])
 
     useEffect(() => {
-        setActiveSlideIndex(mobile ? null : 1)
+        setActiveSlideIndex(mobile ? null : null) //  можно задать номер активного слайда на мобилке и на десктопе
     }, [mobile]);
     
     useEffect(() => {
