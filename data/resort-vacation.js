@@ -34,4 +34,32 @@ export const advantagesSlidesData = [
         title: 'Парковка',
         text: 'Бесплатная парковка<br/>для всех гостей'
     },
-];
+]
+
+export const servicesSlides = [
+    {
+        img: '/images/resort-vacation/pool.svg',
+        text: 'Какой-то текст',
+        link: 'aaa'
+    },
+    {
+        img: '/images/resort-vacation/pool.svg',
+        text: 'Какой-то текст',
+        link: 'aaa'
+    },
+    {
+        img: '/images/resort-vacation/pool.svg',
+        text: 'Какой-то текст',
+        link: 'aaa'
+    },
+    {
+        img: '/images/resort-vacation/pool.svg',
+        text: 'Какой-то текст',
+        link: 'aaa'
+    },
+    {
+        img: '/images/resort-vacation/pool.svg',
+        text: 'Какой-то текст',
+        link: 'aaa'
+    },
+]

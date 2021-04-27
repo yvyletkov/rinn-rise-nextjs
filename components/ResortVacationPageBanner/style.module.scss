@@ -32,7 +32,10 @@
     position: relative;
 
     .content {
-      transform: translateY(-100px);
+      transform: translateY(-63px);
+      @media (min-height: 800px) {
+        transform: translateY(-71px);
+      }
       @media (max-width: 560px) {
         transform: none;
       }
@@ -69,6 +72,7 @@
 
         span {
           font-size: 115px;
+          color: #007261;
           font-family: "Proxima Nova Black", sans-serif;
           text-transform: uppercase;
           display: block;
