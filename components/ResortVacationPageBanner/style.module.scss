@@ -18,6 +18,10 @@
     img {
       object-fit: cover;
     }
+
+    @media (max-width: 550px) {
+      filter: brightness(60%);
+    }
   }
 
   .container {
@@ -86,7 +90,11 @@
         margin-bottom: 12px;
       }
 
-      @media (max-width: 560px) {
+      @media (max-width: 550px) {
+
+        * {
+          color: #fff !important
+        }
 
         .title {
           font-size: 13vw;
@@ -104,6 +112,7 @@
         cursor: pointer;
         margin-bottom: 20px;
         font-size: 18px;
+        font-family: "Proxima Nova Semibold", sans-serif;
       }
 
       .descriptionBlock {
@@ -118,7 +127,15 @@
         &.active {
           visibility: visible;
         }
+      }
 
+      @media (max-width: 560px) {
+        .toggleDescriptionBtn {
+          color: #fff
+        }
+        .descriptionBlock {
+          padding: 20px;
+        }
       }
 
     }

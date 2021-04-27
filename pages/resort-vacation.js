@@ -2,12 +2,14 @@ import dynamic from 'next/dynamic'
 import Head from 'next/head'
 import LazyLoad from 'react-lazyload'
 import ResortVacationPageBanner from '../components/ResortVacationPageBanner'
-import {gallerySlides, offersSlides, roomsSlides} from '../data/homePageData';
-import AdvantagesSlider from '../components/sliders/AdvantagesSlider';
-import {advantagesSlidesData} from '../data/resort-vacation';
-import RoomsSlider from '../components/sliders/RoomsSlider';
-import OffersSlider from '../components/sliders/OffersSlider';
-
+import {offersSlides} from '../data/home-page'
+import {gallerySlides} from '../data/gallery-data'
+import {roomsSlides} from '../data/rooms-data'
+import {advantagesSlidesData, servicesSlides} from '../data/resort-vacation'
+import AdvantagesSlider from '../components/sliders/AdvantagesSlider'
+import RoomsSlider from '../components/sliders/RoomsSlider'
+import OffersSlider from '../components/sliders/OffersSlider'
+import ServicesSlider from '../components/sliders/ServicesSlider';
 const GallerySlider = dynamic(() => import('../components/sliders/GallerySlider'))
 
 export default function ResortVacation() {
@@ -53,6 +55,10 @@ export default function ResortVacation() {
 
                 <section className="section">
                     <RoomsSlider title={'Номера и цены'} slides={roomsSlides}/>
+                </section>
+
+                <section className="section">
+                    <ServicesSlider slides={servicesSlides}/>
                 </section>
 
                 <section className="section">

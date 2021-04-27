@@ -81,17 +81,6 @@ const Menu = ({menuOpened, toggleMenu}) => {
 
                 {/*</div>*/}
 
-                <div className={s.menuItem} onClick={toggleMenu}>
-                    {/* checkactive is for cheking main root page */}
-                    <Link isActive={checkActive} href={"/"} onClick={(e) => {
-                        handleLinkClick(e)
-                        document.querySelector('#sports').scrollIntoView({behavior: 'smooth', block: 'start'})
-                    }}>
-                        <a>
-                            Спортивные сборы
-                        </a>
-                    </Link>
-                </div>
 
                 <div className={s.menuItem} onClick={toggleMenu}>
                     {/* checkactive is for cheking main root page */}
@@ -100,7 +89,18 @@ const Menu = ({menuOpened, toggleMenu}) => {
                         document.querySelector('#gyms').scrollIntoView({behavior: 'smooth', block: 'start'})
                     }}>
                         <a>
-                            Спортсооружения
+                            Главная
+                        </a>
+                    </Link>
+                </div>
+
+                <div className={s.menuItem} onClick={toggleMenu}>
+                    <Link isActive={checkActive} href={"/resort-vacation"} onClick={(e) => {
+                        handleLinkClick(e)
+                        document.querySelector('#sports').scrollIntoView({behavior: 'smooth', block: 'start'})
+                    }}>
+                        <a>
+                            Курортный отдых
                         </a>
                     </Link>
                 </div>
@@ -146,7 +146,7 @@ const Menu = ({menuOpened, toggleMenu}) => {
                 </div>
                 <div className={s.phone}>
                     <img src={'/images/footer/phone.svg'} alt="Телефон"/>
-                    <a href='tel:88005000347'>8 (800) 500-03-47</a>
+                    <a href='tel:88005557856'>7 (800) 555-78-56</a>
                 </div>
                 <div className={s.icons}>
                     <a target={'_blank'} href="https://www.instagram.com/prometey82">

@@ -3,6 +3,13 @@
   width: 100%;
   margin: 0 auto;
 
+  :global(.slick-dots) {
+    bottom: 2px;
+    :global(li) {
+      margin: 0;
+    }
+  }
+
   .container {
     position: relative;
     box-sizing: border-box;

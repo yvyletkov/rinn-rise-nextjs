@@ -38,23 +38,23 @@ export const advantagesSlidesData = [
 
 export const servicesSlides = [
     {
-        img: '/images/resort-vacation/pool.svg',
-        text: 'Какой-то текст',
+        img: '/images/resort-vacation/beduslugi.svg',
+        text: `Проживание в номере выбранной категории `,
         link: 'aaa'
     },
     {
-        img: '/images/resort-vacation/pool.svg',
-        text: 'Какой-то текст',
+        img: '/images/resort-vacation/spaghetti.svg',
+        text: `Разнообразное питание`,
         link: 'aaa'
     },
     {
-        img: '/images/resort-vacation/pool.svg',
-        text: 'Какой-то текст',
-        link: 'aaa'
+        img: '/images/resort-vacation/swimming-pool.svg',
+        text: `Свой большой бассейн`,
+        link: ''
     },
     {
-        img: '/images/resort-vacation/pool.svg',
-        text: 'Какой-то текст',
+        img: '/images/resort-vacation/confetti.svg',
+        text: `Анимация для детей`,
         link: 'aaa'
     },
     {
