@@ -2,36 +2,36 @@ export const advantagesSlidesData = [
     {
         img: '/images/resort-vacation/pool.svg',
         title: 'Бассейн',
-        text: 'Собственный большой бассейн'
+        text: 'Собственный большой<br/>бассейн'
     },
     {
         img: '/images/resort-vacation/park.svg',
         title: 'Зеленая территория',
-        text: 'Огромная закрытая зеленая территория с прогулочной зоной'
+        text: 'Огромная закрытая зеленая<br/>территорияс прогулочной зоной'
     },
     {
         img: '/images/resort-vacation/swing.svg',
         title: 'Детская площадка',
-        text: 'Детская площадка и анимация для наших маленьких гостей'
+        text: 'Детская площадка и анимация<br/>для наших маленьких гостей'
     },
     {
         img: '/images/resort-vacation/sunbed.svg',
         title: 'Зона отдыха',
-        text: 'В распоряжении всех гостей зонты и шезлонги у бассейна'
+        text: 'В распоряжении всех гостей<br/>зонты и шезлонги у бассейна'
     },
     {
         img: '/images/resort-vacation/spaghetti.svg',
         title: 'Шведский стол',
-        text: 'Вкуснейшие блюда из самых свежих продуктов'
+        text: 'Вкуснейшие блюда<br/>из самых свежих продуктов'
     },
     {
         img: '/images/resort-vacation/wifi.svg',
         title: 'Wi-fi',
-        text: 'Бесплатный wi-fi на всей территории'
+        text: 'Бесплатный wi-fi<br/>на всей территории'
     },
     {
         img: '/images/resort-vacation/parking.svg',
         title: 'Парковка',
-        text: 'Бесплатная парковка для всех гостей'
+        text: 'Бесплатная парковка<br/>для всех гостей'
     },
 ];
