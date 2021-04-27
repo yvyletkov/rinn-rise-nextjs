@@ -9,7 +9,7 @@ const HomePageBanner = () => {
                 <div className={s.container}>
                     <div className={s.textBlock}>
                         <div className={s.stars}>
-                            <Image layout={'fill'} src={'/images/home-page/stars.png'} alt={'4 звезды'}/>
+                            <Image loading='eager' layout={'fill'} src={'/images/home-page/stars.png'} alt={'4 звезды'}/>
                         </div>
                         <p className={s.text}>Территория комфорта</p>
                         <h1 className={s.title}>Rinn Rise</h1>
