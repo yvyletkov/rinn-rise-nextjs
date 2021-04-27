@@ -3,7 +3,7 @@ import s from './style.module.scss'
 import Image from 'next/image'
 
 const GallerySliderItem = ({img, title}) => {
-    let [showDescription, setShowDescription] = useState(false);
+    let [showDescription, setShowDescription] = useState(false)
 
     return (
         <div onMouseEnter={() => setShowDescription(true)}
@@ -16,7 +16,7 @@ const GallerySliderItem = ({img, title}) => {
                 src={img}
                 alt={title}/>
         </div>
-    );
-};
+    )
+}
 
-export default GallerySliderItem;
+export default GallerySliderItem

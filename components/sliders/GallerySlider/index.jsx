@@ -6,8 +6,9 @@ import HeadlineCenter from '../../HeadlineCenter'
 import NextArrow from '../../SliderArrows/NextArrow'
 import PrevArrow from '../../SliderArrows/PrevArrow'
 import {SRLWrapper} from 'simple-react-lightbox'
+import SimpleReactLightbox from 'simple-react-lightbox'
 
-const GallerySlider = ({title = "Фотогалерея", slides = []}) => {
+const GallerySlider = ({title = 'Фотогалерея', slides = []}) => {
 
     const settings = {
         infinite: true,
@@ -36,7 +37,7 @@ const GallerySlider = ({title = "Фотогалерея", slides = []}) => {
                     dots: true,
                     slidesToShow: 1,
                     slidesPerRow: 1,
-                    centerPadding: "60px"
+                    centerPadding: '60px'
                 }
             },
             {
@@ -46,19 +47,19 @@ const GallerySlider = ({title = "Фотогалерея", slides = []}) => {
                     dots: true,
                     slidesToShow: 1,
                     slidesPerRow: 1,
-                    centerPadding: "20px"
+                    centerPadding: '20px'
                 }
             },
         ],
         nextArrow: <NextArrow positionStyles={{
-            bottom: "-75px",
-            right: "50%",
-            transform: "translateX(120%)"
+            bottom: '-75px',
+            right: '50%',
+            transform: 'translateX(120%)'
         }}/>,
         prevArrow: <PrevArrow positionStyles={{
-            bottom: "-75px",
-            left: "50%",
-            transform: "translateX(-120%)"
+            bottom: '-75px',
+            left: '50%',
+            transform: 'translateX(-120%)'
         }}/>
     }
 
@@ -85,14 +86,16 @@ const GallerySlider = ({title = "Фотогалерея", slides = []}) => {
     }
 
     return (
-        <SRLWrapper options={options}>
-            <div id='gallery' className={s.wrapper}>
-                <div className={s.container}>
-                    <HeadlineCenter title={title}/>
+        <SimpleReactLightbox>
+            <SRLWrapper options={options}>
+                <div id="gallery" className={s.wrapper}>
+                    <div className={s.container}>
+                        <HeadlineCenter title={title}/>
                         <Slider {...settings}>{items}</Slider>
+                    </div>
                 </div>
-            </div>
-        </SRLWrapper>
+            </SRLWrapper>
+        </SimpleReactLightbox>
     )
 }
 

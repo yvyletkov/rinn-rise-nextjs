@@ -1,3 +1,4 @@
+import dynamic from 'next/dynamic'
 import Head from 'next/head'
 import InfrastructureSlider from '../components/sliders/InfrastructureSlider'
 import OffersSlider from '../components/sliders/OffersSlider'
@@ -5,10 +6,8 @@ import HomePageBanner from '../components/HomePageBanner/HomePageBanner'
 import RoomsSlider from '../components/sliders/RoomsSlider'
 import TextBlock from '../components/TextBlock'
 import {roomsSlides, offersSlides, infrastructureSlides, gallerySlides} from '../data/homePageData'
-import GallerySlider from '../components/sliders/GallerySlider'
 import LazyLoad from 'react-lazyload';
-import SimpleReactLightbox from 'simple-react-lightbox';
-
+const GallerySlider = dynamic(() => import('../components/sliders/GallerySlider'))
 
 export default function Home() {
     return (<>
@@ -54,9 +53,11 @@ export default function Home() {
                     <InfrastructureSlider slides={infrastructureSlides} title={'Инфраструктура'}/>
                 </section>
 
-                {/*<section className="section">*/}
-                {/*    <GallerySlider slides={gallerySlides} title={'Фотогалерея'}/>*/}
-                {/*</section>*/}
+                <LazyLoad height={'300px'} offset={200}>
+                    <section className="section">
+                        <GallerySlider slides={gallerySlides} title={'Фотогалерея'}/>
+                    </section>
+                </LazyLoad>
 
             </main>
         </>
