@@ -14,7 +14,7 @@
 
     img {
       object-fit: cover;
-      object-position: center 29px;
+      object-position: center 60px;
     }
   }
 
@@ -48,6 +48,7 @@
       .text {
         font-size: 30px;
         font-family: "Proxima Nova Semibold", sans-serif;
+        color:#fff;
       }
 
       .title {
@@ -55,11 +56,13 @@
         font-family: "Proxima Nova Black", sans-serif;
         text-transform: uppercase;
         line-height: 1;
+        color: #fff;
       }
 
       .subtitle {
         font-size: 30px;
         font-family: "Proxima Nova Regular", sans-serif;
+        color:#fff;
       }
 
       @media screen and (max-width: 550px){

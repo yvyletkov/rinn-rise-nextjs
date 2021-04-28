@@ -5,7 +5,6 @@ import 'slick-carousel/slick/slick-theme.css'
 import 'react-lazy-load-image-component/src/effects/blur.css'
 import dynamic from 'next/dynamic';
 import Header from '../components/shared/Header/Header'
-import LazyLoad from 'react-lazyload'
 import {useEffect, useState} from 'react'
 import Loader from '../components/shared/Loader'
 import Head from 'next/head'
@@ -17,7 +16,7 @@ function MyApp({Component, pageProps}) {
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
-        const timeout = setTimeout(() => setLoading(false), 1000)
+        const timeout = setTimeout(() => setLoading(false), 800)
         return () => clearTimeout(timeout)
     }, [Component]);
 

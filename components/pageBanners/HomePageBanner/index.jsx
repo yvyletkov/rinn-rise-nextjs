@@ -21,12 +21,12 @@ const HomePageBanner = () => {
                 {/*<div className={s.moduleBlock} />*/}
             </div>
             <div className={s.banner}>
-                {!mobile ?
-                    <img style={{width: '100%', height: '100%'}} src={'/images/home-page/1.jpg'} alt={'Rinn Rise'}/>
-                    :
-                    <img style={{width: '100%', height: '100%'}} src={'/images/home-page/banner-mobile.jpg'}
+                <picture>
+                    <source srcSet='/images/home-page/banner.webp' type='image/webp'/>
+                    <img style={{width: '100%', height: '100%'}}
+                         src={!mobile ? '/images/home-page/banner.jpg' : '/images/home-page/banner-mobile.jpg'}
                          alt={'Rinn Rise'}/>
-                }
+                </picture>
             </div>
             <div className={s.animatedMouse}>
                 <AnimatedMouseIcon/>
