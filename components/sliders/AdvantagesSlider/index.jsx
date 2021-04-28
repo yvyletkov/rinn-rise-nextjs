@@ -39,6 +39,8 @@ const AdvantagesSlider = ({slides}) => {
             <div key={idx} className={s.sliderItemWrapper}>
                 <LazyLoadImage
                     effect="blur"
+                    width={62}
+                    height={62}
                     src={item.img}
                     alt={item.title}
                 />
