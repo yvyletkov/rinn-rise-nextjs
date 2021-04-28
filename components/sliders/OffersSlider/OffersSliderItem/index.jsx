@@ -1,7 +1,6 @@
 import React from 'react'
 import s from './style.module.scss'
 import cx from 'classnames'
-import Image from 'next/image'
 import PropTypes from 'prop-types';
 import {LazyLoadImage} from 'react-lazy-load-image-component';
 

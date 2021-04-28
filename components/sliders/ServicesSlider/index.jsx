@@ -1,7 +1,6 @@
 import s from './style.module.scss'
 import Slider from 'react-slick'
 import React from 'react'
-import Image from 'next/image'
 import PropTypes from 'prop-types';
 import NextArrow from '../../shared/SliderArrows/NextArrow';
 import PrevArrow from '../../shared/SliderArrows/PrevArrow';
