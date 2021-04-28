@@ -43,6 +43,7 @@ export default function ResortVacation() {
             <main>
 
                 <ResortVacationPageBanner/>
+
                 <section className="section first" style={{position:'relative'}}>
                     <AdvantagesSlider slides={advantagesSlidesData}/>
                     <div style={backgroundItemsStyles.wrapper}>

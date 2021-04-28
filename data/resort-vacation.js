@@ -38,17 +38,17 @@ export const advantagesSlidesData = [
 
 export const servicesSlides = [
     {
-        img: '/images/resort-vacation/beduslugi.svg',
+        img: '/images/resort-vacation/room.svg',
         text: `Проживание в номере выбранной категории `,
         link: 'aaa'
     },
     {
-        img: '/images/resort-vacation/spaghetti.svg',
+        img: '/images/resort-vacation/spaghetti-black.svg',
         text: `Разнообразное питание`,
         link: 'aaa'
     },
     {
-        img: '/images/resort-vacation/swimming-pool.svg',
+        img: '/images/resort-vacation/swimming-pool-black.svg',
         text: `Свой большой бассейн`,
         link: ''
     },
@@ -58,8 +58,18 @@ export const servicesSlides = [
         link: 'aaa'
     },
     {
-        img: '/images/resort-vacation/pool.svg',
-        text: 'Какой-то текст',
+        img: '/images/resort-vacation/gorka.svg',
+        text: 'Детская площадка',
+        link: 'aaa'
+    },
+    {
+        img: '/images/resort-vacation/wifi-black.svg',
+        text: 'Wi-Fi на всей территории ',
+        link: 'aaa'
+    },
+    {
+        img: '/images/resort-vacation/parking-black.svg',
+        text: 'Бесплатная парковка',
         link: 'aaa'
     },
 ]
