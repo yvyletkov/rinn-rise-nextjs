@@ -1,8 +1,7 @@
 import React, {useState} from 'react'
 import s from './style.module.scss'
-import AnimatedMouseIcon from '../shared/AnimatedMouseIcon/AnimatedMouseIcon'
-import Image from 'next/image'
-import useMediaQuery from '../customHooks/useMediaQuery'
+import AnimatedMouseIcon from '../../shared/AnimatedMouseIcon/AnimatedMouseIcon'
+import useMediaQuery from '../../shared/customHooks/useMediaQuery'
 
 const ResortVacationPageBanner = () => {
     const mobile = useMediaQuery('(max-width: 550px)')

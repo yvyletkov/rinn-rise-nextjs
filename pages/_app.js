@@ -4,12 +4,13 @@ import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import 'react-lazy-load-image-component/src/effects/blur.css'
 import dynamic from 'next/dynamic';
-import Header from '../components/Header/Header'
+import Header from '../components/shared/Header/Header'
+import LazyLoad from 'react-lazyload'
 import {useEffect, useState} from 'react'
-import Loader from '../components/Loader'
+import Loader from '../components/shared/Loader'
 import Head from 'next/head'
 
-const Footer = dynamic(() => import('../components/Footer/Footer'))
+const Footer = dynamic(() => import('../components/shared/Footer/Footer'))
 
 function MyApp({Component, pageProps}) {
 

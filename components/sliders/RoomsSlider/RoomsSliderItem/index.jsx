@@ -5,6 +5,7 @@ import Image from 'next/image'
 import PropTypes from 'prop-types'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
 
+
 const RoomsSliderItem = ({
                              img,
                              ...data

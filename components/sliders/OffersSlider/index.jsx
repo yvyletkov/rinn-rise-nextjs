@@ -1,10 +1,10 @@
-import React, {FC} from 'react';
+import React from 'react';
 import s from './style.module.scss';
-import PrevArrow from "../../SliderArrows/PrevArrow";
-import NextArrow from '../../SliderArrows/NextArrow';
+import PrevArrow from "../../shared/SliderArrows/PrevArrow";
+import NextArrow from '../../shared/SliderArrows/NextArrow';
 import Slider from "react-slick";
 import OffersSliderItem from "./OffersSliderItem";
-import HeadlineCenter from '../../HeadlineCenter';
+import HeadlineCenter from '../../shared/HeadlineCenter';
 import PropTypes from 'prop-types';
 
 const OffersSlider = ({slides, title}) => {
