@@ -2,7 +2,8 @@ import React from 'react'
 import s from './style.module.scss'
 import Link from 'next/link'
 import Image from 'next/image'
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 
 const RoomsSliderItem = ({
                              img,
@@ -11,17 +12,13 @@ const RoomsSliderItem = ({
 
     return (
                 <div className={s.card}>
-                    <div className={s.img}>
-                        {/*<Image*/}
-                        {/*    layout="fill"*/}
-                        {/*    quality='20'*/}
-                        {/*    src={img}*/}
-                        {/*    alt={data.title}/>*/}
-                        <img
-                            style={{width: '100%', height: '100%'}}
+
+                        <LazyLoadImage
+                            effect='blur'
+                            wrapperClassName={s.img}
                             src={img}
                             alt={data.title}/>
-                    </div>
+
                     <div className={s.content}>
                         <h6 className={s.title}>
                             Номер

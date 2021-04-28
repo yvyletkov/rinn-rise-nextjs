@@ -17,15 +17,15 @@
   .subtitle {
     font-size: 16px;
     text-transform: uppercase;
-    font-family: "Proxima Nova Light";
+    font-family: "Proxima Nova Light", sans-serif;
   }
   .title {
-    font-family: "Proxima Nova Black";
+    font-family: "Proxima Nova Black", sans-serif;
     font-size: 40px;
-    line-height: 1;
+    line-height: 1.1;
     margin-bottom: 10px;
   }
-  .text {
+  :global(.text) {
     margin-bottom: 10px;
     text-align: justify;
   }
@@ -44,9 +44,7 @@
     border: 10px solid #fff;
     border-radius: 5px;
     box-shadow: 21.5px 37.239px 43.5px rgba(20,20,20,0.12);
-    img {
-      object-fit: cover;
-    }
+    object-fit: cover;
   }
 }
 

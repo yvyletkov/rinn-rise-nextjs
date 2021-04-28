@@ -3,6 +3,7 @@ import s from './style.module.scss'
 import cx from 'classnames'
 import Image from 'next/image'
 import PropTypes from 'prop-types';
+import {LazyLoadImage} from 'react-lazy-load-image-component';
 
 const OffersSliderItem = ({
                               img,
@@ -31,13 +32,8 @@ const OffersSliderItem = ({
                 className={cardClassNames}
                 onMouseEnter={() => !window.matchMedia('screen and (max-width: 1200px)').matches ? setLifted(true) : null}
                 onMouseLeave={() => !window.matchMedia('screen and (max-width: 1200px)').matches ? setLifted(false) : null}>
-                <Image
-                    layout={'responsive'}
-                    loading='eager'
-                    priority
-                    height={'150%'}
-                    quality='20'
-                    width={'100%'}
+                <LazyLoadImage
+                    effect='blur'
                     className={s.img}
                     src={img}
                     alt={title}/>

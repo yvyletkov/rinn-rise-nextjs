@@ -38,7 +38,6 @@ const RoomsSlider = ({
     const afterChangeHandler = index => setCurrentSlideIndex(index)
 
     const settings = {
-        lazyLoad: 'progressive',
         slidesToShow: 1,
         initialSlide: initialCurrentSlideIndex,
         afterChange: afterChangeHandler,
