@@ -1,6 +1,8 @@
 import dynamic from 'next/dynamic'
 import Head from 'next/head'
+import s from '../styles/resortVacation.module.scss'
 import LazyLoad from 'react-lazyload'
+import {LazyLoadImage} from 'react-lazy-load-image-component'
 import ResortVacationPageBanner from '../components/pageBanners/ResortVacationPageBanner'
 import {offersSlides} from '../data/home-page'
 import {gallerySlides} from '../data/gallery-data'
@@ -13,28 +15,6 @@ import ServicesSlider from '../components/sliders/ServicesSlider';
 const GallerySlider = dynamic(() => import('../components/sliders/GallerySlider'))
 
 export default function ResortVacation() {
-    const backgroundItemsStyles = {
-        wrapper: {
-            position: 'absolute',
-            left: '50%',
-            transform: 'translateX(-800px)',
-            bottom: '30px',
-            width: '200px',
-            height: '200px',
-        },
-        glasses: {
-            width: '400px',
-            position: 'absolute',
-            left: 0,
-            top: 0
-        },
-        berry: {
-            width: '130px',
-            position: 'absolute',
-            left: '150px',
-            bottom: '-90px'
-        }
-    }
     return (
         <>
             <Head>
@@ -46,11 +26,11 @@ export default function ResortVacation() {
 
                 <section className="section first" style={{position:'relative'}}>
                     <AdvantagesSlider slides={advantagesSlidesData}/>
-                    <div style={backgroundItemsStyles.wrapper}>
-                        <img style={backgroundItemsStyles.glasses} src={'/images/resort-vacation/glasses.png'}
-                             alt={'очки'}/>
-                        <img style={backgroundItemsStyles.berry} src={'/images/resort-vacation/yagody.png'}
-                             alt={'ягоды'}/>
+                    <div className={s.backgroundImages}>
+                        <LazyLoadImage effect='blur' wrapperClassName={s.glasses} src={'/images/resort-vacation/glasses.png'}
+                             alt={'Очки'}/>
+                        <LazyLoadImage effect='blur' wrapperClassName={s.berry} src={'/images/resort-vacation/yagody.png'}
+                             alt={'Ягоды'}/>
                     </div>
                 </section>
 

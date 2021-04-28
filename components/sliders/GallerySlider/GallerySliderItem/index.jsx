@@ -1,6 +1,5 @@
 import React, {useState} from 'react'
 import s from './style.module.scss'
-import Image from 'next/image'
 
 const GallerySliderItem = ({img, title}) => {
     let [showDescription, setShowDescription] = useState(false)

@@ -1,6 +1,7 @@
 import React from 'react'
 import s from './style.module.scss'
 import {LazyLoadImage} from 'react-lazy-load-image-component';
+import PropTypes from 'prop-types';
 
 const TextBlock = ({subtitle, title, img, withStarImage, content}) => {
 
@@ -33,5 +34,18 @@ const TextBlock = ({subtitle, title, img, withStarImage, content}) => {
         </div>
     </div>
 }
+
+TextBlock.propTypes = {
+    subtitle: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    img: PropTypes.string.isRequired,
+    withStarImage: PropTypes.bool,
+    content: PropTypes.string.isRequired,
+}
+
+TextBlock.defaultProps = {
+    withStarImage: false,
+}
+
 
 export default TextBlock

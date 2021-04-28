@@ -3,6 +3,7 @@ import s from './style.module.scss'
 import cx from 'classnames'
 import useMediaQuery from '../../../shared/customHooks/useMediaQuery'
 import PropTypes from 'prop-types';
+import {LazyLoadImage} from 'react-lazy-load-image-component';
 
 const InfrastructureSliderItem = ({
                                       img,
@@ -22,17 +23,12 @@ const InfrastructureSliderItem = ({
     return (
         <div className={classNames}>
 
-            <div className={s.img}>
-                {/*<Image*/}
-                {/*    layout="fill"*/}
-                {/*    quality="20"*/}
-                {/*    src={img}*/}
-                {/*    alt={title}/>*/}
-                <img
-                    style={{width: '100%', height: '100%'}}
-                    src={img}
-                    alt={title}/>
-            </div>
+            <LazyLoadImage
+                effect="blur"
+                wrapperClassName={s.img}
+                src={img}
+                alt={title}
+            />
 
             <div className={s.content}>
                 <h6 className={s.title} dangerouslySetInnerHTML={{__html: title}}/>

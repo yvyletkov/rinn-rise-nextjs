@@ -4,7 +4,7 @@ import React from 'react'
 import HeadlineCenter from '../../shared/HeadlineCenter'
 import NextArrow from '../../shared/SliderArrows/NextArrow'
 import PrevArrow from '../../shared/SliderArrows/PrevArrow'
-
+import {LazyLoadImage} from 'react-lazy-load-image-component';
 
 const AdvantagesSlider = ({slides}) => {
 
@@ -37,7 +37,11 @@ const AdvantagesSlider = ({slides}) => {
     const items = slides.map((item, idx) => {
         return (
             <div key={idx} className={s.sliderItemWrapper}>
-                <img src={item.img} alt={''}/>
+                <LazyLoadImage
+                    effect="blur"
+                    src={item.img}
+                    alt={item.title}
+                />
                 <h5>{item.title}</h5>
                 <p dangerouslySetInnerHTML={{__html: item.text}}/>
             </div>
