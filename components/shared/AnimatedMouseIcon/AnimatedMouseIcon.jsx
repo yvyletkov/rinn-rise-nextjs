@@ -1,7 +1,6 @@
 import React from 'react'
 import s from './AnimatedMouseIcon.module.scss'
 import PropTypes from 'prop-types'
-import InfrastructureSlider from '../../sliders/InfrastructureSlider';
 
 const AnimatedMouseIcon = ({black}) => {
     return (

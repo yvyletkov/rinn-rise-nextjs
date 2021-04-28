@@ -2,7 +2,7 @@ import dynamic from 'next/dynamic'
 import Head from 'next/head'
 import InfrastructureSlider from '../components/sliders/InfrastructureSlider'
 import OffersSlider from '../components/sliders/OffersSlider'
-import HomePageBanner from '../components/HomePageBanner'
+import HomePageBanner from '../components/pageBanners/HomePageBanner'
 import RoomsSlider from '../components/sliders/RoomsSlider'
 import TextBlock from '../components/TextBlock'
 import {offersSlides, infrastructureSlides} from '../data/home-page';
