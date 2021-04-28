@@ -36,11 +36,16 @@ const ResortVacationPageBanner = () => {
                 {/*<div className={s.moduleBlock} />*/}
             </div>
             <div className={s.banner}>
+                {/*{!mobile ?*/}
+                {/*    <Image loading={'eager'} layout={'fill'} src={'/images/resort-vacation/glavnaya.jpg'} alt={'Rinn Rise'}/>*/}
+                {/*    :*/}
+                {/*    <Image loading={'eager'} layout={'fill'} src={'/images/resort-vacation/banner-mobile.jpg'}*/}
+                {/*           alt={'Rinn Rise'}/>*/}
+                {/*}*/}
                 {!mobile ?
-                    <Image loading={'eager'} layout={'fill'} src={'/images/resort-vacation/glavnaya.jpg'} alt={'Rinn Rise'}/>
+                    <img style={{width: '100%', height: '100%'}} src={'/images/resort-vacation/glavnaya.jpg'} alt={'Rinn Rise'}/>
                     :
-                    <Image loading={'eager'} layout={'fill'} src={'/images/resort-vacation/banner-mobile.jpg'}
-                           alt={'Rinn Rise'}/>
+                    <img style={{width: '100%', height: '100%'}} src={'/images/resort-vacation/banner-mobile.jpg'} alt={'Rinn Rise'}/>
                 }
             </div>
             <div className={s.animatedMouse}>
