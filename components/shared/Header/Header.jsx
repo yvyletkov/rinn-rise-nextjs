@@ -64,18 +64,9 @@ const Header = () => {
                             <span></span>
                         </div>
                         <div className={s.leftBlock}>
-                            <CustomLink title={"Акции"} href={"/residence"} onClickHandler={(e) => {
-                                handleLinkClick(e);
-                                document.querySelector('#residence').scrollIntoView({behavior: 'smooth', block: 'start'})
-                            }}/>
-                            <CustomLink title={"Номера и цены"} href={"/sports"} onClickHandler={(e) => {
-                                handleLinkClick(e);
-                                document.querySelector('#sports').scrollIntoView({behavior: 'smooth', block: 'start'})
-                            }}/>
-                            <CustomLink title={"Инфраструктура"} href={"/sports"} onClickHandler={(e) => {
-                                handleLinkClick(e);
-                                document.querySelector('#sports').scrollIntoView({behavior: 'smooth', block: 'start'})
-                            }}/>
+                            <CustomLink title={"Акции"} href={"/residence"} />
+                            <CustomLink title={"Номера и цены"} href={"/rooms"} />
+                            <CustomLink title={"Инфраструктура"} href={"/sports"} />
                         </div>
                         <div className={s.logo}>
                             <Link href={'/'}>
