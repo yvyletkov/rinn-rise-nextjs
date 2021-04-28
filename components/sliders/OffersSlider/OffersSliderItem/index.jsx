@@ -34,7 +34,7 @@ const OffersSliderItem = ({
                 <Image
                     layout={'responsive'}
                     height={'150%'}
-                    quality="40"
+                    quality='20'
                     width={'100%'}
                     className={s.img}
                     src={img}

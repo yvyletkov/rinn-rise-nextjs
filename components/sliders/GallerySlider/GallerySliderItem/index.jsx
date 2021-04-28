@@ -10,8 +10,9 @@ const GallerySliderItem = ({img, title}) => {
              onMouseLeave={() => setShowDescription(false)}
              className={s.photo}>
             <Image
-                quality="45"
-                layout="fill"
+                quality='30'
+                loadind='eager'
+                layout='fill'
                 className={s.img}
                 src={img}
                 alt={title}/>

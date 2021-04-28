@@ -14,7 +14,7 @@ const RoomsSliderItem = ({
                     <div className={s.img}>
                         <Image
                             layout="fill"
-                            quality='40'
+                            quality='20'
                             src={img}
                             alt={data.title}/>
                     </div>
