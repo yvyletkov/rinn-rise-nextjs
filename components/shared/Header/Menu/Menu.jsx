@@ -30,61 +30,14 @@ const Menu = ({menuOpened, toggleMenu}) => {
         e.preventDefault()
     }
 
-    const checkActive = (match, location) => {
-        if (!location) return false;
-        const {pathname} = location;
-        return pathname === "/";
-    }
-
     return <div className={!menuOpened ? s.menuWrapper : s.menuWrapper + ' ' + s.opened}>
 
         <div className={s.flexContainer}>
 
             <div className={s.col}>
-
-                {/*<div className={!resortVacationOpened ? `${s.menuItem}` : `${s.menuItem} ${s.opened}`}>*/}
-                {/*    <p onClick={toggleResortVacation}>*/}
-                {/*        Курортный отдых*/}
-                {/*    </p>*/}
-                {/*    <img src={arrowIcon} onClick={toggleResortVacation}*/}
-                {/*         className={!resortVacationOpened ? s.arrow + ' ' + s.rotated : s.arrow}*/}
-                {/*         alt=""/>*/}
-
-
-                {/*    <div className={s.list}>*/}
-
-                {/*        <Link href={"/family-vacation"}>*/}
-                {/*            <div className={s.listItem} onClick={toggleMenu}>*/}
-                {/*                Семейный отдых*/}
-                {/*            </div>*/}
-                {/*        </NavLink>*/}
-
-                {/*        <NavLink to={"/vacation-for-yourself"}>*/}
-                {/*            <div className={s.listItem} onClick={toggleMenu}>*/}
-                {/*                Отдых без детей*/}
-                {/*            </div>*/}
-                {/*        </NavLink>*/}
-
-                {/*        <NavLink to={"/romantic-vacation"}>*/}
-                {/*            <div className={s.listItem} onClick={toggleMenu}>*/}
-                {/*                Романтический отдых*/}
-                {/*            </div>*/}
-                {/*        </NavLink>*/}
-
-                {/*        <NavLink to={"/vacation-with-friends"}>*/}
-                {/*            <div className={s.listItem} onClick={toggleMenu}>*/}
-                {/*                Отдых с друзьями*/}
-                {/*            </div>*/}
-                {/*        </NavLink>*/}
-
-                {/*    </div>*/}
-
-                {/*</div>*/}
-
-
                 <div className={s.menuItem} onClick={toggleMenu}>
                     {/* checkactive is for cheking main root page */}
-                    <Link isActive={checkActive} href={"/"}>
+                    <Link href={"/"}>
                         <a>
                             Главная
                         </a>
@@ -92,7 +45,7 @@ const Menu = ({menuOpened, toggleMenu}) => {
                 </div>
 
                 <div className={s.menuItem} onClick={toggleMenu}>
-                    <Link isActive={checkActive} href={"/resort-vacation"}>
+                    <Link href={"/resort-vacation"}>
                         <a>
                             Курортный отдых
                         </a>
@@ -100,25 +53,19 @@ const Menu = ({menuOpened, toggleMenu}) => {
                 </div>
 
                 <div className={s.menuItem} onClick={toggleMenu}>
-                    <Link isActive={checkActive} href={"/rooms"}>
+                    <Link href={"/rooms"}>
                         <a>
                             Номера и цены
                         </a>
                     </Link>
                 </div>
-
-
             </div>
 
             <div className={s.col}>
-
                 <div className={s.menuItem} onClick={toggleMenu}>
-                    <Link isActive={checkActive} href={"/"} onClick={(e) => {
-                        handleLinkClick(e)
-                        document.querySelector('#aboutCenter').scrollIntoView({behavior: 'smooth', block: 'start'})
-                    }}>
+                    <Link href={"/"}>
                         <a>
-                            О центре
+                            Инфраструктура
                         </a>
                     </Link>
                 </div>
@@ -129,10 +76,7 @@ const Menu = ({menuOpened, toggleMenu}) => {
 
 
                 <div className={s.menuItem} onClick={toggleMenu}>
-                    <Link href={"/"} onClick={(e) => {
-                        handleLinkClick(e)
-                        document.querySelector('#footer').scrollIntoView({behavior: 'smooth', block: 'start'})
-                    }}>
+                    <Link href={"/contacts"}>
                         <a>
                             Контакты
                         </a>
