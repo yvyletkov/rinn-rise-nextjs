@@ -9,6 +9,9 @@ import {offersSlides, infrastructureSlides} from '../data/home-page';
 import {gallerySlides} from '../data/gallery-data';
 import {roomsSlides} from '../data/rooms-data';
 import LazyLoad from 'react-lazyload'
+import React from 'react';
+import s from '../components/TextBlock/style.module.scss';
+
 const GallerySlider = dynamic(() => import('../components/sliders/GallerySlider'))
 
 export default function Home() {
@@ -25,7 +28,24 @@ export default function Home() {
                 </section>
 
                 <section className="section">
-                    <TextBlock/>
+                    <TextBlock
+                        subtitle="Добро пожаловать"
+                        title="Безупречный отдых для всей семьи"
+                        content={`<p class='text'>
+                                    Rinn Rise - новый современный отель, распахнувший свои двери для гостей в 2021 году. Отель
+                                    расположен в живописном курортном поселке Джемете на солнечном Черноморском побережье недалеко от
+                                    города Анапа. Джемете славится своими широкими песчаными пляжами и чистым морем с пологим дном.
+                                    Более того, идеальный климат, теплое море и солёный морской воздух благоприятно влияют на здоровье
+                                    отдыхающих.
+                                </p>
+                                <p class='text'>
+                                    Наш отель имеет все необходимое для комфортного отдыха всей семьей: собственную закрытую территорию
+                                    с озеленением, 5 трехэтажных корпусов с разными категориями номеров, ресторан и свой бассейн.
+                                    Песчаный пляж и море находятся всего в 7-10 минутах ходьбы. Высококлассный сервис и идеальное
+                                    расположение сделают ваш отдых у нас незабываемым!
+    
+                                </p>`}
+                        img='/images/home-page/text-block.jpg'/>
                 </section>
 
                 <section className="section">
