@@ -1,7 +1,6 @@
 import React from 'react'
 import s from './style.module.scss'
 import AnimatedMouseIcon from '../../shared/AnimatedMouseIcon/AnimatedMouseIcon'
-import Image from 'next/image'
 import useMediaQuery from '../../shared/customHooks/useMediaQuery'
 
 const RoomsAndPricesBanner = () => {
@@ -11,7 +10,7 @@ const RoomsAndPricesBanner = () => {
             <div className={s.container}>
                 <div className={s.textBlock}>
                     <div className={s.stars}>
-                        <Image loading="eager" layout={'fill'} src={'/images/home-page/stars.png'} alt={'4 звезды'}/>
+                        <img src={'/images/home-page/stars.png'} alt={'4 звезды'}/>
                     </div>
                     <p className={s.text}>Номера и цены</p>
                     <h1 className={s.title}>Размещение</h1>
