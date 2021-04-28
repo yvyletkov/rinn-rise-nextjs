@@ -33,12 +33,14 @@ const OffersSliderItem = ({
                 onMouseLeave={() => !window.matchMedia('screen and (max-width: 1200px)').matches ? setLifted(false) : null}>
                 <Image
                     layout={'responsive'}
+                    loading='eager'
+                    priority
                     height={'150%'}
                     quality='20'
                     width={'100%'}
                     className={s.img}
                     src={img}
-                    alt="Афиша"/>
+                    alt={title}/>
                 <div className={s.content}>
                     <p dangerouslySetInnerHTML={{__html: subtitle}} className={s.subtitle}/>
                     <p dangerouslySetInnerHTML={{__html: title}} className={s.title}/>

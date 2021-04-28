@@ -12,9 +12,13 @@ const RoomsSliderItem = ({
     return (
                 <div className={s.card}>
                     <div className={s.img}>
-                        <Image
-                            layout="fill"
-                            quality='20'
+                        {/*<Image*/}
+                        {/*    layout="fill"*/}
+                        {/*    quality='20'*/}
+                        {/*    src={img}*/}
+                        {/*    alt={data.title}/>*/}
+                        <img
+                            style={{width: '100%', height: '100%'}}
                             src={img}
                             alt={data.title}/>
                     </div>
