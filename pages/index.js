@@ -45,7 +45,8 @@ export default function Home() {
                                     расположение сделают ваш отдых у нас незабываемым!
     
                                 </p>`}
-                        img='/images/home-page/text-block.jpg'/>
+                        img="/images/home-page/text-block.jpg"
+                        withStarImage={true}/>
                 </section>
 
                 <section className="section">

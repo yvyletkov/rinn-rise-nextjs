@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 import NextArrow from '../../shared/SliderArrows/NextArrow';
 import PrevArrow from '../../shared/SliderArrows/PrevArrow';
 import HeadlineCenter from '../../shared/HeadlineCenter';
+import {LazyLoadImage} from 'react-lazy-load-image-component';
 
 const ServicesSlider = ({slides}) => {
 
@@ -53,7 +54,11 @@ const ServicesSlider = ({slides}) => {
                             <div className={s.sliderItemWrapper}>
                                 <div className={s.index}>{'0' + (index + 1)}</div>
                                 <div className={s.imageWrapper}>
-                                    <Image width={70} height={70} src={item.img} alt={item.text}/>
+                                    <LazyLoadImage width={70}
+                                                   effect='blur'
+                                                   height={70}
+                                                   src={item.img}
+                                                   alt={item.text}/>
                                 </div>
                                 <p dangerouslySetInnerHTML={{__html: item.text}}/>
                                 {item.link && <div className={s.btn}>Подробнее</div>}
