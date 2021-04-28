@@ -25,7 +25,7 @@ function MyApp({Component, pageProps}) {
         <>
             {loading && <Loader/>}
             <Head>
-                <script defer src='/scripts/ym.js'/>
+                <script async src='/scripts/ym.js'/>
             </Head>
             <Header/>
             <Component {...pageProps} />
