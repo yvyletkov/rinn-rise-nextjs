@@ -44,10 +44,6 @@ const Header = () => {
         setMenuOpened(status => !status)
     };
 
-    const handleLinkClick = (e) => {
-        e.preventDefault()
-    }
-
     return (<>
 
             <div className={s.wrapper}>
