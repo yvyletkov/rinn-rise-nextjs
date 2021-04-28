@@ -3,6 +3,7 @@ import '../styles/fonts.css'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import 'react-lazy-load-image-component/src/effects/blur.css'
+import dynamic from 'next/dynamic
 import Header from '../components/shared/Header/Header'
 import {useEffect, useState} from 'react'
 import Loader from '../components/shared/Loader'
