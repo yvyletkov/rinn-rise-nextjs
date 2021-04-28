@@ -7,6 +7,8 @@ import Header from '../components/Header/Header'
 import LazyLoad from 'react-lazyload'
 import {useEffect, useState} from 'react'
 import Loader from '../components/Loader'
+import Head from 'next/head'
+
 const Footer = dynamic(() => import('../components/Footer/Footer'))
 
 function MyApp({Component, pageProps}) {
@@ -21,11 +23,12 @@ function MyApp({Component, pageProps}) {
     return (
         <>
             {loading && <Loader/>}
-                    <Header/>
-                    <Component {...pageProps} />
-                    <LazyLoad height={'300px'} offset={300}>
-                        <Footer/>
-                    </LazyLoad>
+            <Head>
+                <script src='/scripts/ym.js'/>
+            </Head>
+            <Header/>
+            <Component {...pageProps} />
+            <Footer/>
         </>
     );
 }
