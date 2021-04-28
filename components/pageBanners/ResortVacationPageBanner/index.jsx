@@ -22,10 +22,12 @@ const ResortVacationPageBanner = () => {
                         <div className={s.descriptionBlock + (showDescription ? (' ' + s.active) : '')}>
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi est in ipsam
-                                necessitatibus numquam quod similique veniam? Ab architecto, dolore illum, ipsa, magni odit
+                                necessitatibus numquam quod similique veniam? Ab architecto, dolore illum, ipsa, magni
+                                odit
                                 quas repudiandae rerum soluta sunt velit.
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi est in ipsam
-                                necessitatibus numquam quod similique veniam? Ab architecto, dolore illum, ipsa, magni odit
+                                necessitatibus numquam quod similique veniam? Ab architecto, dolore illum, ipsa, magni
+                                odit
                                 quas repudiandae rerum soluta sunt velit.
                             </p>
                         </div>
@@ -35,17 +37,12 @@ const ResortVacationPageBanner = () => {
                 {/*<div className={s.moduleBlock} />*/}
             </div>
             <div className={s.banner}>
-                {/*{!mobile ?*/}
-                {/*    <Image loading={'eager'} layout={'fill'} src={'/images/resort-vacation/glavnaya.jpg'} alt={'Rinn Rise'}/>*/}
-                {/*    :*/}
-                {/*    <Image loading={'eager'} layout={'fill'} src={'/images/resort-vacation/banner-mobile.jpg'}*/}
-                {/*           alt={'Rinn Rise'}/>*/}
-                {/*}*/}
-                {!mobile ?
-                    <img style={{width: '100%', height: '100%'}} src={'/images/resort-vacation/glavnaya.jpg'} alt={'Rinn Rise'}/>
-                    :
-                    <img style={{width: '100%', height: '100%'}} src={'/images/resort-vacation/banner-mobile.jpg'} alt={'Rinn Rise'}/>
-                }
+                <picture>
+                    <source srcSet='/images/resort-vacation/banner.webp' type='image/webp'/>
+                    <img style={{width: '100%', height: '100%'}}
+                         src={!mobile ? '/images/resort-vacation/banner.jpg' : '/images/resort-vacation/banner-mobile.jpg'}
+                         alt={'Rinn Rise'}/>
+                </picture>
             </div>
             <div className={s.animatedMouse}>
                 <AnimatedMouseIcon/>

@@ -10,7 +10,6 @@ import {gallerySlides} from '../data/gallery-data';
 import {roomsSlides} from '../data/rooms-data';
 import LazyLoad from 'react-lazyload'
 import React from 'react';
-import s from '../components/TextBlock/style.module.scss';
 
 const GallerySlider = dynamic(() => import('../components/sliders/GallerySlider'))
 

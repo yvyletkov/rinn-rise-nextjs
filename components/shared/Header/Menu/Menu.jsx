@@ -84,10 +84,7 @@ const Menu = ({menuOpened, toggleMenu}) => {
 
                 <div className={s.menuItem} onClick={toggleMenu}>
                     {/* checkactive is for cheking main root page */}
-                    <Link isActive={checkActive} href={"/"} onClick={(e) => {
-                        handleLinkClick(e)
-                        document.querySelector('#gyms').scrollIntoView({behavior: 'smooth', block: 'start'})
-                    }}>
+                    <Link isActive={checkActive} href={"/"}>
                         <a>
                             Главная
                         </a>
@@ -95,12 +92,17 @@ const Menu = ({menuOpened, toggleMenu}) => {
                 </div>
 
                 <div className={s.menuItem} onClick={toggleMenu}>
-                    <Link isActive={checkActive} href={"/resort-vacation"} onClick={(e) => {
-                        handleLinkClick(e)
-                        document.querySelector('#sports').scrollIntoView({behavior: 'smooth', block: 'start'})
-                    }}>
+                    <Link isActive={checkActive} href={"/resort-vacation"}>
                         <a>
                             Курортный отдых
+                        </a>
+                    </Link>
+                </div>
+
+                <div className={s.menuItem} onClick={toggleMenu}>
+                    <Link isActive={checkActive} href={"/rooms"}>
+                        <a>
+                            Номера и цены
                         </a>
                     </Link>
                 </div>
