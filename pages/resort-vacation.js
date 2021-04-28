@@ -21,9 +21,7 @@ export default function ResortVacation() {
                 <title>Курортный отдых – Rinn Rise – Анапа, Джемете</title>
             </Head>
             <main>
-
                 <ResortVacationPageBanner/>
-
                 <section className="section first" style={{position:'relative'}}>
                     <AdvantagesSlider slides={advantagesSlidesData}/>
                     <div className={s.backgroundImages}>
