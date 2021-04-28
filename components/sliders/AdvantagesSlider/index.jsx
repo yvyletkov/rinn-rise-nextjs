@@ -1,9 +1,9 @@
-import s from './style.module.scss';
-import Slider from 'react-slick';
-import React from 'react';
-import HeadlineCenter from '../../HeadlineCenter';
-import NextArrow from '../../SliderArrows/NextArrow';
-import PrevArrow from '../../SliderArrows/PrevArrow';
+import s from './style.module.scss'
+import Slider from 'react-slick'
+import React from 'react'
+import HeadlineCenter from '../../shared/HeadlineCenter'
+import NextArrow from '../../shared/SliderArrows/NextArrow'
+import PrevArrow from '../../shared/SliderArrows/PrevArrow'
 
 
 const AdvantagesSlider = ({slides}) => {

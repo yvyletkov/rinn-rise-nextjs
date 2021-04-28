@@ -1,10 +1,8 @@
 import React from 'react'
-import Image from 'next/image'
 import s from './style.module.scss'
 import cx from 'classnames'
-import useMediaQuery from '../../../customHooks/useMediaQuery'
+import useMediaQuery from '../../../shared/customHooks/useMediaQuery'
 import PropTypes from 'prop-types';
-import InfrastructureSlider from '../index';
 
 const InfrastructureSliderItem = ({
                                       img,

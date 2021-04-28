@@ -3,9 +3,9 @@ import Slider from 'react-slick'
 import React from 'react'
 import Image from 'next/image'
 import PropTypes from 'prop-types';
-import NextArrow from '../../SliderArrows/NextArrow';
-import PrevArrow from '../../SliderArrows/PrevArrow';
-import HeadlineCenter from '../../HeadlineCenter';
+import NextArrow from '../../shared/SliderArrows/NextArrow';
+import PrevArrow from '../../shared/SliderArrows/PrevArrow';
+import HeadlineCenter from '../../shared/HeadlineCenter';
 
 const ServicesSlider = ({slides}) => {
 
