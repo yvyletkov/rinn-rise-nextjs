@@ -21,10 +21,15 @@ const HomePageBanner = () => {
                     {/*<div className={s.moduleBlock} />*/}
                 </div>
                 <div className={s.banner}>
+                    {/*{!mobile ?*/}
+                    {/*    <Image loading={'eager'} layout={'fill'} src={'/images/home-page/1.jpg'} alt={'Rinn Rise'}/>*/}
+                    {/*    :*/}
+                    {/*    <Image loading={'eager'} layout={'fill'} src={'/images/home-page/banner-mobile.jpg'} alt={'Rinn Rise'}/>*/}
+                    {/*}*/}
                     {!mobile ?
-                        <Image loading={'eager'} layout={'fill'} src={'/images/home-page/1.jpg'} alt={'Rinn Rise'}/>
+                        <img style={{width: '100%', height: '100%'}} src={'/images/home-page/1.jpg'} alt={'Rinn Rise'}/>
                         :
-                        <Image loading={'eager'} layout={'fill'} src={'/images/home-page/banner-mobile.jpg'} alt={'Rinn Rise'}/>
+                        <img style={{width: '100%', height: '100%'}} src={'/images/home-page/banner-mobile.jpg'} alt={'Rinn Rise'}/>
                     }
                 </div>
                 <div className={s.animatedMouse}>
