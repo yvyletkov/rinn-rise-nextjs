@@ -9,11 +9,7 @@ const GallerySliderItem = ({img, title}) => {
         <div onMouseEnter={() => setShowDescription(true)}
              onMouseLeave={() => setShowDescription(false)}
              className={s.photo}>
-            <Image
-                decoding={'sync'}
-                priority
-                quality="45"
-                layout="fill"
+            <img
                 className={s.img}
                 src={img}
                 alt={title}/>
