@@ -5,11 +5,11 @@ import OffersSlider from '../components/sliders/OffersSlider'
 import HomePageBanner from '../components/pageBanners/HomePageBanner'
 import RoomsSlider from '../components/sliders/RoomsSlider'
 import TextBlock from '../components/TextBlock'
-import {offersSlides, infrastructureSlides} from '../data/home-page';
-import {gallerySlides} from '../data/gallery-data';
-import {roomsSlides} from '../data/rooms-data';
+import {offersSlides, infrastructureSlides} from '../data/home-page'
+import {gallerySlides} from '../data/gallery-data'
+import {roomsSlides} from '../data/rooms-data'
 import LazyLoad from 'react-lazyload'
-import React from 'react';
+import React from 'react'
 
 const GallerySlider = dynamic(() => import('../components/sliders/GallerySlider'))
 

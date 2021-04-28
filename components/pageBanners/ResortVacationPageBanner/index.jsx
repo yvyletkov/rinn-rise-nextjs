@@ -38,9 +38,9 @@ const ResortVacationPageBanner = () => {
             </div>
             <div className={s.banner}>
                 <picture>
-                    <source srcSet='/images/resort-vacation/banner.webp' type='image/webp'/>
+                    <source srcSet={mobile ? '/images/resort-vacation/banner-mobile.webp' : '/images/resort-vacation/banner.webp'} type='image/webp'/>
                     <img style={{width: '100%', height: '100%'}}
-                         src={!mobile ? '/images/resort-vacation/banner.jpg' : '/images/resort-vacation/banner-mobile.jpg'}
+                         src={mobile ? '/images/resort-vacation/banner-mobile.jpg' : '/images/resort-vacation/banner.jpg'}
                          alt={'Rinn Rise'}/>
                 </picture>
             </div>
