@@ -21,11 +21,6 @@ const HomePageBanner = () => {
                     {/*<div className={s.moduleBlock} />*/}
                 </div>
                 <div className={s.banner}>
-                    {/*{!mobile ?*/}
-                    {/*    <Image decoding={'sync'} priority layout={'fill'} src={'/images/home-page/1.jpg'} alt={'Rinn Rise'}/>*/}
-                    {/*    :*/}
-                    {/*    <Image decoding={'sync'} priority layout={'fill'} src={'/images/home-page/banner-mobile.jpg'} alt={'Rinn Rise'}/>*/}
-                    {/*}*/}
                     {!mobile ?
                         <img style={{width: '100%', height: '100%'}} src={'/images/home-page/1.jpg'} alt={'Rinn Rise'}/>
                         :
