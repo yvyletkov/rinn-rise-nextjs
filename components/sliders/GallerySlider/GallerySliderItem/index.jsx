@@ -5,11 +5,12 @@ import Image from 'next/image'
 const GallerySliderItem = ({img, title}) => {
     let [showDescription, setShowDescription] = useState(false)
 
+    console.log(img)
     return (
         <div onMouseEnter={() => setShowDescription(true)}
              onMouseLeave={() => setShowDescription(false)}
              className={s.photo}>
-            <Image
+            <img
                 quality="45"
                 layout="fill"
                 className={s.img}
