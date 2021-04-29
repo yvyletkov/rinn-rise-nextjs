@@ -1,0 +1,82 @@
+.wrapper {
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+
+  .container {
+    box-sizing: border-box;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+
+    .sliderWrapper {
+      max-width: 940px;
+      margin: 0 auto;
+    }
+
+    .iconWrapper {
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0;
+
+      img {
+        width: 55px;
+        filter: brightness(0);
+        margin-bottom: 20px;
+      }
+
+      p {
+        font-family: "Helvetica Neue Roman", sans-serif;
+        text-align: center;
+      }
+
+      @media (max-width: 1000px) {
+        flex-direction: row;
+        max-width: 250px;
+        width: fit-content;
+        padding: 0 20px;
+
+        img {
+          margin-bottom: 0;
+          margin-right: 10px;
+          height: 55px;
+          width: unset;
+        }
+
+        p {
+          text-align: left;
+        }
+      }
+
+    }
+
+
+  }
+
+  @media (max-width: 1000px) {
+    padding-bottom: 20px;
+  }
+}
+
+.nextArrow, .prevArrow {
+  position: absolute;
+  display: block;
+  z-index: 10;
+  width: 30px;
+  height: 50px;
+  top: 50%;
+  background: no-repeat center;
+  cursor: pointer;
+}
+
+.nextArrow {
+  right: -14px;
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.prevArrow {
+  left: -14px;
+  transform: translateY(-50%);
+}
