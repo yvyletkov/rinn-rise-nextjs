@@ -10,8 +10,7 @@ const TextBlock = ({subtitle, title, img, withStarImage, content}) => {
             {withStarImage &&
             <div className={s.starImg}>
                 <LazyLoadImage
-                    effect="blur"
-                    wrapperClassName={s.starImg}
+                    effect="br"
                     className={s.img}
                     src="/images/home-page/star.png"
                     alt="Rinn Rise"/>
