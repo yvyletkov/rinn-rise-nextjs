@@ -20,7 +20,7 @@ function MyApp({Component, pageProps}) {
 
     return (
         <>
-            {loading && <Loader/>}
+            {/*{loading && <Loader/>}*/}
             <Head>
                 <script defer src='/scripts/ym.js'/>
             </Head>
