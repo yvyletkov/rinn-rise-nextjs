@@ -2,9 +2,9 @@ import Head from 'next/head'
 import React from 'react'
 import SingleRoomPageBanner from '../../components/pageBanners/SingleRoomPageBanner'
 import DescriptionRoomBlock from '../../components/shared/DescriptionRoomBlock'
-import RoomPhotosSlider from '../../components/sliders/RoomPhotosSlider';
-import {roomPhotos, descriptionRooms, otherRoomsSlides} from '../../data/rooms-data';
-import OtherRoomsSlider from '../../components/sliders/OtherRoomsSlider';
+import RoomPhotosSlider from '../../components/sliders/RoomPhotosSlider'
+import {roomPhotos, descriptionRooms, otherRoomsSlides} from '../../data/rooms-data'
+import OtherRoomsSlider from '../../components/sliders/OtherRoomsSlider'
 
 export default function SingleRoomPage() {
     return (<>
@@ -20,7 +20,7 @@ export default function SingleRoomPage() {
                     <RoomPhotosSlider slides={roomPhotos.standard} title="Фотографии номера"/>
                 </section>
                 <section className="section last">
-                    <OtherRoomsSlider slides={otherRoomsSlides} title={'sasd'} type={'rooms'} />
+                    <OtherRoomsSlider slides={otherRoomsSlides} title={'Другие номера'} type={'room'}/>
                 </section>
             </main>
         </>

@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react'
+import PropTypes from 'prop-types'
 
-function useMediaQuery(query) {
-    const [matches, setMatches] = useState(true)
+function useMediaQuery(query, banner) {
+    const [matches, setMatches] = useState(banner)
 
     useEffect(() => {
         const media = window.matchMedia(query)
@@ -16,6 +17,15 @@ function useMediaQuery(query) {
     }, [matches, query])
 
     return matches
+}
+
+useMediaQuery.propTypes = {
+    query: PropTypes.string.isRequired,
+    banner: PropTypes.bool
+}
+
+useMediaQuery.defaultProps = {
+    banner: false
 }
 
 export default useMediaQuery
