@@ -6,7 +6,7 @@ import {LazyLoadImage} from 'react-lazy-load-image-component'
 import ResortVacationPageBanner from '../components/pageBanners/ResortVacationPageBanner'
 import {offersSlides} from '../data/home-page'
 import {gallerySlides} from '../data/gallery-data'
-import {roomsSlides} from '../data/rooms-data'
+import {roomPreviewSlides} from '../data/rooms-data'
 import {advantagesSlidesData, servicesSlides} from '../data/resort-vacation'
 import AdvantagesSlider from '../components/sliders/AdvantagesSlider'
 import RoomsSlider from '../components/sliders/RoomsSlider'
@@ -33,7 +33,7 @@ export default function ResortVacation() {
                 </section>
 
                 <section className="section">
-                    <RoomsSlider title={'Номера и цены'} slides={roomsSlides}/>
+                    <RoomsSlider title={'Номера и цены'} slides={roomPreviewSlides}/>
                 </section>
 
                 <section className="section">

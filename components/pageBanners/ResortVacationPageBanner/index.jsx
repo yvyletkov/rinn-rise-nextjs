@@ -4,7 +4,7 @@ import AnimatedMouseIcon from '../../shared/AnimatedMouseIcon/AnimatedMouseIcon'
 import useMediaQuery from '../../shared/customHooks/useMediaQuery'
 
 const ResortVacationPageBanner = () => {
-    const mobile = useMediaQuery('(max-width: 550px)')
+    const mobile = useMediaQuery('(max-width: 550px)', true)
     const [showDescription, setShowDescription] = useState(false)
     return (
         <div className={s.wrapper}>

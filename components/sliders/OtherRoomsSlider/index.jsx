@@ -1,56 +1,39 @@
-import React from 'react';
-import Slider from 'react-slick';
-import s from './style.module.scss';
-import OtherRoomsSliderItem from './OtherRoomsSliderItem';
-import NextArrow from '../../shared/SliderArrows/NextArrow';
-import PrevArrow from '../../shared/SliderArrows/PrevArrow';
+import React, {useEffect, useRef, useState} from 'react'
+import Slider from 'react-slick'
+import s from './style.module.scss'
+import OtherRoomsSliderItem from './OtherRoomsSliderItem'
+import NextArrow from '../../shared/SliderArrows/NextArrow'
+import PrevArrow from '../../shared/SliderArrows/PrevArrow'
+import useMediaQuery from '../../shared/customHooks/useMediaQuery'
+import HeadlineCenter from '../../shared/HeadlineCenter'
+import PropTypes from 'prop-types'
 
-const OtherRoomsSlider = ({
-                              title = 'Какой-то заголовок',
-                              slides,
-                              type = 'home-page',
-                              desaturated = false,
-                              infinite = false
-                          }) => {
+const OtherRoomsSlider = ({title, slides}) => {
 
+    const initialCurrentSlideIndex = useMediaQuery('(min-width: 769px)') ?
+        ((slides.length >= 5 || 4) ? 2 : (slides.length === 2 || 3) ? 1 : 0) : 0;
 
-    const initialCurrentSlideIndex = window.matchMedia('(min-width: 769px)').matches ?
-        (slides.length >= 5 ? 2 : slides.length === 4 ? 2 : slides.length === 2 ? 1 : slides.length === 3 ? 1 : 0)
-        : 0;
+    console.log('init', initialCurrentSlideIndex)
 
-    let [currentSlideIndex, setCurrentSlideIndex] = React.useState(initialCurrentSlideIndex);
+    let [currentSlideIndex, setCurrentSlideIndex] = useState(initialCurrentSlideIndex);
 
     const items = slides.map((item, index) => {
         const {
             img,
             link,
             title,
-            subtitle,
-            time,
-            date,
-            campus,
-            campusName,
-            subsubtitle = '',
-            fontsizeSubsubtitle = '',
             capacity,
-            area
+            area,
+            desc
         } = item;
         return (
             <div className="sliderElement" key={index}>
                 <OtherRoomsSliderItem
-                    desaturated={desaturated}
                     active={currentSlideIndex === index}
                     link={link}
-                    type={type}
                     img={img}
                     title={title}
-                    subtitle={subtitle}
-                    subsubtitle={subsubtitle}
-                    fontsizeSubsubtitle={fontsizeSubsubtitle}
-                    time={time}
-                    date={date}
-                    campus={campus}
-                    campusName={campusName}
+                    desc={desc}
                     capacity={capacity}
                     area={area}
                 />
@@ -66,16 +49,16 @@ const OtherRoomsSlider = ({
         dots: false,
         className: 'center',
         centerMode: true,
-        infinite: type !== 'home-page' || infinite,
+        infinite: false,
         centerPadding: '60px',
         variableWidth: true,
         speed: 500,
-        nextArrow: <NextArrow onClick={() => setCurrentSlideIndex(currentSlideIndex + 1)} positionStyles={{
+        nextArrow: <NextArrow positionStyles={{
             bottom: '-90px',
             right: '50%',
             transform: 'translateX(120%)'
         }}/>,
-        prevArrow: <PrevArrow onClick={() => setCurrentSlideIndex(currentSlideIndex - 1)} positionStyles={{
+        prevArrow: <PrevArrow positionStyles={{
             bottom: '-90px',
             left: '50%',
             transform: 'translateX(-120%)'
@@ -89,7 +72,6 @@ const OtherRoomsSlider = ({
                     centerMode: false,
                     slidesToShow: 1,
                     slidesToScroll: 1,
-                    infinite: type !== 'home-page' || infinite,
                     dots: true,
                     arrows: false
                 }
@@ -97,11 +79,13 @@ const OtherRoomsSlider = ({
         ]
     };
 
-    React.useEffect(() => {
+    useEffect(() => {
         sliderRef.current.slickGoTo(currentSlideIndex);
     }, [currentSlideIndex]);
 
-    const sliderRef = React.useRef();
+    console.log('curr', currentSlideIndex)
+
+    const sliderRef = useRef();
 
     return (
         <div className={s.wrapper}>
@@ -110,5 +94,14 @@ const OtherRoomsSlider = ({
         </div>
     );
 };
+
+OtherRoomsSlider.propTypes = {
+    title: PropTypes.string,
+    slides: PropTypes.arrayOf(PropTypes.object)
+}
+
+OtherRoomsSlider.defaultProps = {
+    title: 'Заголовок'
+}
 
 export default OtherRoomsSlider
