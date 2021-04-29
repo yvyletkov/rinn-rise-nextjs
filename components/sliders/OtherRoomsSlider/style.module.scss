@@ -1,0 +1,38 @@
+.wrapper {
+  max-width: 1580px;
+  width: 100%;
+  padding-bottom: 113px;
+  overflow: hidden;
+  margin-bottom: -23px auto;
+}
+
+:global(.slick-next:before, .slick-prev:before) {
+  color: #000;
+}
+
+:global(.slick-list) {
+  transition: all 0.3s;
+  overflow: visible;
+}
+
+:global(.slick-dots) {
+  bottom: -32px;
+}
+:global(.slick-dots li) {
+  margin: 0
+}
+
+:global(.slick-slide img) {
+  width: 100%;
+  margin: 0 40px 0 0;
+}
+
+:global(.slick-track) {
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 480px){
+  .wrapper {
+    padding-bottom: 37px;
+  }
+}
