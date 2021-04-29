@@ -1,44 +1,19 @@
 import s from './style.module.scss'
-// import HeadlineCenter from "../HeadlineCenter/HeadlineCenter";
 import Slider from 'react-slick'
 import React from 'react'
 import HeadlineCenter from '../HeadlineCenter'
-// import arrowImg from "../../../img/sliderArrows/arrowThin.png";
+import PropTypes from 'prop-types'
 
-// function NextArrow({style, onClick}) {
-//     return <div
-//         className={s.nextArrow}
-//         style={{...style, backgroundImage: 'url(' + arrowImg + ')'}}
-//         onClick={onClick}
-//     />
-// }
-//
-// function PrevArrow({style, onClick}) {
-//     return <div
-//         className={s.prevArrow}
-//         style={{...style, backgroundImage: 'url(' + arrowImg + ')'}}
-//         onClick={onClick}
-//     />
-// }
-
-const icons = [
-    {img: '/images/rooms/area.svg', text: 'Площадь<br>50м&sup2;'},
-    {img: '/images/rooms/capacity.svg', text: '2 человка<br>1 доп. место'},
-    {img: '/images/rooms/room.svg', text: 'Две<br>комнаты'},
-]
-
-const DescriptionRoomBlock = ({title, slidesToShow}) => {
+const DescriptionRoomBlock = ({title, icons, slidesToShow}) => {
 
     const settings = {
         infinite: false,
         slidesToShow: slidesToShow || icons.length,
-        // nextArrow: <NextArrow/>,
-        // prevArrow: <PrevArrow/>,
         arrows: true,
         dots: false,
         responsive: [
             {
-                breakpoint: 1000,
+                breakpoint: 500,
                 settings: {
                     arrows: false,
                     variableWidth: true,
@@ -56,18 +31,36 @@ const DescriptionRoomBlock = ({title, slidesToShow}) => {
             <div className={s.sliderWrapper}>
                 <Slider {...settings}>
                     {icons.map((item, index) => {
-                        return <div key={index}>
-                            <div className={s.iconWrapper}>
-                                <img src={item.img} alt=""/>
-                                <p dangerouslySetInnerHTML={{__html: item.text}}/>
-                            </div>
+                        return <div key={index} className={s.iconWrapper}>
+                            <img className={s.icon} src={item.img} alt=""/>
+                            <p className={s.text} dangerouslySetInnerHTML={{__html: item.text}}/>
                         </div>
                     })}
                 </Slider>
             </div>
-
+            <p className={s.textDesc}><b>Оснащение номера:</b> один балкон с видом на задний фасад здания, второй балкон с видом на площадь с
+                фонтаном, 2 ТВ – один в спальне, другой в гостиной, бесплатный Wi-Fi, бесплатная парковка, мебель на
+                балконе, тапочки, сейф, холодильник, индивидуальное кондиционирование, расширенный набор банных
+                принадлежностей, сервиз, чайная станция.
+            </p>
+            <p className={s.textDesc}>Просторный двухкомнатный номер. В номере одна большая спальня и просторная гостиная комната. Каждый
+                номер оснащен современной мебелью , также в номере есть собственная ванная комната с душем и
+                расширенным набором банных принадлежностей, тапочки, кондиционер, 2 телевизора, мини-бар, сейф,
+                чайная станция, сервиз. Есть 2 собственных балкона с мебелью.
+            </p>
+            <div className={s.button}>Забронировать</div>
         </div>
     </div>
 };
+
+DescriptionRoomBlock.propTypes = {
+    title: PropTypes.string.isRequired,
+    slidesToShow: PropTypes.number,
+    icons: PropTypes.arrayOf(PropTypes.object).isRequired
+}
+
+DescriptionRoomBlock.defaultProps = {
+    icons: []
+}
 
 export default DescriptionRoomBlock

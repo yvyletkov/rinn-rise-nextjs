@@ -4,6 +4,12 @@ import SingleRoomPageBanner from '../../components/pageBanners/SingleRoomPageBan
 import DescriptionRoomBlock from '../../components/shared/DescriptionRoomBlock'
 import ServicesSlider from '../../components/sliders/ServicesSlider'
 
+const icons = [
+    {img: '/images/rooms/area.svg', text: 'Площадь<br>50м&sup2;'},
+    {img: '/images/rooms/capacity.svg', text: '2 человка<br>1 доп. место'},
+    {img: '/images/rooms/room.svg', text: 'Две<br>комнаты'},
+]
+
 export default function SingleRoomPage() {
     return (<>
             <Head>
@@ -12,10 +18,7 @@ export default function SingleRoomPage() {
             <main>
                 <SingleRoomPageBanner/>
                 <section className="section first">
-                    <DescriptionRoomBlock title="Описание номера"/>
-                </section>
-                <section className="section first">
-                    <DescriptionRoomBlock title="Описание номера"/>
+                    <DescriptionRoomBlock title="Описание номера" icons={icons}/>
                 </section>
             </main>
         </>
