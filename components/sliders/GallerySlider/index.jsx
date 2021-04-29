@@ -7,8 +7,9 @@ import NextArrow from '../../shared/SliderArrows/NextArrow'
 import PrevArrow from '../../shared/SliderArrows/PrevArrow'
 import {SRLWrapper} from 'simple-react-lightbox'
 import SimpleReactLightbox from 'simple-react-lightbox'
+import propTypes from 'prop-types'
 
-const GallerySlider = ({title = 'Фотогалерея', slides = []}) => {
+const GallerySlider = ({title, slides}) => {
 
     const settings = {
         infinite: true,
@@ -97,6 +98,16 @@ const GallerySlider = ({title = 'Фотогалерея', slides = []}) => {
             </SRLWrapper>
         </SimpleReactLightbox>
     )
+}
+
+GallerySlider.propTypes = {
+    slides: propTypes.arrayOf(propTypes.object).isRequired,
+    title: propTypes.string
+}
+
+GallerySlider.defaultProps = {
+    slides: [],
+    title: 'Фотогалерея'
 }
 
 export default GallerySlider

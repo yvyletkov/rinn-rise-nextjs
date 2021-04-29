@@ -4,7 +4,9 @@ import React from 'react'
 import HeadlineCenter from '../../shared/HeadlineCenter'
 import NextArrow from '../../shared/SliderArrows/NextArrow'
 import PrevArrow from '../../shared/SliderArrows/PrevArrow'
-import {LazyLoadImage} from 'react-lazy-load-image-component';
+import {LazyLoadImage} from 'react-lazy-load-image-component'
+import propTypes from 'prop-types'
+import InfrastructureSlider from '../InfrastructureSlider';
 
 const AdvantagesSlider = ({slides}) => {
 
@@ -62,5 +64,14 @@ const AdvantagesSlider = ({slides}) => {
         </div>
     </div>
 };
+
+AdvantagesSlider.propTypes = {
+    slides: propTypes.arrayOf(propTypes.object).isRequired
+}
+
+AdvantagesSlider.defaultProps = {
+    slides: [],
+}
+
 
 export default AdvantagesSlider;
