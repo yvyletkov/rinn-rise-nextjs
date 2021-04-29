@@ -9,6 +9,21 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  animation: fade 800ms;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 100%;
+  }
+
+  20% {
+    opacity: 100%;
+  }
+
+  100% {
+    opacity: 0;
+  }
 }
 
 .ldsRoller {
