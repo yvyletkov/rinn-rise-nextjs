@@ -5,13 +5,13 @@ import OtherRoomsSliderItem from './OtherRoomsSliderItem';
 import NextArrow from '../../shared/SliderArrows/NextArrow';
 import PrevArrow from '../../shared/SliderArrows/PrevArrow';
 
-const CenteredSlider = ({
-                            title = 'Какой-то заголовок',
-                            slides,
-                            type = 'home-page',
-                            desaturated = false,
-                            infinite = false
-                        }) => {
+const OtherRoomsSlider = ({
+                              title = 'Какой-то заголовок',
+                              slides,
+                              type = 'home-page',
+                              desaturated = false,
+                              infinite = false
+                          }) => {
 
 
     const initialCurrentSlideIndex = window.matchMedia('(min-width: 769px)').matches ?
@@ -111,4 +111,4 @@ const CenteredSlider = ({
     );
 };
 
-export default CenteredSlider;
+export default OtherRoomsSlider

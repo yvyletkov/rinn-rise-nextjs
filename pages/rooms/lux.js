@@ -2,9 +2,9 @@ import Head from 'next/head'
 import React from 'react'
 import SingleRoomPageBanner from '../../components/pageBanners/SingleRoomPageBanner'
 import DescriptionRoomBlock from '../../components/shared/DescriptionRoomBlock'
-import {icons, otherRoomsSlides} from '../../data/room-data';
 import RoomPhotosSlider from '../../components/sliders/RoomPhotosSlider';
-import {roomPhotos} from '../../data/rooms-data';
+import {roomPhotos, descriptionRooms, otherRoomsSlides} from '../../data/rooms-data';
+import OtherRoomsSlider from '../../components/sliders/OtherRoomsSlider';
 
 export default function SingleRoomPage() {
     return (<>
@@ -14,10 +14,13 @@ export default function SingleRoomPage() {
             <main>
                 <SingleRoomPageBanner/>
                 <section className="section first">
-                    <DescriptionRoomBlock title="Описание номера" icons={icons}/>
+                    <DescriptionRoomBlock title="Описание номера" icons={descriptionRooms}/>
                 </section>
                 <section className="section">
-                    <RoomPhotosSlider slides={roomPhotos.standard} title='Фотографии номера'/>
+                    <RoomPhotosSlider slides={roomPhotos.standard} title="Фотографии номера"/>
+                </section>
+                <section className="section last">
+                    <OtherRoomsSlider slides={otherRoomsSlides} title={'sasd'} type={'rooms'} />
                 </section>
             </main>
         </>
