@@ -2,7 +2,8 @@ import Head from 'next/head'
 import React from 'react'
 import SingleRoomPageBanner from '../../components/pageBanners/SingleRoomPageBanner'
 import DescriptionRoomBlock from '../../components/shared/DescriptionRoomBlock'
-import ServicesSlider from '../../components/sliders/ServicesSlider'
+import RoomPhotosSlider from '../../components/sliders/RoomPhotosSlider';
+import {roomPhotos} from '../../data/rooms-data';
 
 const icons = [
     {img: '/images/rooms/area.svg', text: 'Площадь<br>50м&sup2;'},
@@ -19,6 +20,9 @@ export default function SingleRoomPage() {
                 <SingleRoomPageBanner/>
                 <section className="section first">
                     <DescriptionRoomBlock title="Описание номера" icons={icons}/>
+                </section>
+                <section className="section">
+                    <RoomPhotosSlider slides={roomPhotos.standard} title='Фотографии номера'/>
                 </section>
             </main>
         </>
