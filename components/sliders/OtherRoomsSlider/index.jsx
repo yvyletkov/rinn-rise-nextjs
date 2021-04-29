@@ -10,10 +10,7 @@ import PropTypes from 'prop-types'
 
 const OtherRoomsSlider = ({title, slides}) => {
 
-    const initialCurrentSlideIndex = useMediaQuery('(min-width: 769px)') ?
-        ((slides.length >= 5 || 4) ? 2 : (slides.length === 2 || 3) ? 1 : 0) : 0;
-
-    console.log('init', initialCurrentSlideIndex)
+    const initialCurrentSlideIndex = useMediaQuery('(min-width: 769px)') ? 2 : 0;
 
     let [currentSlideIndex, setCurrentSlideIndex] = useState(initialCurrentSlideIndex);
 
@@ -44,7 +41,7 @@ const OtherRoomsSlider = ({title, slides}) => {
     const afterChangeHandler = (index) => setCurrentSlideIndex(index)
 
     const settings = {
-        initialSlide: initialCurrentSlideIndex,
+        // initialSlide: initialCurrentSlideIndex,
         afterChange: afterChangeHandler,
         dots: false,
         className: 'center',
@@ -80,10 +77,11 @@ const OtherRoomsSlider = ({title, slides}) => {
     };
 
     useEffect(() => {
-        sliderRef.current.slickGoTo(currentSlideIndex);
-    }, [currentSlideIndex]);
-
-    console.log('curr', currentSlideIndex)
+        if (initialCurrentSlideIndex === 2) {
+            sliderRef.current.slickGoTo(initialCurrentSlideIndex);
+            setCurrentSlideIndex(initialCurrentSlideIndex)
+        }
+    }, [initialCurrentSlideIndex])
 
     const sliderRef = useRef();
 
