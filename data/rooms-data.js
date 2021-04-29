@@ -1,4 +1,4 @@
-export const roomsSlides = [
+export const roomPreviewSlides = [
     {
         img: '/images/room-photos/standart.jpg',
         data: {
@@ -44,3 +44,11 @@ export const roomsSlides = [
         }
     },
 ]
+
+export const roomPhotos = {
+    lux: [
+        {img: '/images/rooms/standard/fotogalereya1.jpg'},
+        {img: '/images/rooms/standard/fotogalereya2.jpg'},
+        {img: '/images/rooms/standard/fotogalereya3.jpg'},
+    ]
+}
