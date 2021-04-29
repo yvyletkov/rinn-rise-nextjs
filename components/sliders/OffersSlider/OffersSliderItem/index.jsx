@@ -39,7 +39,7 @@ const OffersSliderItem = ({
                 <div className={s.content}>
                     <p dangerouslySetInnerHTML={{__html: subtitle}} className={s.subtitle}/>
                     <p dangerouslySetInnerHTML={{__html: title}} className={s.title}/>
-                    {link && <div>Подробнее →</div>}
+                    {link && <div>Узнать подробности →</div>}
                 </div>
             </div>
         </div>)

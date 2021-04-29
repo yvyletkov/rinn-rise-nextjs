@@ -44,14 +44,6 @@
   overflow: hidden;
 }
 
-.videoContainer {
-  box-sizing: border-box;
-  padding-bottom: 110px;
-  max-width: 1080px;
-  width: 100%;
-  margin: 0 auto;
-}
-
 .item {
   width: 930px;
   height: 530px;
@@ -61,11 +53,6 @@
   box-shadow: -14.444px 19.167px 27px 0px rgba(23, 23, 23, 0.14);
 }
 
-.item.video {
-  box-sizing: border-box;
-  padding: 12px;
-  background: #e7e7e7;
-}
 
 @media screen and (max-width: 1220px) {
   .item {
@@ -76,9 +63,7 @@
 
 
 @media screen and (max-width: 480px) {
-  .item.video {
-    padding: 0;
-  }
+
   .item {
     width: 82vw !important;
     height: calc(82vw * 0.65);

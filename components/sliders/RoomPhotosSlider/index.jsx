@@ -5,6 +5,7 @@ import HeadlineCenter from '../../shared/HeadlineCenter'
 import NextArrow from '../../shared/SliderArrows/NextArrow'
 import PrevArrow from '../../shared/SliderArrows/PrevArrow'
 import PropTypes from 'prop-types'
+import {LazyLoadImage} from 'react-lazy-load-image-component';
 
 const RoomPhotosSlider = ({
                               title,
@@ -47,8 +48,11 @@ const RoomPhotosSlider = ({
 
     const items =
         slides.map(({img}, index) =>
-            <div key={key}>
-                <img className={s.item} alt={title} key={index} src={img}/>
+            <div key={index}>
+                <LazyLoadImage
+                    className={s.item}
+                    alt={title}
+                    src={img}/>
             </div>
         )
 

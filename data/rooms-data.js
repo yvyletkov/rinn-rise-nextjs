@@ -46,7 +46,7 @@ export const roomPreviewSlides = [
 ]
 
 export const roomPhotos = {
-    lux: [
+    standard: [
         {img: '/images/rooms/standard/fotogalereya1.jpg'},
         {img: '/images/rooms/standard/fotogalereya2.jpg'},
         {img: '/images/rooms/standard/fotogalereya3.jpg'},
