@@ -13,16 +13,16 @@ const RoomsAndPricesBanner = () => {
                         <img src={'/images/home-page/stars.png'} alt={'4 звезды'}/>
                     </div>
                     <p className={s.text}>Номера и цены</p>
-                    <h1 className={s.title}>Размещение</h1>
-                    <h3 className={s.subtitle}>в отеле Rinn Rise</h3>
+                    <h1 className={s.title}>Номер люкс</h1>
+                    <h3 className={s.subtitle}>двухкомнатный</h3>
                 </div>
                 <img className={s.circlesBlock} src={'/images/home-page/circles.png'} alt={'Круги'}/>
                 {/*<div className={s.moduleBlock} />*/}
             </div>
             <div className={s.banner}>
                 <picture>
-                    <source srcSet='/images/rooms/banner.webp' type='image/webp'/>
-                    <img style={{width: '100%', height: '100%'}} src={'/images/rooms/banner.jpg'} alt={'Номера и цены'}/>
+                    <source srcSet='/images/rooms/lux-2/banner.webp' type='image/webp'/>
+                    <img style={{width: '100%', height: '100%'}} src={'/images/rooms/lux-2/banner.jpg'} alt={'Номера и цены'}/>
                 </picture>
             </div>
             <div className={s.animatedMouse}>
