@@ -3,7 +3,7 @@ import OffersSlider from '../../components/sliders/OffersSlider'
 import RoomsSlider from '../../components/sliders/RoomsSlider'
 import TextBlock from '../../components/TextBlock'
 import {offersSlides} from '../../data/home-page';
-import {roomsSlides} from '../../data/rooms-data';
+import {roomPreviewSlides} from '../../data/rooms-data';
 import React from 'react'
 import RoomsAndPricesBanner from '../../components/pageBanners/RoomsAndPricesBanner'
 import ServicesSlider from '../../components/sliders/ServicesSlider';
@@ -24,7 +24,7 @@ export default function RoomsPage() {
                 </section>
 
                 <section className="section">
-                    <RoomsSlider title={'Номера и цены'} slides={roomsSlides}/>
+                    <RoomsSlider title={'Номера и цены'} slides={roomPreviewSlides}/>
                 </section>
 
                 <section className="section">

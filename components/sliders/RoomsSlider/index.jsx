@@ -13,12 +13,7 @@ const RoomsSlider = ({
                         title
                     }) => {
 
-
-    const initialCurrentSlideIndex = useMediaQuery('(min-width: 769px)') ?
-        (slides.length >= 5 ? 2 : slides.length === 4 ? 2 : slides.length === 2 ? 1 : slides.length === 3 ? 1 : 0)
-        : 0
-
-    let [currentSlideIndex, setCurrentSlideIndex] = React.useState(initialCurrentSlideIndex)
+    let [currentSlideIndex, setCurrentSlideIndex] = React.useState(0)
 
     const items = slides.map((item, index) => {
         const {
@@ -39,7 +34,7 @@ const RoomsSlider = ({
 
     const settings = {
         slidesToShow: 1,
-        initialSlide: initialCurrentSlideIndex,
+        initialSlide: 0,
         afterChange: afterChangeHandler,
         dots: false,
         className: 'center',

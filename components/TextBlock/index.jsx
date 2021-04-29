@@ -1,7 +1,7 @@
 import React from 'react'
 import s from './style.module.scss'
-import {LazyLoadImage} from 'react-lazy-load-image-component';
-import PropTypes from 'prop-types';
+import {LazyLoadImage} from 'react-lazy-load-image-component'
+import PropTypes from 'prop-types'
 
 const TextBlock = ({subtitle, title, img, withStarImage, content}) => {
 
@@ -21,7 +21,7 @@ const TextBlock = ({subtitle, title, img, withStarImage, content}) => {
                 <h2 className={s.title}>
                     {title}
                 </h2>
-                <div dangerouslySetInnerHTML={{__html: content}}></div>
+                <div dangerouslySetInnerHTML={{__html: content}}/>
             </div>
             <div className={s.imageWrapper}>
                 <LazyLoadImage
