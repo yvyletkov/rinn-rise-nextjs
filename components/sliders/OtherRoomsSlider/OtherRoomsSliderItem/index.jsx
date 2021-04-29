@@ -1,5 +1,5 @@
 import React from 'react';
-import s from './CenteredSliderItem.module.scss';
+import s from './style.module.scss';
 import capacityImg from './../../../../../img/room-page/capacity-white.png';
 import areaImg from './../../../../../img/room-page/ploshchad-white.png';
 import {NavLink} from 'react-router-dom';
