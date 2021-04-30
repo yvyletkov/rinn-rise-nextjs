@@ -60,9 +60,9 @@ const Header = () => {
                             <span></span>
                         </div>
                         <div className={s.leftBlock}>
-                            <CustomLink title={"Акции"} href={"/residence"} />
+                            <CustomLink title={"Акции"} href={"#"} />
                             <CustomLink title={"Номера и цены"} href={"/rooms"} />
-                            <CustomLink title={"Инфраструктура"} href={"/sports"} />
+                            <CustomLink title={"Инфраструктура"} href={"/infrastructure"} />
                         </div>
                         <div className={s.logo}>
                             <Link href={'/'}>

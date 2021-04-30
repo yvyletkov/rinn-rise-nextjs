@@ -45,7 +45,7 @@ const OtherRoomsSlider = ({title, slides}) => {
     const afterChangeHandler = (index) => setCurrentSlideIndex(index)
 
     const settings = {
-        // initialSlide: initialCurrentSlideIndex,
+        initialSlide: initialCurrentSlideIndex,
         afterChange: afterChangeHandler,
         dots: false,
         className: 'center',

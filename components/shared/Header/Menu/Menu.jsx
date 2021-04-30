@@ -63,7 +63,7 @@ const Menu = ({menuOpened, toggleMenu}) => {
 
             <div className={s.col}>
                 <div className={s.menuItem} onClick={toggleMenu}>
-                    <Link href={"/"}>
+                    <Link href={"/infrastructure"}>
                         <a>
                             Инфраструктура
                         </a>
@@ -95,13 +95,13 @@ const Menu = ({menuOpened, toggleMenu}) => {
                     <a href='tel:88005557856'>7 (800) 555-78-56</a>
                 </div>
                 <div className={s.icons}>
-                    <a target={'_blank'} href="https://www.instagram.com/prometey82">
+                    <a target={'_blank'} href="https://instagram.com/rinnrisehotel">
                         <img src={'/images/footer/inst.png'} alt="Instagram"/>
                     </a>
-                    <a target={'_blank'} href="https://www.facebook.com/prometey82">
+                    <a target={'_blank'} href="https://www.facebook.com/Rinn-Rise-106305541613817/">
                         <img src={'/images/footer/facebook.png'} alt="Facebook"/>
                     </a>
-                    <a target={'_blank'} href="https://vk.com/prometey_82">
+                    <a target={'_blank'} href="https://vk.com/rinnrise">
                         <img src={'/images/footer/vk.png'} alt="ВК"/>
                     </a>
                 </div>
