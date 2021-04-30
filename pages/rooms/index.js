@@ -3,7 +3,7 @@ import OffersSlider from '../../components/sliders/OffersSlider'
 import RoomsSlider from '../../components/sliders/RoomsSlider'
 import TextBlock from '../../components/TextBlock'
 import {offersSlides} from '../../data/home-page';
-import {roomPreviewSlides} from '../../data/rooms-data';
+import {roomPreviewSlides} from '../../data/shared-rooms-data';
 import React from 'react'
 import RoomsAndPricesBanner from '../../components/pageBanners/RoomsAndPricesBanner'
 import ServicesSlider from '../../components/sliders/ServicesSlider';

@@ -7,7 +7,7 @@ import RoomsSlider from '../components/sliders/RoomsSlider'
 import TextBlock from '../components/TextBlock'
 import {offersSlides, infrastructureSlides} from '../data/home-page'
 import {gallerySlides} from '../data/gallery-data'
-import {roomPreviewSlides} from '../data/rooms-data'
+import {roomPreviewSlides} from '../data/shared-rooms-data'
 import LazyLoad from 'react-lazyload'
 import React from 'react'
 
