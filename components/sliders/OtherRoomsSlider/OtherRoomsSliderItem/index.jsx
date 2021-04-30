@@ -12,13 +12,18 @@ const OtherRoomsSliderItem = ({
                                   capacity,
                                   desc,
                                   area,
+                                  index
                               }) => {
 
     return (
         <div className={active ? s.card + ' ' + s.active : s.card}>
             <Link href={link}>
                 <a>
-                    <LazyLoadImage effect={'blur'} wrapperClassName={s.img} src={img} alt={title}/>
+                    <LazyLoadImage
+                        effect={'blur'}
+                        wrapperClassName={s.img}
+                        src={img}
+                        alt={title}/>
                     <div className={s.content}>
                         <p className={s.roomSubtitle}>Номер</p>
                         <p className={s.roomTitle}>{title}</p>
