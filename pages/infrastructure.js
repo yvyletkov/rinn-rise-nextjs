@@ -25,7 +25,7 @@ export default function Infrastructure() {
                     <InfrastructureSlider slides={infrastructureSlides} title={'Инфраструктура'}/>
                 </section>
 
-                <LazyLoad height={'300px'} offset={300}>
+                <LazyLoad height={'300px'}>
                     <section className="section">
                         <GallerySlider slides={gallerySlides} title={'Фотогалерея'}/>
                     </section>
