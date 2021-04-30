@@ -11,6 +11,7 @@ import {roomPreviewSlides} from '../data/shared-rooms-data'
 import LazyLoad from 'react-lazyload'
 import React from 'react'
 import HeadlineCenter from '../components/shared/HeadlineCenter';
+import InfrastructurePageBanner from '../components/pageBanners/InfrastructurePageBanner';
 
 const GallerySlider = dynamic(() => import('../components/sliders/GallerySlider'))
 
@@ -20,8 +21,9 @@ export default function Infrastructure() {
                 <title>Rinn Rise – Инфраструктура – Анапа, Джемете</title>
             </Head>
             <main>
+                <InfrastructurePageBanner />
 
-                <section className="section first" style={{paddingTop: '180px'}}>
+                <section className="section first">
                     <InfrastructureSlider slides={infrastructureSlides} title={'Инфраструктура'}/>
                 </section>
 
