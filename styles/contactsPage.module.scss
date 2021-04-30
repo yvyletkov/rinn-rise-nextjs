@@ -15,63 +15,35 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-direction: column;
       padding: 0 20px 0 30px;
 
-      h4.title {
-        //display: inline-block;
-        width: 480px;
+      .headlineCenter {
+        text-align: center;
+        font-size: 40px;
+        font-family: "Proxima Nova Black", sans-serif;
+        margin: 15px auto;
+        max-width: 95%;
 
-        span {
-          text-transform: uppercase;
-          display: block;
-          line-height: 1.6;
+        @media screen and (max-width: 768px) {
+          font-size: 32px;
+          margin-bottom: 50px;
         }
 
-        span:first-of-type {
-          text-transform: none;
-          font-family: "Proxima Nova Semibold", sans-serif;
-          font-size: 23px;
-          position: relative;
-          width: fit-content;
-
-          &:after {
-            content: "";
-            display: block;
-            position: absolute;
-            width: 60px;
-            height: 1px;
-            background-color: #171717;
-            top: 45%;
-            right: -70px;
-          }
+        @media screen and (max-width: 450px) {
+          margin-bottom: 30px;
+          font-size: 29px;
         }
 
-        span:last-of-type {
-          font-family: "Proxima Nova Black", sans-serif;
-          font-size: 45px;
-          line-height: 1.1;
+        @media screen and (max-width: 380px) {
+          margin-bottom: 23px;
+          font-size: 26px;
         }
-
-        @media (max-width: 500px) {
-          width: fit-content;
-
-          span:first-of-type {
-            font-size: 18px;
-          }
-          span:last-of-type {
-            font-size: 11.2vw;
-          }
-        }
-
-        @media (max-width: 1024px) {
-          margin-bottom: 20px;
-        }
-
       }
 
       .textContent {
         padding: 0 20px;
-        text-align: justify;
+        text-align: center;
         width: 60%;
         position: relative;
 
@@ -100,19 +72,21 @@
           }
 
           ul {
-            li{list-style-type:"–  ";}
+            li {
+              list-style-type: "–  ";
+            }
           }
 
           &.active {
             z-index: 1;
             opacity: 1;
           }
+
           img {
             width: 68px;
             margin-bottom: 15px;
           }
         }
-
       }
 
       @media (max-width: 1024px) {
@@ -134,84 +108,34 @@
         padding: 0;
         display: block;
       }
-
     }
 
     .flexWrapper {
       box-sizing: border-box;
       display: flex;
-      margin-top: 135px;
+      margin-top: 40px;
       padding: 0 30px;
       width: 100%;
-
-      .col {
-        margin-right: 60px;
-        @media (max-width: 700px) {
-          margin-bottom: 50px;
-          width: 100%;
-          &:last-child {
-            margin-right: 0;
-          }
-        }
-
-        @media (min-width: 1024px) {
-          width: 26%;
-        }
-
-        @media (min-width: 700px) and (max-width: 1024px) {
-          &:first-child {
-            margin-bottom: 30px;
-          }
-        }
-      }
+      justify-content: space-around;
 
       @media (max-width: 1024px) {
+        flex-direction: column;
         padding: 0 20px;
-        flex-wrap: wrap;
         max-width: 850px;
         width: 100%;
         margin: 0 auto;
       }
 
-      .formWrapper {
-        form {
-          display: flex;
-          justify-content: space-between;
-          flex-wrap: wrap;
-
-          div {
-            width: 49%;
-            margin-bottom: 10px;
-          }
-
-          div:nth-child(3), div:nth-child(4) {
-            width: 100%;
-          }
-
-          a {
-            flex-grow: 1;
-          }
-
-          @media (max-width: 500px) {
-            width: 100%;
-
-            div {
-              width: 100%;
-              margin-bottom: 10px;
-            }
-          }
-        }
-      }
-
       @media (max-width: 1024px) {
-        margin-top: 55px;
+        margin-top: 25px;
       }
     }
 
     .contactsItem {
-
-      margin-bottom: 43px;
+      max-width: 300px;
+      width: 100%;
       font-family: "Proxima Nova Regular", sans-serif;
+      margin:0 auto;
 
       .smallDesc {
         font-size: 10px;
@@ -221,6 +145,10 @@
       a {
         text-decoration: none;
 
+        &:hover {
+          text-decoration: underline;
+        }
+
         &:visited {
           color: #171717;
         }
@@ -229,7 +157,7 @@
       h5 {
         position: relative;
         padding-left: 12px;
-        margin-bottom: 17px;
+        margin-bottom: 7px;
         font-family: "Proxima Nova Semibold", sans-serif;
         font-size: 18px;
         white-space: nowrap;
@@ -261,13 +189,18 @@
       &:last-child {
         margin-bottom: 0;
       }
+
+      @media screen and (max-width: 1024px) {
+        margin-top: 20px;
+
+        &:first-child {
+          margin: 0 auto;
+        }
+      }
     }
-
-
   }
 
   @media (max-width: 1024px) {
     padding-top: 100px;
   }
-
 }

@@ -4,61 +4,7 @@ import useMediaQuery from '../customHooks/useMediaQuery'
 import {Map, Placemark, YMaps} from 'react-yandex-maps'
 import Image from 'next/image'
 import LazyLoad from 'react-lazyload'
-
-const Footer = () => {
-    return (
-        <div className={s.wrapper}>
-            <div className={s.container}>
-                <LazyLoad height={'300px'} offset={300}>
-                    <MapBlock/>
-                </LazyLoad>
-                <div className={s.contactBlock}>
-                    <h3 className={s.title}>Контакты</h3>
-                    <div className={s.contacts}>
-                        <div className={s.item}>
-                            <Image width={'16px'}
-                                   height={'21px'}
-                                   objectFit={'contain'}
-                                   src={'/images/footer/address.png'}
-                                   alt={'Адрес'}/>
-                            <p>ул. Гулаева 6, Джемете, Анапа</p>
-                        </div>
-                        <div className={s.item}>
-                            <Image width={'16px'}
-                                   height={'21px'}
-                                   objectFit={'contain'}
-                                   src={'/images/footer/phone.svg'}
-                                   alt={'Телефон'}/>
-                            <p>7 (800) 555-78-56</p>
-                        </div>
-                        <div className={s.item}>
-                            <Image width={'16px'}
-                                   height={'21px'}
-                                   objectFit={'contain'}
-                                   src={'/images/footer/email.png'}
-                                   alt={'Email'}/>
-                            <p>reservation@rinnrise.ru</p>
-                        </div>
-                    </div>
-                    <div className={s.iconsBlock}>
-                        <div className={s.icon}>
-                            <Image layout={'fill'} src={'/images/footer/inst.svg'} alt={'Инстаграм'}/>
-                        </div>
-                        <div className={s.icon}>
-                            <Image layout={'fill'} src={'/images/footer/vk.svg'} alt={'Вконтакте'}/>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div className={s.footerGray}>
-                <p>Rinn Rise, Джемете, Анапа © 2021 Официальный сайт гостиницы
-                    <span className={s.thinLine}>&nbsp; | &nbsp;</span>
-                    <a href="https://upro.group/" className={s.managedBy}>Managed by UPRO</a>
-                </p>
-            </div>
-        </div>
-    )
-}
+import Link from 'next/link'
 
 const MapBlock = () => {
     const isMobile = useMediaQuery('(max-width: 992px)')
@@ -85,6 +31,70 @@ const MapBlock = () => {
                     />
                 </Map>
             </YMaps>
+        </div>
+    )
+}
+
+const Footer = () => {
+    return (
+        <div className={s.wrapper}>
+            <div className={s.container}>
+                <LazyLoad height={'300px'} offset={300}>
+                    <MapBlock/>
+                </LazyLoad>
+                <div className={s.contactBlock}>
+                    <h3 className={s.title}>Контакты</h3>
+                    <div className={s.contacts}>
+                        <div className={s.item}>
+                            <Image width={'16px'}
+                                   height={'21px'}
+                                   objectFit={'contain'}
+                                   src={'/images/footer/address.png'}
+                                   alt={'Адрес'}/>
+                            <p>ул. Гулаева 6, Джемете, Анапа</p>
+                        </div>
+                        <a className={s.item} href="tel:78005557856">
+                            <Image width={'16px'}
+                                   height={'21px'}
+                                   objectFit={'contain'}
+                                   src={'/images/footer/phone.svg'}
+                                   alt={'Телефон'}/>
+                            <p>7 (800) 555-78-56</p>
+                        </a>
+                        <a className={s.item} href="mailto:reservation@rinnrise.ru">
+                            <Image width={'16px'}
+                                   height={'21px'}
+                                   objectFit={'contain'}
+                                   src={'/images/footer/email.png'}
+                                   alt={'Email'}/>
+                            <p>reservation@rinnrise.ru</p>
+                        </a>
+                    </div>
+                    <div className={s.iconsBlock}>
+                        <Link  href={'https://instagram.com/rinnrisehotel'}>
+                            <a target='_blank' className={s.icon}>
+                                <Image layout={'fill'} src={'/images/footer/inst.svg'} alt={'Инстаграм'}/>
+                            </a>
+                        </Link>
+                        <Link href={'https://vk.com/rinnrise'}>
+                            <a target='_blank' className={s.icon}>
+                                <Image layout={'fill'} src={'/images/footer/vk.svg'} alt={'Вконтакте'}/>
+                            </a>
+                        </Link>
+                        <Link href={'https://www.facebook.com/Rinn-Rise-106305541613817/'}>
+                            <a target='_blank' className={s.icon}>
+                                <Image layout={'fill'} src={'/images/footer/facebook.svg'} alt={'facebook'}/>
+                            </a>
+                        </Link>
+                    </div>
+                </div>
+            </div>
+            <div className={s.footerGray}>
+                <p>Rinn Rise, Джемете, Анапа © 2021 Официальный сайт гостиницы
+                    <span className={s.thinLine}>&nbsp; | &nbsp;</span>
+                    <a href="https://upro.group/" className={s.managedBy}>Managed by UPRO</a>
+                </p>
+            </div>
         </div>
     )
 }
