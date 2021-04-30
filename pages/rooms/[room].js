@@ -3,8 +3,9 @@ import React from 'react'
 import SingleRoomPageBanner from '../../components/pageBanners/SingleRoomPageBanner'
 import DescriptionRoomBlock from '../../components/shared/DescriptionRoomBlock'
 import RoomPhotosSlider from '../../components/sliders/RoomPhotosSlider'
-import {roomPhotos, descriptionRooms, otherRoomsSlides} from '../../data/rooms-data'
+import {roomPhotos, descriptionRooms, otherRoomsSlides} from '../../data/shared-rooms-data'
 import OtherRoomsSlider from '../../components/sliders/OtherRoomsSlider'
+import RoomData from '../../data/shared-rooms-data'
 
 export default function SingleRoomPage() {
     return (<>
@@ -25,4 +26,32 @@ export default function SingleRoomPage() {
             </main>
         </>
     )
+}
+
+export async function getStaticPaths() {
+    return {
+        paths: [
+          {
+            params: {
+              room: 'standard'
+            }
+          },
+          {
+            params: {
+              room: 'lux-1'
+            }
+          }
+        ],
+        fallback: false
+    }
+}
+
+export async function getStaticProps({ params }) {
+    const room = params.room
+    console.log(room)
+    return {
+        props: {
+            //
+        }
+    }
 }
