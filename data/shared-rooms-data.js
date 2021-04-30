@@ -3,7 +3,8 @@ export const roomPreviewSlides = [
         img: '/images/room-photos/standart.jpg',
         data: {
             title: 'Стандарт',
-            text: 'Уютный однокомнатный номер с двумя раздельными кроватями или одной большой кроватью.'
+            text: 'Уютный однокомнатный номер с двумя раздельными кроватями или одной большой кроватью.',
+            link: '/rooms/standard'
         }
     },
     {
@@ -11,7 +12,8 @@ export const roomPreviewSlides = [
         data: {
             title: 'Superior',
             additional: 'Без доп. места',
-            text: 'Уютный однокомнатный номер с большой кроватью.'
+            text: 'Уютный однокомнатный номер с большой кроватью.',
+            link: '/rooms/superior'
         }
     },
     {
@@ -19,28 +21,32 @@ export const roomPreviewSlides = [
         data: {
             title: 'Superior',
             additional: 'C доп. местом',
-            text: 'Просторный однокомнатный номер с большой кроватью.'
+            text: 'Просторный однокомнатный номер с большой кроватью.',
+            link: '/rooms/superior-extra'
         }
     },
     {
         img: '/images/room-photos/lux-1.jpg',
         data: {
             title: 'Люкс однокомнантый',
-            text: 'Просторный однокомнатный номер с большой кроватью.'
+            text: 'Просторный однокомнатный номер с большой кроватью.',
+            link: '/rooms/1-room-lux'
         }
     },
     {
         img: '/images/room-photos/lux-2.jpg',
         data: {
             title: 'Люкс двухкомнатный',
-            text: 'Просторный двухкомнатный номер с большой спальней и гостиной.'
+            text: 'Просторный двухкомнатный номер с большой спальней и гостиной.',
+            link: '/rooms/2-rooms-lux'
         }
     },
     {
         img: '/images/room-photos/lux-3.jpg',
         data: {
             title: 'Люкс трехкомнатный',
-            text: 'Просторный трёхкомнатный номер с гостиной и двумя спальнями.'
+            text: 'Просторный трёхкомнатный номер с гостиной и двумя спальнями.',
+            link: '/rooms/3-rooms-lux'
         }
     },
 ]
@@ -52,7 +58,7 @@ export const otherRoomsSlides = [
         capacity: "3 человека",
         desc: "однокомнатный",
         area: "23",
-        link: '/nomera-i-tseny/standart-modern',
+        link: '/rooms/standard'
     },
     {
         img: '/images/rooms/other-rooms-slides/lux-1.jpg',
@@ -60,7 +66,7 @@ export const otherRoomsSlides = [
         capacity: "3 человека",
         area: "25,5",
         desc: "однокомнатный",
-        link: '/nomera-i-tseny/improved-modern/',
+        link: '/rooms/1-room-lux'
     },
     {
         img: '/images/rooms/other-rooms-slides/lux-2.jpg',
@@ -68,7 +74,7 @@ export const otherRoomsSlides = [
         capacity: "2 человека",
         desc: "двухкомнатный",
         area: "50",
-        link: '/nomera-i-tseny/vip-suite',
+        link: '/rooms/2-rooms-lux'
     },
     {
         img: '/images/rooms/other-rooms-slides/lux-3.jpg',
@@ -76,7 +82,7 @@ export const otherRoomsSlides = [
         capacity: "2 человека",
         desc: "трехкомнатный",
         area: "50",
-        link: '/nomera-i-tseny/lux-modern',
+        link: '/rooms/3-rooms-lux'
     },
     {
         img: '/images/rooms/other-rooms-slides/superior.jpg',
@@ -84,7 +90,7 @@ export const otherRoomsSlides = [
         capacity: "2 человека",
         area: "17",
         desc: "без дополнительного места",
-        link: '/modern/semilux',
+        link: '/rooms/superior'
     },
     {
         img: '/images/rooms/other-rooms-slides/superior-extra.jpg',
@@ -92,7 +98,7 @@ export const otherRoomsSlides = [
         capacity: "2 человека",
         area: "25,5",
         desc: "с дополнительным местом",
-        link: '/nomera-i-tseny/vip-suite',
+        link: '/rooms/superior-extra'
     },
 ];
 
