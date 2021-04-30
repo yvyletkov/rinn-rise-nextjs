@@ -57,7 +57,7 @@ const RoomPhotosSlider = ({
         )
 
     return (
-        <div id="gallery" className={s.wrapper}>
+        <div id='gallery' className={s.wrapper}>
             <div className={s.container}>
                 <HeadlineCenter title={title}/>
                 <div className={s.sliderWrapper}>
