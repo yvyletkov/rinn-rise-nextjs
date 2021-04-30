@@ -1,7 +1,6 @@
 import React from 'react'
 import s from './style.module.scss'
 import AnimatedMouseIcon from '../../shared/AnimatedMouseIcon/AnimatedMouseIcon'
-import useMediaQuery from '../../shared/customHooks/useMediaQuery'
 import PropTypes from 'prop-types';
 
 const RoomsAndPricesBanner = ({
@@ -10,7 +9,6 @@ const RoomsAndPricesBanner = ({
                                   title,
                                   subtitle
                               }) => {
-    // const mobile = useMediaQuery('(max-width: 550px)', true)
     return (
         <div className={s.wrapper}>
             <div className={s.container}>
