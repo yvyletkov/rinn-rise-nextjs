@@ -22,7 +22,7 @@ export default function ResortVacation() {
             </Head>
             <main>
                 <ResortVacationPageBanner/>
-                <section className='section first' style={{position:'relative'}}>
+                <section className="section first" style={{position:'relative'}}>
                     <AdvantagesSlider slides={advantagesSlidesData}/>
                     <div className={s.backgroundImages}>
                         <LazyLoadImage effect='blur' wrapperClassName={s.glasses} src={'/images/resort-vacation/glasses.png'}

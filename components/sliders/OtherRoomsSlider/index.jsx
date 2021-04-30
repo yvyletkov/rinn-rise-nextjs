@@ -7,14 +7,17 @@ import PrevArrow from '../../shared/SliderArrows/PrevArrow'
 import useMediaQuery from '../../shared/customHooks/useMediaQuery'
 import HeadlineCenter from '../../shared/HeadlineCenter'
 import PropTypes from 'prop-types'
+import {useRouter} from 'next/router'
 
 const OtherRoomsSlider = ({title, slides}) => {
 
-    const initialCurrentSlideIndex = useMediaQuery('(min-width: 769px)') ? 2 : 0;
+    const router = useRouter()
+    const currentLink = '/rooms/' + router.query.room
+    const initialCurrentSlideIndex = useMediaQuery('(min-width: 769px)') ? 1 : 0;
 
     let [currentSlideIndex, setCurrentSlideIndex] = useState(initialCurrentSlideIndex);
 
-    const items = slides.map((item, index) => {
+    const items = slides.filter(item => item.link !== currentLink).map((item, index) => {
         const {
             img,
             link,
@@ -22,9 +25,9 @@ const OtherRoomsSlider = ({title, slides}) => {
             capacity,
             area,
             desc
-        } = item;
+        } = item
         return (
-            <div className="sliderElement" key={index}>
+            <div className='sliderElement' key={index}>
                 <OtherRoomsSliderItem
                     active={currentSlideIndex === index}
                     link={link}
@@ -33,6 +36,7 @@ const OtherRoomsSlider = ({title, slides}) => {
                     desc={desc}
                     capacity={capacity}
                     area={area}
+                    index={index}
                 />
             </div>
         );
@@ -77,7 +81,7 @@ const OtherRoomsSlider = ({title, slides}) => {
     };
 
     useEffect(() => {
-        if (initialCurrentSlideIndex === 2) {
+        if (initialCurrentSlideIndex === 1) {
             sliderRef.current.slickGoTo(initialCurrentSlideIndex);
             setCurrentSlideIndex(initialCurrentSlideIndex)
         }
