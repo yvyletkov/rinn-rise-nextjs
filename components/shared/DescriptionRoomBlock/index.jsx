@@ -3,8 +3,16 @@ import Slider from 'react-slick'
 import React from 'react'
 import HeadlineCenter from '../HeadlineCenter'
 import PropTypes from 'prop-types'
+import Link from 'next/link'
 
-const DescriptionRoomBlock = ({title, icons, slidesToShow}) => {
+
+const DescriptionRoomBlock = ({
+                                  title,
+                                  icons,
+                                  slidesToShow,
+                                  link,
+                                  description
+                              }) => {
 
     const settings = {
         infinite: false,
@@ -22,7 +30,7 @@ const DescriptionRoomBlock = ({title, icons, slidesToShow}) => {
                 }
             },
         ]
-    };
+    }
 
     return <div className={s.wrapper}>
         <div className={s.container}>
@@ -38,25 +46,19 @@ const DescriptionRoomBlock = ({title, icons, slidesToShow}) => {
                     })}
                 </Slider>
             </div>
-            <p className={s.textDesc}><b>Оснащение номера:</b> один балкон с видом на задний фасад здания, второй балкон с видом на площадь с
-                фонтаном, 2 ТВ – один в спальне, другой в гостиной, бесплатный Wi-Fi, бесплатная парковка, мебель на
-                балконе, тапочки, сейф, холодильник, индивидуальное кондиционирование, расширенный набор банных
-                принадлежностей, сервиз, чайная станция.
-            </p>
-            <p className={s.textDesc}>Просторный двухкомнатный номер. В номере одна большая спальня и просторная гостиная комната. Каждый
-                номер оснащен современной мебелью , также в номере есть собственная ванная комната с душем и
-                расширенным набором банных принадлежностей, тапочки, кондиционер, 2 телевизора, мини-бар, сейф,
-                чайная станция, сервиз. Есть 2 собственных балкона с мебелью.
-            </p>
-            <div className={s.button}>Забронировать</div>
+            <div className={s.description} dangerouslySetInnerHTML={{__html: description}}/>
+            {link && <Link href={link}><a className={s.button}>Забронировать</a></Link>}
+
         </div>
     </div>
-};
+}
 
 DescriptionRoomBlock.propTypes = {
     title: PropTypes.string.isRequired,
     slidesToShow: PropTypes.number,
-    icons: PropTypes.arrayOf(PropTypes.object).isRequired
+    icons: PropTypes.arrayOf(PropTypes.object).isRequired,
+    description: PropTypes.string.isRequired,
+    link: PropTypes.string
 }
 
 DescriptionRoomBlock.defaultProps = {
