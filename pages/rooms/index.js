@@ -1,14 +1,13 @@
-// import React from 'react'
+import React from 'react'
 import Head from 'next/head'
-import dynamic from 'next/dynamic'
 import {offersSlides} from '../../data/home-page'
 import {roomPreviewSlides} from '../../data/shared-rooms-data'
 import {servicesSlides} from '../../data/resort-vacation'
 import RoomsAndPricesBanner from '../../components/pageBanners/RoomsAndPricesBanner'
-const OffersSlider = dynamic(() => import('../../components/sliders/OffersSlider'))
-const RoomsSlider = dynamic(() => import('../../components/sliders/RoomsSlider'))
-const TextBlock = dynamic(() => import('../../components/TextBlock'))
-const ServicesSlider = dynamic(() => import('../../components/sliders/ServicesSlider'))
+import OffersSlider from '../../components/sliders/OffersSlider'
+import RoomsSlider from '../../components/sliders/RoomsSlider'
+import TextBlock from '../../components/TextBlock'
+import ServicesSlider from '../../components/sliders/ServicesSlider'
 
 export default function RoomsPage() {
     return (<>

@@ -1,4 +1,4 @@
-// import React from 'react'
+import React from 'react'
 import dynamic from 'next/dynamic'
 import LazyLoad from 'react-lazyload'
 import Head from 'next/head'
@@ -10,10 +10,6 @@ import RoomsSlider from '../components/sliders/RoomsSlider'
 import TextBlock from '../components/TextBlock'
 import OffersSlider from '../components/sliders/OffersSlider'
 import InfrastructureSlider from '../components/sliders/InfrastructureSlider'
-// const RoomsSlider = dynamic(() => import('../components/sliders/RoomsSlider'));
-// const TextBlock = dynamic(() => import('../components/TextBlock'));
-// const OffersSlider = dynamic(() => import('../components/sliders/OffersSlider'));
-// const InfrastructureSlider = dynamic(() => import('../components/sliders/InfrastructureSlider'));
 const GallerySlider = dynamic(() => import('../components/sliders/GallerySlider'))
 
 export default function Home() {

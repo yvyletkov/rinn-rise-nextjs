@@ -1,11 +1,11 @@
-// import React from 'react'
+import React from 'react'
 import dynamic from 'next/dynamic'
 import Head from 'next/head'
 import {infrastructureSlides} from '../data/home-page'
 import {gallerySlides} from '../data/gallery-data'
 import LazyLoad from 'react-lazyload'
 import InfrastructurePageBanner from '../components/pageBanners/InfrastructurePageBanner';
-const InfrastructureSlider = dynamic(() => import('../components/sliders/InfrastructureSlider'))
+import InfrastructureSlider from '../components/sliders/InfrastructureSlider';
 const GallerySlider = dynamic(() => import('../components/sliders/GallerySlider'))
 
 export default function Infrastructure() {

@@ -1,4 +1,4 @@
-// import React from 'react'
+import React from 'react'
 import s from '../styles/contactsPage.module.scss'
 import Head from 'next/head'
 
