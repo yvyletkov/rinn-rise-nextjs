@@ -53,13 +53,13 @@ const Footer = () => {
                                    alt={'Адрес'}/>
                             <p>ул. Гулаева 6, Джемете, Анапа</p>
                         </div>
-                        <a className={s.item} href="tel:78005557856">
+                        <a className={s.item} href="tel:88005007217">
                             <Image width={'16px'}
                                    height={'21px'}
                                    objectFit={'contain'}
                                    src={'/images/footer/phone.svg'}
                                    alt={'Телефон'}/>
-                            <p>7 (800) 555-78-56</p>
+                            <p>8 (800) 500 72 17</p>
                         </a>
                         <a className={s.item} href="mailto:reservation@rinnrise.ru">
                             <Image width={'16px'}
