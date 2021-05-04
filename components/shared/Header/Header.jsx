@@ -4,6 +4,7 @@ import Link from 'next/link'
 import Menu from './Menu/Menu'
 import useMediaQuery from '../customHooks/useMediaQuery'
 import Image from 'next/image'
+import PopupContactForm from '../../ContactForm/PopupContactForm';
 
 
 const CustomLink = ({title, style, icon, link = '#', extraClass = null, onClickHandler, href = '#'}) => {
@@ -98,13 +99,13 @@ const Header = () => {
                     </div>
                 </div>
 
-                {/*<PopupContactForm popupOpen={popupOpened} setPopupOpen={setPopupOpened}*/}
-                {/*                  popupTitleText={'Пожалуйста, укажите свои контактные данные'}*/}
-                {/*                  submitBtnText='Жду звонка'*/}
-                {/*                  formName={`Контактная форма из шапки сайта`}*/}
-                {/*                  swalText={'очень скоро наши менеджеры свяжутся c Вами'}*/}
-                {/*                  withName*/}
-                {/*                  withPhone/>*/}
+                <PopupContactForm popupOpen={popupOpened} setPopupOpen={setPopupOpened}
+                                  popupTitleText={'Пожалуйста, укажите свои контактные данные'}
+                                  submitBtnText='Жду звонка'
+                                  formName={`Контактная форма из шапки сайта`}
+                                  swalText={'очень скоро наши менеджеры свяжутся c Вами'}
+                                  withName
+                                  withPhone/>
 
             </header>
 
