@@ -33,7 +33,7 @@ const Menu = ({menuOpened, toggleMenu}) => {
 
     return <div className={!menuOpened ? s.menuWrapper : s.menuWrapper + ' ' + s.opened}>
 
-        <div className={s.flexContainer}>
+        <nav className={s.flexContainer}>
 
             <div className={s.col}>
                 <div className={s.menuItem} onClick={toggleMenu}>
@@ -110,7 +110,7 @@ const Menu = ({menuOpened, toggleMenu}) => {
             </div>
 
 
-        </div>
+        </nav>
 
 
     </div>

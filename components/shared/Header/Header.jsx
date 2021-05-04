@@ -46,7 +46,7 @@ const Header = () => {
 
     return (<>
 
-            <div className={s.wrapper}>
+            <header className={s.wrapper}>
 
                 <Menu toggleMenu={toggleMenu} menuOpened={menuOpened}/>
 
@@ -106,7 +106,7 @@ const Header = () => {
                 {/*                  withName*/}
                 {/*                  withPhone/>*/}
 
-            </div>
+            </header>
 
         </>
     )

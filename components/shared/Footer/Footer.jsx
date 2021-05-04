@@ -37,7 +37,7 @@ const MapBlock = () => {
 
 const Footer = () => {
     return (
-        <div className={s.wrapper}>
+        <footer className={s.wrapper}>
             <div className={s.container}>
                 <LazyLoad height={'300px'} offset={300}>
                     <MapBlock/>
@@ -95,7 +95,7 @@ const Footer = () => {
                     <a href="https://upro.group/" className={s.managedBy}>Managed by UPRO</a>
                 </p>
             </div>
-        </div>
+        </footer>
     )
 }
 
