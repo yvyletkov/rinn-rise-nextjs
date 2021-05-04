@@ -6,10 +6,14 @@ import {offersSlides, infrastructureSlides} from '../data/home-page'
 import {gallerySlides} from '../data/gallery-data'
 import {roomPreviewSlides} from '../data/shared-rooms-data'
 import HomePageBanner from '../components/pageBanners/HomePageBanner'
-const RoomsSlider = dynamic(() => import('../components/sliders/RoomsSlider'));
-const TextBlock = dynamic(() => import('../components/TextBlock'));
-const OffersSlider = dynamic(() => import('../components/sliders/OffersSlider'));
-const InfrastructureSlider = dynamic(() => import('../components/sliders/InfrastructureSlider'));
+import RoomsSlider from '../components/sliders/RoomsSlider'
+import TextBlock from '../components/TextBlock'
+import OffersSlider from '../components/sliders/OffersSlider'
+import InfrastructureSlider from '../components/sliders/InfrastructureSlider'
+// const RoomsSlider = dynamic(() => import('../components/sliders/RoomsSlider'));
+// const TextBlock = dynamic(() => import('../components/TextBlock'));
+// const OffersSlider = dynamic(() => import('../components/sliders/OffersSlider'));
+// const InfrastructureSlider = dynamic(() => import('../components/sliders/InfrastructureSlider'));
 const GallerySlider = dynamic(() => import('../components/sliders/GallerySlider'))
 
 export default function Home() {
