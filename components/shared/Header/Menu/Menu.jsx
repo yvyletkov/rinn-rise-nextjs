@@ -1,13 +1,14 @@
-import React from "react";
+// import React from "react";
 import s from "./Menu.module.scss";
 import Link from 'next/link'
+import {useState} from 'react';
 
 const Menu = ({menuOpened, toggleMenu}) => {
 
-    let [resortVacationOpened, setResortVacationOpened] = React.useState(false);
-    let [miceOpened, setMiceOpened] = React.useState(false);
-    let [eventOpened, setEventOpened] = React.useState(false);
-    let [infrastructureOpened, setInfrastructureOpened] = React.useState(false);
+    let [resortVacationOpened, setResortVacationOpened] = useState(false);
+    let [miceOpened, setMiceOpened] = useState(false);
+    let [eventOpened, setEventOpened] = useState(false);
+    let [infrastructureOpened, setInfrastructureOpened] = useState(false);
 
     const toggleResortVacation = () => {
         setMiceOpened(false);

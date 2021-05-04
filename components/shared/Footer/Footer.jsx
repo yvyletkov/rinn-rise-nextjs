@@ -1,4 +1,4 @@
-import React from 'react'
+// import React from 'react'
 import s from './Footer.module.scss'
 import useMediaQuery from '../customHooks/useMediaQuery'
 import {Map, Placemark, YMaps} from 'react-yandex-maps'

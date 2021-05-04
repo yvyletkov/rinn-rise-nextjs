@@ -1,4 +1,4 @@
-import React from 'react'
+// import React from 'react'
 import s from './style.module.scss'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
