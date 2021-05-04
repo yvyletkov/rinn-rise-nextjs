@@ -12,6 +12,7 @@ import AdvantagesSlider from '../components/sliders/AdvantagesSlider'
 import RoomsSlider from '../components/sliders/RoomsSlider'
 import OffersSlider from '../components/sliders/OffersSlider'
 import ServicesSlider from '../components/sliders/ServicesSlider';
+import React from 'react';
 const GallerySlider = dynamic(() => import('../components/sliders/GallerySlider'))
 
 export default function ResortVacation() {
