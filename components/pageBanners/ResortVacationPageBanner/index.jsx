@@ -21,14 +21,7 @@ const ResortVacationPageBanner = () => {
                         </div>
                         <div className={s.descriptionBlock + (showDescription ? (' ' + s.active) : '')}>
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi est in ipsam
-                                necessitatibus numquam quod similique veniam? Ab architecto, dolore illum, ipsa, magni
-                                odit
-                                quas repudiandae rerum soluta sunt velit.
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi est in ipsam
-                                necessitatibus numquam quod similique veniam? Ab architecto, dolore illum, ipsa, magni
-                                odit
-                                quas repudiandae rerum soluta sunt velit.
+                                Подарите себе и своим близким незабываемый отпуск в отеле Rinn Rise! Качественный сервис, современный дизайн номеров, большая зеленая территория с прогулочной зоной и бассейн создадут атмосферу уюта, комфорта и уединенности. А для наших маленьких гостей есть детская игровая площадка и анимационные программы.
                             </p>
                         </div>
 
