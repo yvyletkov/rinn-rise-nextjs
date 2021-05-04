@@ -12,7 +12,7 @@ import {servicesSlides} from '../../data/resort-vacation';
 export default function RoomsPage() {
     return (<>
             <Head>
-                <title>Rinn Rise – Номера и цены – Анапа, Джемете</title>
+                <title>Номера и цены – Rinn Rise – Анапа, Джемете</title>
             </Head>
             <main>
                 <RoomsAndPricesBanner/>

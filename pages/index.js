@@ -1,16 +1,15 @@
+import React from 'react'
 import dynamic from 'next/dynamic'
+import LazyLoad from 'react-lazyload'
 import Head from 'next/head'
-import InfrastructureSlider from '../components/sliders/InfrastructureSlider'
-import OffersSlider from '../components/sliders/OffersSlider'
-import HomePageBanner from '../components/pageBanners/HomePageBanner'
-import RoomsSlider from '../components/sliders/RoomsSlider'
-import TextBlock from '../components/TextBlock'
 import {offersSlides, infrastructureSlides} from '../data/home-page'
 import {gallerySlides} from '../data/gallery-data'
 import {roomPreviewSlides} from '../data/shared-rooms-data'
-import LazyLoad from 'react-lazyload'
-import React from 'react'
-
+import HomePageBanner from '../components/pageBanners/HomePageBanner'
+const RoomsSlider = dynamic(() => import('../components/sliders/RoomsSlider'));
+const TextBlock = dynamic(() => import('../components/TextBlock'));
+const OffersSlider = dynamic(() => import('../components/sliders/OffersSlider'));
+const InfrastructureSlider = dynamic(() => import('../components/sliders/InfrastructureSlider'));
 const GallerySlider = dynamic(() => import('../components/sliders/GallerySlider'))
 
 export default function Home() {

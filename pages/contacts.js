@@ -6,7 +6,7 @@ const ContactsPage = () => {
 
     return (<>
             <Head>
-                <title>Rinn Rise – Контакты – Анапа, Джемете</title>
+                <title>Контакты – Rinn Rise – Анапа, Джемете</title>
             </Head>
             <main>
                 <section className="section">

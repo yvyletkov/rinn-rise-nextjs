@@ -18,7 +18,7 @@ const GallerySlider = dynamic(() => import('../components/sliders/GallerySlider'
 export default function Infrastructure() {
     return (<>
             <Head>
-                <title>Rinn Rise – Инфраструктура – Анапа, Джемете</title>
+                <title>Инфраструктура – Rinn Rise – Анапа, Джемете</title>
             </Head>
             <main>
                 <InfrastructurePageBanner />
