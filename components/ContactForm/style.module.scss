@@ -1,0 +1,31 @@
+.button {
+  cursor: pointer;
+  display: block;
+  font-family: "Proxima Nova Light", sans-serif;
+  background-color: #00af98;
+  padding: 18px 30px;
+  font-size: 16px;
+  color: #fff;
+  border-radius: 6px;
+  text-align: center;
+  transition: all 200ms;
+  border:1px transparent solid;
+}
+
+.button:hover {
+  background-color: #019e88;
+  text-decoration: none;
+}
+
+
+@media screen and (max-width: 768px) {
+  .button {
+    box-sizing: border-box;
+    width: 100%;
+    box-shadow: -1.71px 4.698px 16px 0px rgba(23, 23, 23, 0.17);
+    font-size: 14px!important;
+  }
+  .button span {
+    font-size: 14px;
+  }
+}
