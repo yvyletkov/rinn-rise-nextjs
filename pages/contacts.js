@@ -1,6 +1,6 @@
-import React from 'react';
-import s from '../styles/contactsPage.module.scss';
-import Head from 'next/head';
+// import React from 'react'
+import s from '../styles/contactsPage.module.scss'
+import Head from 'next/head'
 
 const ContactsPage = () => {
 
@@ -54,7 +54,7 @@ const ContactsPage = () => {
                 </section>
             </main>
         </>
-    );
+    )
 }
 
-export default ContactsPage;
+export default ContactsPage

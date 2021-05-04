@@ -1,12 +1,14 @@
+// import React from 'react'
+import dynamic from 'next/dynamic'
 import Head from 'next/head'
-import React from 'react'
-import SingleRoomPageBanner from '../../components/pageBanners/SingleRoomPageBanner'
-import DescriptionRoomBlock from '../../components/shared/DescriptionRoomBlock'
-import RoomPhotosSlider from '../../components/sliders/RoomPhotosSlider'
 import {otherRoomsSlides} from '../../data/shared-rooms-data'
-import OtherRoomsSlider from '../../components/sliders/OtherRoomsSlider'
 import {roomsData} from '../../data/rooms-data'
 import PropTypes from 'prop-types'
+import SingleRoomPageBanner from '../../components/pageBanners/SingleRoomPageBanner'
+const DescriptionRoomBlock = dynamic(() => import('../../components/shared/DescriptionRoomBlock'))
+const RoomPhotosSlider = dynamic(() => import('../../components/sliders/RoomPhotosSlider'))
+const OtherRoomsSlider = dynamic(() => import('../../components/sliders/OtherRoomsSlider'))
+
 
 export default function SingleRoomPage({
                                            title,

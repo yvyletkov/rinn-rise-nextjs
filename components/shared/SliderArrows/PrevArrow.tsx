@@ -1,5 +1,5 @@
 import s from './style.module.scss'
-import React from 'react'
+// import React from 'react'
 import NextArrow from './NextArrow'
 import PropTypes from 'prop-types'
 

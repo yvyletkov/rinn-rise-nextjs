@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import s from './styles.module.scss'
 
 export default function Loader() {

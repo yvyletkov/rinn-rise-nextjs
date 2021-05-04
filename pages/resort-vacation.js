@@ -1,18 +1,18 @@
+// import React from 'react';
 import dynamic from 'next/dynamic'
 import Head from 'next/head'
 import s from '../styles/resortVacation.module.scss'
 import LazyLoad from 'react-lazyload'
 import {LazyLoadImage} from 'react-lazy-load-image-component'
-import ResortVacationPageBanner from '../components/pageBanners/ResortVacationPageBanner'
 import {offersSlides} from '../data/home-page'
 import {gallerySlides} from '../data/gallery-data'
 import {roomPreviewSlides} from '../data/shared-rooms-data'
 import {advantagesSlidesData, servicesSlides} from '../data/resort-vacation'
-import AdvantagesSlider from '../components/sliders/AdvantagesSlider'
-import RoomsSlider from '../components/sliders/RoomsSlider'
-import OffersSlider from '../components/sliders/OffersSlider'
-import ServicesSlider from '../components/sliders/ServicesSlider';
-import React from 'react';
+import ResortVacationPageBanner from '../components/pageBanners/ResortVacationPageBanner'
+const AdvantagesSlider = dynamic(() => import('../components/sliders/AdvantagesSlider'))
+const RoomsSlider = dynamic(() => import('../components/sliders/RoomsSlider'))
+const OffersSlider = dynamic(() => import('../components/sliders/OffersSlider'))
+const ServicesSlider = dynamic(() => import('../components/sliders/ServicesSlider'))
 const GallerySlider = dynamic(() => import('../components/sliders/GallerySlider'))
 
 export default function ResortVacation() {

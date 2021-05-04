@@ -1,4 +1,4 @@
-import React from 'react'
+// import React from 'react'
 import s from './style.module.scss'
 import AnimatedMouseIcon from '../../shared/AnimatedMouseIcon/AnimatedMouseIcon'
 import useMediaQuery from '../../shared/customHooks/useMediaQuery'

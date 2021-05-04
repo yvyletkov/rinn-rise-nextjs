@@ -1,4 +1,4 @@
-import React from 'react'
+// import React from 'react'
 import Slider from 'react-slick'
 import s from './style.module.scss'
 import GallerySliderItem from './GallerySliderItem'
