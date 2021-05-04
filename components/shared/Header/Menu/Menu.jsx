@@ -92,7 +92,7 @@ const Menu = ({menuOpened, toggleMenu}) => {
                 </div>
                 <div className={s.phone}>
                     <img src={'/images/footer/phone.svg'} alt="Телефон"/>
-                    <a href='tel:88005557856'>7 (800) 555-78-56</a>
+                    <a href='tel:88005007217'>8 (800) 500 72 17</a>
                 </div>
                 <div className={s.icons}>
                     <a target={'_blank'} href="https://instagram.com/rinnrisehotel">

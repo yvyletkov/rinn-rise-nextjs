@@ -75,9 +75,9 @@ const Header = () => {
                         </div>
                         <div className={s.rightBlock}>
                             <div className={s.contacts}>
-                                <a href={"tel:88005557856"} className={s.link + ' ' + s.number}>
+                                <a href={"tel:88005007217"} className={s.link + ' ' + s.number}>
                                     <img src={'/images/footer/phone.svg'} alt={'Телефон'}/>
-                                    <div className={s.telephone}>+7 (800) 555-78-56</div>
+                                    <div className={s.telephone}>8 (800) 500 72 17</div>
                                     <span className={s.location}>
                                         Джемете, г. Анапа
                                     </span>
