@@ -3,10 +3,8 @@ import {Field, Form, Formik} from 'formik';
 import * as Yup from 'yup';
 import s from "./style.module.scss";
 import cx from "classnames";
-// import {withRouter} from "react-router-dom";
-// import {request} from "../../../api";
+import request from "../Api";
 import swal from 'sweetalert2';
-// import Cleave from "cleave.js"
 import Cleave from 'cleave.js/react';
 
 const Input = ({
