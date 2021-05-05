@@ -2,10 +2,9 @@ import React, {useEffect} from 'react'
 import Slider from 'react-slick'
 import s from './style.module.scss'
 import RoomsSliderItem from './RoomsSliderItem'
-import HeadlineCenter from '../../HeadlineCenter'
-import useMediaQuery from '../../customHooks/useMediaQuery'
-import NextArrow from '../../SliderArrows/NextArrow'
-import PrevArrow from '../../SliderArrows/PrevArrow'
+import HeadlineCenter from '../../shared/HeadlineCenter'
+import NextArrow from '../../shared/SliderArrows/NextArrow'
+import PrevArrow from '../../shared/SliderArrows/PrevArrow'
 import PropTypes from 'prop-types'
 
 const RoomsSlider = ({
@@ -13,12 +12,7 @@ const RoomsSlider = ({
                         title
                     }) => {
 
-
-    const initialCurrentSlideIndex = useMediaQuery('(min-width: 769px)') ?
-        (slides.length >= 5 ? 2 : slides.length === 4 ? 2 : slides.length === 2 ? 1 : slides.length === 3 ? 1 : 0)
-        : 0
-
-    let [currentSlideIndex, setCurrentSlideIndex] = React.useState(initialCurrentSlideIndex)
+    let [currentSlideIndex, setCurrentSlideIndex] = React.useState(0)
 
     const items = slides.map((item, index) => {
         const {
@@ -38,7 +32,8 @@ const RoomsSlider = ({
     const afterChangeHandler = index => setCurrentSlideIndex(index)
 
     const settings = {
-        initialSlide: initialCurrentSlideIndex,
+        slidesToShow: 1,
+        initialSlide: 0,
         afterChange: afterChangeHandler,
         dots: false,
         className: 'center',
@@ -79,11 +74,6 @@ const RoomsSlider = ({
     }, [currentSlideIndex])
 
     const sliderRef = React.useRef()
-
-    useEffect(() => {
-        console.log(slides)
-    });
-
 
     return (
         <div className={s.wrapper}>

@@ -1,8 +1,8 @@
 import React from 'react'
 import s from './style.module.scss'
 import cx from 'classnames'
-import Image from 'next/image'
 import PropTypes from 'prop-types';
+import {LazyLoadImage} from 'react-lazy-load-image-component';
 
 const OffersSliderItem = ({
                               img,
@@ -31,16 +31,15 @@ const OffersSliderItem = ({
                 className={cardClassNames}
                 onMouseEnter={() => !window.matchMedia('screen and (max-width: 1200px)').matches ? setLifted(true) : null}
                 onMouseLeave={() => !window.matchMedia('screen and (max-width: 1200px)').matches ? setLifted(false) : null}>
-                <Image layout={'responsive'}
-                       height={'150%'}
-                       width={'100%'}
-                       className={s.img}
-                       src={img}
-                       alt="Афиша"/>
+                <LazyLoadImage
+                    effect='blur'
+                    className={s.img}
+                    src={img}
+                    alt={title}/>
                 <div className={s.content}>
                     <p dangerouslySetInnerHTML={{__html: subtitle}} className={s.subtitle}/>
                     <p dangerouslySetInnerHTML={{__html: title}} className={s.title}/>
-                    {link && <div>Подробнее →</div>}
+                    {link && <div>Узнать подробности →</div>}
                 </div>
             </div>
         </div>)

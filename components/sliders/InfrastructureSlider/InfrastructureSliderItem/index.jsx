@@ -1,10 +1,9 @@
 import React from 'react'
-import Image from 'next/image'
 import s from './style.module.scss'
 import cx from 'classnames'
-import useMediaQuery from '../../../customHooks/useMediaQuery'
+import useMediaQuery from '../../../shared/customHooks/useMediaQuery'
 import PropTypes from 'prop-types';
-import InfrastructureSlider from '../index';
+import {LazyLoadImage} from 'react-lazy-load-image-component';
 
 const InfrastructureSliderItem = ({
                                       img,
@@ -24,17 +23,19 @@ const InfrastructureSliderItem = ({
     return (
         <div className={classNames}>
 
-            <div className={s.img}>
-                <Image layout="fill"
-                       src={img} alt=""/>
-            </div>
+            <LazyLoadImage
+                effect="blur"
+                wrapperClassName={s.img}
+                src={img}
+                alt={title}
+            />
 
             <div className={s.content}>
                 <h6 className={s.title} dangerouslySetInnerHTML={{__html: title}}/>
 
                 <div className={s.description}>
                     <p dangerouslySetInnerHTML={{__html: description}}
-                       style={useMediaQuery('(max-width: 490px)')?{}:{marginBottom: '10px'}}/>
+                       style={useMediaQuery('(max-width: 490px)') ? {} : {marginBottom: '10px'}}/>
                 </div>
 
                 <div className={s.moreBtn} onClick={handleClick}>

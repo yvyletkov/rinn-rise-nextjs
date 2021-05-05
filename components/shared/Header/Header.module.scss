@@ -1,0 +1,251 @@
+
+//a, a:visited {
+//  color: #333333;
+//}
+//
+//a:hover {
+//  text-decoration: underline;
+//}
+
+.container {
+  box-sizing: border-box;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+}
+
+.wrapper {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0px 0px 40.94px 5.06px rgba(3, 7, 8, 0.08);
+  background-color: rgb(255, 255, 255);
+}
+
+.content {
+  color: #333333;
+  font-size: 20px;
+  height: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding-left: 65px;
+  transition: all 300ms;
+}
+
+.content.minified {
+  height: 85px;
+}
+
+.logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background-color: #fff;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+.logo a .logoWrapper {
+  width: 200px;
+  height: 155px;
+  position: relative;
+  top:15px;
+
+  @media screen and (max-width: 1200px) {
+    top:unset;
+    width: 125px;
+    height: 90px;
+  }
+}
+
+.leftBlock {
+  display: flex;
+  width: fit-content;
+  width: -webkit-fill-available;
+  padding-left: 25px;
+  z-index: 100;
+}
+
+.rightBlock {
+  display: flex;
+  align-items: center;
+
+  @media (max-width: 1200px) {
+    width: 50%;
+    justify-content: flex-end;
+  }
+}
+
+.link {
+  display: flex;
+  align-items: flex-start;
+  font-size: 17px;
+  margin-right: 6%;
+
+  .location {
+    white-space: nowrap;
+    font-size: 12px;
+    position: absolute;
+    bottom: -12px;
+    right: 0;
+    font-family: "Proxima Nova Ligth", sans-serif;
+  }
+  .telephone{
+    font-family: "Proxima Nova Semibold", sans-serif !important;
+  }
+}
+
+.link.number {
+  margin-right: 0;
+  text-align: right;
+  font-size: 20px;
+  align-items: center;
+}
+
+.link img {
+  display: inline-block;
+  height: 17px;
+  margin-right: 5px;
+  margin-top: 3px;
+}
+
+.link div {
+  white-space: nowrap;
+  font-family: "Helvetica Neue Roman", sans-serif !important;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  //width: 185px;
+  margin-right: 35px;
+}
+
+.contacts div {
+  font-size: 18px;
+}
+
+.contacts a {
+  position: relative;
+}
+
+
+.menuIcon {
+  position: absolute;
+  font-size: 60px;
+  left: 12px;
+  transition: all 200ms;
+  cursor: pointer;
+}
+
+.menuIcon.opened {
+  z-index: 3000;
+  transform: scale(1.3);
+}
+
+.menuIcon.opened span {
+  background-color: #171717;
+}
+
+.menuIcon span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: #333333;
+  margin-bottom: 5px;
+  transition: all 200ms;
+  transform-origin: left;
+}
+
+.menuIcon.opened span:nth-child(1) {
+  transform: rotate(45deg) translateY(-2px);
+}
+
+.menuIcon.opened span:nth-child(2) {
+  opacity: 0;
+}
+
+.menuIcon.opened span:nth-child(3) {
+  transform: rotate(-45deg) translateY(2px);
+}
+
+@media screen and (max-width: 1200px) {
+  .link, .contacts {
+    display: none;
+  }
+  .searchIcon {
+    display: none;
+  }
+  .rightBlock a[aria-current], .rightBlock a[href='/booking'] {
+    display: none;
+  }
+  .content {
+    height: 70px;
+    transition: all 400ms;
+  }
+
+  .content.minified {
+    height: 55px;
+  }
+
+  .logo {
+    height: unset;
+    width: unset;
+  }
+
+  .logo img {
+    width: 73px;
+    transition: all 400ms;
+    position: unset;
+  }
+
+  .content.minified .logo img {
+    width: 73px;
+  }
+
+  .container {
+    padding: 0 15px 0 10px;
+  }
+}
+
+.button {
+  font-size: 20px;
+  color: #fff;
+  background-color: #00af98;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 20px;
+  white-space: nowrap;
+  font-family: "Proxima Nova Semibold", sans-serif;
+  transition: all 300ms;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #019e88;
+  }
+
+  @media (max-width: 1200px) {
+    padding: 0;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    margin-left: 20px;
+  }
+
+  @media (max-width: 768px) {
+    background-color: #00af98;
+    width: 43px;
+    height: 43px;
+  }
+
+}

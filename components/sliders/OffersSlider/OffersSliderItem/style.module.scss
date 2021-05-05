@@ -82,6 +82,9 @@
 }
 
 @media screen and (max-width: 480px){
+  .card:before {
+    content: none;
+  }
   .cardWrapper {
     width: 65vw;
   }
@@ -131,6 +134,8 @@
 
 .title + div {
   text-transform: none;
+  font-size: 13px;
+  color: #868686;
   font-family: "Proxima Nova Regular", sans-serif;
 }
 

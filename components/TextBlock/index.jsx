@@ -1,41 +1,50 @@
 import React from 'react'
 import s from './style.module.scss'
-import Image from 'next/image'
+import {LazyLoadImage} from 'react-lazy-load-image-component'
+import PropTypes from 'prop-types'
 
-const TextBlock = (props) => {
+const TextBlock = ({subtitle, title, img, withStarImage, content}) => {
 
     return <div className={s.wrapper}>
         <div className={s.container}>
+            {withStarImage &&
             <div className={s.starImg}>
-                <Image src='/images/home-page/star.png' layout='fill'/>
-            </div>
-            <div className={s.content}>
-                <p className={s.subtitle}>Добро пожаловать</p>
-                <h2 className={s.title}>
-                    Безупречный отдых для всей семьи
-                </h2>
-                <p className={s.text}>
-                    Rinn Rise - новый современный отель, распахнувший свои двери для гостей в 2021 году. Отель
-                    расположен в живописном курортном поселке Джемете на солнечном Черноморском побережье недалеко от
-                    города Анапа. Джемете славится своими широкими песчаными пляжами и чистым морем с пологим дном.
-                    Более того, идеальный климат, теплое море и солёный морской воздух благоприятно влияют на здоровье
-                    отдыхающих.
-                </p>
-                <p className={s.text}>
-                    Наш отель имеет все необходимое для комфортного отдыха всей семьей: собственную закрытую территорию
-                    с озеленением, 5 трехэтажных корпусов с разными категориями номеров, ресторан и свой бассейн.
-                    Песчаный пляж и море находятся всего в 7-10 минутах ходьбы. Высококлассный сервис и идеальное
-                    расположение сделают ваш отдых у нас незабываемым!
+                <LazyLoadImage
+                    effect="br"
+                    className={s.img}
+                    src="/images/home-page/star.png"
+                    alt="Rinn Rise"/>
+            </div>}
 
-                </p>
+            <div className={s.content}>
+                <p className={s.subtitle}>{subtitle}</p>
+                <h2 className={s.title}>
+                    {title}
+                </h2>
+                <div dangerouslySetInnerHTML={{__html: content}}/>
             </div>
             <div className={s.imageWrapper}>
-                <div className={s.img}>
-                    <Image src="/images/home-page/text-block.jpg" layout="fill"/>
-                </div>
+                <LazyLoadImage
+                    effect="blur"
+                    className={s.img}
+                    src={img}
+                    layout="fill"/>
             </div>
         </div>
     </div>
 }
+
+TextBlock.propTypes = {
+    subtitle: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    img: PropTypes.string.isRequired,
+    withStarImage: PropTypes.bool,
+    content: PropTypes.string.isRequired,
+}
+
+TextBlock.defaultProps = {
+    withStarImage: false,
+}
+
 
 export default TextBlock

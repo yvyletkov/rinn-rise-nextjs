@@ -2,7 +2,7 @@
   overflow: hidden;
   max-width: 1470px;
   width: 100%;
-  margin: 35px auto 0;
+  margin: 0 auto;
 
   .sliderWrapper {
     :global(.slick-next:before,
@@ -46,10 +46,6 @@
     height: unset;
     bottom: unset;
     right: unset;
-  }
-
-  &:last-child {
-    margin: 40px auto 0;
   }
 
 }

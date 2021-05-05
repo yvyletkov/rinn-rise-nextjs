@@ -1,0 +1,56 @@
+.wrapper {
+  width: 100%;
+  overflow: hidden;
+
+  :global(.slick-next:before), :global(.slick-prev:before) {
+    color: #000;
+  }
+
+  :global(.slick-slide img) {
+    width: 100%
+  }
+
+  :global(.slick-list) {
+    transition: all 0.3s;
+    overflow: visible;
+  }
+
+  :global(.slick-dots) {
+    bottom: -32px;
+  }
+
+  :global(.slick-dots li) {
+    margin: 0
+  }
+}
+
+.container {
+  box-sizing: border-box;
+  padding-bottom: 95px;
+  max-width: 1920px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.mobileBlock {
+  padding: 0 20px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.mobileBlockText {
+  font-family: "Helvetica Neue Bold", sans-serif;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 600px) {
+  .mobileBlock {
+    display: flex;
+  }
+  .container {
+    padding-bottom: 30px;
+  }
+}

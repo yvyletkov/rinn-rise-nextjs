@@ -1,11 +1,11 @@
 import React, {useEffect, useState} from 'react'
 import Slider from 'react-slick'
 import s from './style.module.scss'
-import PrevArrow from '../../SliderArrows/PrevArrow'
-import NextArrow from '../../SliderArrows/NextArrow'
+import PrevArrow from '../../shared/SliderArrows/PrevArrow'
+import NextArrow from '../../shared/SliderArrows/NextArrow'
 import cx from 'classnames'
-import useMediaQuery from '../../customHooks/useMediaQuery'
-import HeadlineCenter from '../../HeadlineCenter'
+import useMediaQuery from '../../shared/customHooks/useMediaQuery'
+import HeadlineCenter from '../../shared/HeadlineCenter'
 import InfrastructureSliderItem from './InfrastructureSliderItem'
 import PropTypes from 'prop-types'
 
@@ -51,7 +51,7 @@ const InfrastructureSlider = ({
     const [items, setItems] = useState([])
 
     useEffect(() => {
-        setActiveSlideIndex(mobile ? null : 1)
+        setActiveSlideIndex(mobile ? null : null) //  можно задать номер активного слайда на мобилке и на десктопе
     }, [mobile]);
     
     useEffect(() => {
