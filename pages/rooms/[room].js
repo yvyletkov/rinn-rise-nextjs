@@ -4,7 +4,7 @@ import {otherRoomsSlides} from '../../data/shared-rooms-data'
 import {roomsData} from '../../data/rooms-data'
 import PropTypes from 'prop-types'
 import SingleRoomPageBanner from '../../components/pageBanners/SingleRoomPageBanner'
-import DescriptionRoomBlock from '../../components/sliders/RoomPhotosSlider'
+import DescriptionRoomBlock from '../../components/shared/DescriptionRoomBlock'
 import RoomPhotosSlider from '../../components/sliders/RoomPhotosSlider'
 import OtherRoomsSlider from '../../components/sliders/OtherRoomsSlider'
 
